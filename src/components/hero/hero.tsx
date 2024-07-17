@@ -7,6 +7,7 @@ const HeroContainer = styled.section`
   height: 100vh;
   background-color: #1e1e1e;
   color: #fff;
+  overflow: hidden;
 `;
 
 const LeftContainer = styled.div`
@@ -23,6 +24,7 @@ const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;  /* Ensure nothing overflows */
 `;
 
 const floatAnimation = keyframes`
@@ -38,7 +40,7 @@ const floatAnimation = keyframes`
 `;
 
 const Spaceship = styled.img`
-  width: 50%;
+  width: 70%;
   z-index: 1;
   animation: ${floatAnimation} 3s infinite;
 `;
@@ -88,10 +90,13 @@ const Hero: React.FC = () => {
         const containerHeight = rightContainerRef.current.clientHeight;
 
         const newCircles: CircleProps[] = Array.from({ length: 7 }).map(() => {
-          // Determine if the circle will be placed on a vertical or horizontal edge
           const isVerticalEdge = Math.random() > 0.5;
-          const left = isVerticalEdge ? (Math.random() > 0.5 ? 0 : containerWidth) : Math.random() * containerWidth;
-          const top = !isVerticalEdge ? (Math.random() > 0.5 ? 0 : containerHeight) : Math.random() * containerHeight;
+          const left = isVerticalEdge 
+            ? (Math.random() > 0.5 ? 0 : containerWidth - 10)  // Left or right edge
+            : Math.random() * containerWidth;
+          const top = !isVerticalEdge 
+            ? (Math.random() > 0.5 ? 0 : containerHeight - 10)  // Top or bottom edge
+            : Math.random() * containerHeight;
 
           return {
             id: Date.now() + Math.random(),
@@ -102,7 +107,7 @@ const Hero: React.FC = () => {
             containerHeight,
           };
         });
-        
+
         setCircles(prevCircles => [...prevCircles, ...newCircles]);
         setTimeout(() => {
           setCircles(prevCircles =>
@@ -110,7 +115,7 @@ const Hero: React.FC = () => {
           );
         }, 2000);
       }
-    }, 333); // 1000ms / 3 = 333ms for 3x faster spawning
+    }, 333);
 
     return () => clearInterval(interval);
   }, []);
