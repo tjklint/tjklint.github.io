@@ -30,13 +30,13 @@ const Spaceship = styled.img`
   z-index: 1;
 `;
 
-const shrinkAndMove = (left: number, top: number) => keyframes`
+const shrinkAndMove = keyframes`
   0% {
-    transform: translate(0, 0) scale(1);
+    transform: scale(1) translate(0, 0);
     opacity: 1;
   }
   100% {
-    transform: translate(${50 - left}%, ${50 - top}%) scale(0);
+    transform: scale(0) translate(-50%, -50%);
     opacity: 0;
   }
 `;
@@ -52,7 +52,16 @@ const Circle = styled.div<{ left: number; top: number; size: number }>`
     height: ${size}px;
     left: ${left}%;
     top: ${top}%;
-    animation: ${shrinkAndMove(left, top)} 2s linear forwards;
+    animation: ${css`${keyframes`
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(calc(50% - ${left}%), calc(50% - ${top}%)) scale(0);
+        opacity: 0;
+      }
+    `}`} 2s linear forwards;
   `}
 `;
 
