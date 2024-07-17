@@ -25,9 +25,22 @@ const RightContainer = styled.div`
   align-items: center;
 `;
 
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 const Spaceship = styled.img`
   width: 50%;
   z-index: 1;
+  animation: ${floatAnimation} 3s infinite;
 `;
 
 const shrinkAndMove = (left: number, top: number, containerWidth: number, containerHeight: number) => keyframes`
