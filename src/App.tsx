@@ -1,12 +1,13 @@
-import './App.css';
 import React from 'react';
 import Header from './components/header/header';
+import Hero from './components/hero/hero.tsx';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div>
       <Header />
-      {/* Other components will eventually go here */}
+      <Hero />
+      {/* Other components go here */}
     </div>
   );
 }
