@@ -4,27 +4,50 @@ import spaceship from '../../assets/spaceship.png';
 
 const HeroContainer = styled.section`
   display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: #1e1e1e;
   color: #fff;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const LeftContainer = styled.div`
-  flex: 0 0 35%;  // 35% of the width
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
+
+  @media (max-width: 768px) {
+    padding-top: 0; 
+    flex: 0 0 25%;
+  }
+
+  @media (min-width: 768px) {
+    flex: 0 0 35%;
+  }
 `;
 
 const RightContainer = styled.div`
-  flex: 0 0 65%;  // 65% of the width
+  flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;  /* Ensure nothing overflows */
+
+  @media (min-width: 768px) {
+    flex: 0 0 65%;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 75%;
+  }
+
 `;
 
 const floatAnimation = keyframes`
