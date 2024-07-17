@@ -11,7 +11,7 @@ const HeroContainer = styled.section`
 `;
 
 const LeftContainer = styled.div`
-  flex: 1;
+  flex: 0 0 35%;  // 35% of the width
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  flex: 1;
+  flex: 0 0 65%;  // 65% of the width
   position: relative;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@ const floatAnimation = keyframes`
 `;
 
 const Spaceship = styled.img`
-  width: 70%;
+  width: 50%;
   z-index: 1;
   animation: ${floatAnimation} 3s infinite;
 `;
