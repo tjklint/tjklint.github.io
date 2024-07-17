@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/header/header';
+import Header from './components/header/header.tsx';
 import Hero from './components/hero/hero.tsx';
 
 const App: React.FC = () => {
