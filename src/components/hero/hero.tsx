@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import spaceship from '../../assets/spaceship.png';
 
@@ -30,38 +30,28 @@ const Spaceship = styled.img`
   z-index: 1;
 `;
 
-const shrinkAndMove = keyframes`
+const shrinkAndMove = (left: number, top: number, containerWidth: number, containerHeight: number) => keyframes`
   0% {
-    transform: scale(1) translate(0, 0);
+    transform: translate(0, 0) scale(1);
     opacity: 1;
   }
   100% {
-    transform: scale(0) translate(-50%, -50%);
+    transform: translate(${containerWidth / 2 - left}px, ${containerHeight / 2 - top}px) scale(0);
     opacity: 0;
   }
 `;
 
-const Circle = styled.div<{ left: number; top: number; size: number }>`
+const Circle = styled.div<{ left: number; top: number; size: number; containerWidth: number; containerHeight: number }>`
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
   opacity: 0.8;
-  z-index: 0;
-  ${({ left, top, size }) => css`
+  ${({ left, top, size, containerWidth, containerHeight }) => css`
     width: ${size}px;
     height: ${size}px;
-    left: ${left}%;
-    top: ${top}%;
-    animation: ${css`${keyframes`
-      0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translate(calc(50% - ${left}%), calc(50% - ${top}%)) scale(0);
-        opacity: 0;
-      }
-    `}`} 2s linear forwards;
+    left: ${left}px;
+    top: ${top}px;
+    animation: ${shrinkAndMove(left, top, containerWidth, containerHeight)} 2s linear forwards;
   `}
 `;
 
@@ -70,26 +60,35 @@ interface CircleProps {
   left: number;
   top: number;
   size: number;
+  containerWidth: number;
+  containerHeight: number;
 }
 
 const Hero: React.FC = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]);
+  const rightContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const newCircles: CircleProps[] = Array.from({ length: 15 }).map(() => ({
-        id: Date.now() + Math.random(),
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        size: Math.random() * 20 + 10,
-      }));
-      setCircles(prevCircles => [...prevCircles, ...newCircles]);
-      setTimeout(() => {
-        setCircles(prevCircles =>
-          prevCircles.filter(circle => !newCircles.some(newCircle => newCircle.id === circle.id))
-        );
-      }, 2000);
-    }, 1000);
+      if (rightContainerRef.current) {
+        const containerWidth = rightContainerRef.current.clientWidth;
+        const containerHeight = rightContainerRef.current.clientHeight;
+        const newCircles: CircleProps[] = Array.from({ length: 7 }).map(() => ({
+          id: Date.now() + Math.random(),
+          left: Math.random() * containerWidth,
+          top: Math.random() * containerHeight,
+          size: Math.random() * 20 + 10,
+          containerWidth,
+          containerHeight,
+        }));
+        setCircles(prevCircles => [...prevCircles, ...newCircles]);
+        setTimeout(() => {
+          setCircles(prevCircles =>
+            prevCircles.filter(circle => !newCircles.some(newCircle => newCircle.id === circle.id))
+          );
+        }, 2000);
+      }
+    }, 333); // 1000ms / 3 = 333ms for 3x faster spawning
 
     return () => clearInterval(interval);
   }, []);
@@ -100,7 +99,7 @@ const Hero: React.FC = () => {
         <h1>Welcome to TJ KLINT's Portfolio</h1>
         <p>Check out my projects, resume, and more!</p>
       </LeftContainer>
-      <RightContainer>
+      <RightContainer ref={rightContainerRef}>
         <Spaceship src={spaceship} alt="Spaceship" />
         {circles.map(circle => (
           <Circle
@@ -108,6 +107,8 @@ const Hero: React.FC = () => {
             left={circle.left}
             top={circle.top}
             size={circle.size}
+            containerWidth={circle.containerWidth}
+            containerHeight={circle.containerHeight}
           />
         ))}
       </RightContainer>
