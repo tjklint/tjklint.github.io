@@ -30,7 +30,7 @@ const floatAnimation = keyframes`
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
@@ -86,14 +86,23 @@ const Hero: React.FC = () => {
       if (rightContainerRef.current) {
         const containerWidth = rightContainerRef.current.clientWidth;
         const containerHeight = rightContainerRef.current.clientHeight;
-        const newCircles: CircleProps[] = Array.from({ length: 7 }).map(() => ({
-          id: Date.now() + Math.random(),
-          left: Math.random() * containerWidth,
-          top: Math.random() * containerHeight,
-          size: Math.random() * 20 + 10,
-          containerWidth,
-          containerHeight,
-        }));
+
+        const newCircles: CircleProps[] = Array.from({ length: 7 }).map(() => {
+          // Determine if the circle will be placed on a vertical or horizontal edge
+          const isVerticalEdge = Math.random() > 0.5;
+          const left = isVerticalEdge ? (Math.random() > 0.5 ? 0 : containerWidth) : Math.random() * containerWidth;
+          const top = !isVerticalEdge ? (Math.random() > 0.5 ? 0 : containerHeight) : Math.random() * containerHeight;
+
+          return {
+            id: Date.now() + Math.random(),
+            left,
+            top,
+            size: Math.random() * 20 + 10,
+            containerWidth,
+            containerHeight,
+          };
+        });
+        
         setCircles(prevCircles => [...prevCircles, ...newCircles]);
         setTimeout(() => {
           setCircles(prevCircles =>
