@@ -8,13 +8,13 @@ interface NavProps {
 
 const HeaderContainer = styled.header`
   background-color: #1e1e1e;
-  padding: 20px 40px;
+  padding: 20px 60px 20px 40px; /* Add padding to the left side */
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
   position: relative;
-  z-index: 1000; 
+  z-index: 1000; /* Ensure the header stays above other content */
 `;
 
 const Logo = styled.div`
@@ -22,6 +22,7 @@ const Logo = styled.div`
   font-weight: bold;
   letter-spacing: 2px;
   color: #e1e1e1;
+  font-family: 'Arial', sans-serif; /* Exclude from Poppins font */
 `;
 
 const Nav = styled.nav<NavProps>`
@@ -36,12 +37,12 @@ const Nav = styled.nav<NavProps>`
     height: 100vh;
     background-color: #1e1e1e;
     flex-direction: column;
-    justify-content: flex-start; 
-    padding-top: 80px; 
+    justify-content: flex-start; /* Align items to the top */
+    padding-top: 80px; /* Add padding to push items down */
     transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
     transition: transform 0.3s ease;
-    overflow-y: auto; 
-    z-index: 999;
+    overflow-y: auto; /* Add this to prevent scrolling issues */
+    z-index: 999; /* Ensure the nav stays above other content */
   }
 `;
 
@@ -52,6 +53,7 @@ const NavLink = styled.a`
   color: #d3d3d3;
   text-decoration: none;
   font-size: 18px;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
   transition: color 0.3s;
 
   &:hover {

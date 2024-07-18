@@ -9,7 +9,7 @@ import Hero from './components/hero/hero.tsx';
 import SocialLinks from './components/social_links/social_links.tsx';
 
 const AppContainer = styled.div`
-  background-color: #1e1e1e; /* Match the background color of the hero section */
+  background-color: #1e1e1e;
   min-height: 100vh;
   padding: 20px 0;
 `;
@@ -17,7 +17,7 @@ const AppContainer = styled.div`
 const App: React.FC = () => {
   return (
     <div>
-        <AppContainer>
+      <AppContainer>
         <Header />
         <Hero />
         <SocialLinks />

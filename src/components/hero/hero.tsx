@@ -6,9 +6,10 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #1e1e1e; 
+  background-color: #1e1e1e;
   color: #fff;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -20,10 +21,13 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 40px 40px 40px; /* Add padding to the left side */
+  text-align: left; /* Align text to the left */
+  margin-top: -10%; /* Adjust to move text above the vertical center */
 
   @media (max-width: 768px) {
     padding-top: 0;  /* Remove upper padding for mobile */
+    margin-top: 0; /* Remove top margin for mobile */
   }
 
   @media (min-width: 768px) {
@@ -58,7 +62,7 @@ const floatAnimation = keyframes`
 `;
 
 const Spaceship = styled.img`
-  width: 80%; 
+  width: 80%; /* Adjusted to take up more space */
   z-index: 1;
   animation: ${floatAnimation} 3s infinite;
 
@@ -96,14 +100,14 @@ const GradientText = styled.h2`
   background: linear-gradient(90deg, #8a2be2, #d4a1ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 4em; 
-  font-weight: bold; 
+  font-size: 4em; /* Make the text much bigger */
+  font-weight: bold; /* Make the text bolder */
   margin: 0.5em 0;
 `;
 
 const TypewriterText = styled.div`
-  color: #d4a1ff;
-  font-size: 1.5em; 
+  color: #d4a1ff; /* Light purple color */
+  font-size: 1.5em; /* Adjust the size */
   margin-top: 0.5em;
   white-space: nowrap;
   overflow: hidden;
