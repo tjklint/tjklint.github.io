@@ -6,7 +6,7 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* Gray background */
   color: #fff;
   overflow: hidden;
 
