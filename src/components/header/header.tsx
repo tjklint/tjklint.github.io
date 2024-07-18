@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   color: #fff;
   position: relative;
-  z-index: 1000; /* Ensure the header stays above other content */
+  z-index: 1000; 
 `;
 
 const Logo = styled.div`
@@ -36,12 +36,12 @@ const Nav = styled.nav<NavProps>`
     height: 100vh;
     background-color: #1e1e1e;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the top */
-    padding-top: 80px; /* Add padding to push items down */
+    justify-content: flex-start; 
+    padding-top: 80px; 
     transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
     transition: transform 0.3s ease;
-    overflow-y: auto; /* Add this to prevent scrolling issues */
-    z-index: 999; /* Ensure the nav stays above other content */
+    overflow-y: auto; 
+    z-index: 999;
   }
 `;
 

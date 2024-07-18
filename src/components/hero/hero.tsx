@@ -6,7 +6,7 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #1e1e1e; /* Gray background */
+  background-color: #1e1e1e; 
   color: #fff;
   overflow: hidden;
 
@@ -58,7 +58,7 @@ const floatAnimation = keyframes`
 `;
 
 const Spaceship = styled.img`
-  width: 80%; /* Adjusted to take up more space */
+  width: 80%; 
   z-index: 1;
   animation: ${floatAnimation} 3s infinite;
 
@@ -96,14 +96,14 @@ const GradientText = styled.h2`
   background: linear-gradient(90deg, #8a2be2, #d4a1ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 4em; /* Make the text much bigger */
-  font-weight: bold; /* Make the text bolder */
+  font-size: 4em; 
+  font-weight: bold; 
   margin: 0.5em 0;
 `;
 
 const TypewriterText = styled.div`
-  color: #d4a1ff; /* Light purple color */
-  font-size: 1.5em; /* Adjust the size */
+  color: #d4a1ff;
+  font-size: 1.5em; 
   margin-top: 0.5em;
   white-space: nowrap;
   overflow: hidden;
