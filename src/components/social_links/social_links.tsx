@@ -6,7 +6,7 @@ const SocialContainer = styled.div`
   width: 30%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #2e2e2e; /* Slightly lighter gray */
+  background-color: #2e2e2e; 
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
