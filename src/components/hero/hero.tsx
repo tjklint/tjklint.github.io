@@ -101,19 +101,12 @@ const GradientText = styled.h2`
   margin: 0.5em 0;
 `;
 
-const blink = keyframes`
-  from, to { border-color: transparent; }
-  50% { border-color: rgba(255, 255, 255, 0.75); }
-`;
-
 const TypewriterText = styled.div`
   color: #d4a1ff; /* Light purple color */
   font-size: 1.5em; /* Adjust the size */
   margin-top: 0.5em;
-  border-right: 3px solid rgba(255, 255, 255, 0.75); /* Cursor */
   white-space: nowrap;
   overflow: hidden;
-  animation: ${blink} 1s step-end infinite; /* Cursor blink animation */
 `;
 
 interface CircleProps {
@@ -158,7 +151,6 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const typeWriter = () => {
       let i = 0;
-      let j = 0;
       let textPos = 0;
       let currentString = typewriterTexts[i];
       const speed = 100;
