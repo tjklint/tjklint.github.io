@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 interface NavProps {
   isOpen: boolean;
@@ -46,7 +47,7 @@ const Nav = styled.nav<NavProps>`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   margin-left: 40px;
@@ -91,19 +92,19 @@ const Header = () => {
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </Hamburger>
       <Nav isOpen={isOpen}>
-        <NavLink href="#home" onClick={() => setIsOpen(false)}>
+        <NavLink to="/" onClick={() => setIsOpen(false)}>
           <FaHome />
           Home
         </NavLink>
-        <NavLink href="#about" onClick={() => setIsOpen(false)}>
+        <NavLink to="#about" onClick={() => setIsOpen(false)}>
           <FaUser />
           About
         </NavLink>
-        <NavLink href="#projects" onClick={() => setIsOpen(false)}>
+        <NavLink to="#projects" onClick={() => setIsOpen(false)}>
           <FaCode />
           Projects
         </NavLink>
-        <NavLink href="#resume" onClick={() => setIsOpen(false)}>
+        <NavLink to="/resume" onClick={() => setIsOpen(false)}>
           <FaFileAlt />
           Resume
         </NavLink>
