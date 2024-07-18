@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './components/header/header.tsx';
-import Hero from './components/hero/hero.tsx';
+import Header from './components/header/header';
+import Hero from './components/hero/hero';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="App">
       <Header />
       <Hero />
       {/* Other components go here */}
