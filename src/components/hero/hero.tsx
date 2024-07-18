@@ -23,7 +23,7 @@ const LeftContainer = styled.div`
   padding: 40px;
 
   @media (max-width: 768px) {
-    padding-top: 0; 
+    padding-top: 0;  /* Remove upper padding for mobile */
   }
 
   @media (min-width: 768px) {
@@ -43,7 +43,6 @@ const RightContainer = styled.div`
   @media (min-width: 768px) {
     flex: 0 0 65%;
   }
-
 `;
 
 const floatAnimation = keyframes`
@@ -129,8 +128,7 @@ interface CircleProps {
 const Hero: React.FC = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]);
   const [topLine, setTopLine] = useState('');
-  const [currentText, setCurrentText] = useState<string[]>([]);
-  const [textIndex, setTextIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
   const rightContainerRef = useRef<HTMLDivElement>(null);
 
   const topLines = [
@@ -159,19 +157,41 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     const typeWriter = () => {
-      if (currentText.length < typewriterTexts[textIndex].length) {
-        setCurrentText(prev => [...prev, typewriterTexts[textIndex].charAt(currentText.length)]);
-      } else {
-        setTimeout(() => {
-          setCurrentText([]);
-          setTextIndex((textIndex + 1) % typewriterTexts.length);
-        }, 2000);
+      let i = 0;
+      let j = 0;
+      let textPos = 0;
+      let currentString = typewriterTexts[i];
+      const speed = 100;
+      const deleteSpeed = 50;
+      const waitTime = 2000;
+
+      function type() {
+        setCurrentText(currentString.substring(0, textPos) + '_');
+
+        if (textPos++ === currentString.length) {
+          setTimeout(() => deleteText(), waitTime);
+        } else {
+          setTimeout(type, speed);
+        }
       }
+
+      function deleteText() {
+        setCurrentText(currentString.substring(0, textPos) + '_');
+
+        if (textPos-- === 0) {
+          i = (i + 1) % typewriterTexts.length;
+          currentString = typewriterTexts[i];
+          setTimeout(type, speed);
+        } else {
+          setTimeout(deleteText, deleteSpeed);
+        }
+      }
+
+      type();
     };
 
-    const typingInterval = setInterval(typeWriter, 100);
-    return () => clearInterval(typingInterval);
-  }, [currentText, textIndex]);
+    typeWriter();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -215,7 +235,7 @@ const Hero: React.FC = () => {
       <LeftContainer>
         <h1>{topLine}</h1>
         <GradientText>I'm TJ Klint.</GradientText>
-        <TypewriterText>{currentText.join('')}</TypewriterText>
+        <TypewriterText>{currentText}</TypewriterText>
       </LeftContainer>
       <RightContainer ref={rightContainerRef}>
         <Spaceship src={spaceship} alt="Spaceship" />
