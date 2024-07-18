@@ -5,14 +5,15 @@ import { FaGithub, FaLinkedin, FaGlobe, FaMedium } from 'react-icons/fa';
 const SocialContainer = styled.div`
   width: 30%;
   margin: 20px auto;
-  padding: 20px;
+  padding: 20px 20px 30px 20px; 
   background-color: #2e2e2e; 
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif; 
 
   @media (max-width: 768px) {
-    width: 80%; /* Adjust width for smaller screens */
+    width: 80%; 
   }
 `;
 
@@ -28,6 +29,10 @@ const SocialTitle = styled.h3`
 const SocialDescription = styled.p`
   color: #d3d3d3;
   margin-bottom: 20px;
+
+  .highlight {
+    color: #8a2be2; 
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -50,12 +55,14 @@ const SocialLinks: React.FC = () => {
   return (
     <SocialContainer>
       <SocialTitle>FIND ME ON</SocialTitle>
-      <SocialDescription>Feel free to connect with me</SocialDescription>
+      <SocialDescription>
+        Feel free to <span className="highlight">connect</span> with me
+      </SocialDescription>
       <SocialIcons>
         <a href="https://github.com/tjklint" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         <a href="https://tjklint.com" target="_blank" rel="noopener noreferrer"><FaGlobe /></a>
-        <a href="https://medium.com/@profile-coming-soon" target="_blank" rel="noopener noreferrer"><FaMedium /></a>
+        <a href="https://medium.com/@my-profile" target="_blank" rel="noopener noreferrer"><FaMedium /></a>
       </SocialIcons>
     </SocialContainer>
   );
