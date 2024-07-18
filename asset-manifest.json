@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tjklint.github.io/static/css/main.e6c13ad2.css",
-    "main.js": "/tjklint.github.io/static/js/main.dac3e9d6.js",
-    "static/js/453.d3bffd49.chunk.js": "/tjklint.github.io/static/js/453.d3bffd49.chunk.js",
-    "static/media/spaceship.png": "/tjklint.github.io/static/media/spaceship.c05c3c6cb980e17d22e8.png",
-    "index.html": "/tjklint.github.io/index.html",
-    "main.e6c13ad2.css.map": "/tjklint.github.io/static/css/main.e6c13ad2.css.map",
-    "main.dac3e9d6.js.map": "/tjklint.github.io/static/js/main.dac3e9d6.js.map",
-    "453.d3bffd49.chunk.js.map": "/tjklint.github.io/static/js/453.d3bffd49.chunk.js.map"
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.23c1d8b6.js",
+    "static/js/453.d3bffd49.chunk.js": "/static/js/453.d3bffd49.chunk.js",
+    "static/media/spaceship.png": "/static/media/spaceship.c05c3c6cb980e17d22e8.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.23c1d8b6.js.map": "/static/js/main.23c1d8b6.js.map",
+    "453.d3bffd49.chunk.js.map": "/static/js/453.d3bffd49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.dac3e9d6.js"
+    "static/js/main.23c1d8b6.js"
   ]
 }
