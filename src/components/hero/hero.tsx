@@ -23,9 +23,11 @@ const LeftContainer = styled.div`
   justify-content: center;
   padding: 40px 40px 40px 40px; /* Add padding to the left side */
   text-align: left; /* Align text to the left */
+  margin-top: -10%; /* Adjust to move text above the vertical center */
 
   @media (max-width: 768px) {
     padding-top: 0;  /* Remove upper padding for mobile */
+    margin-top: 0; /* Remove top margin for mobile */
   }
 
   @media (min-width: 768px) {
