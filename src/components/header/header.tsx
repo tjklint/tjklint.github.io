@@ -13,6 +13,8 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  position: relative;
+  z-index: 1000; /* Ensure the header stays above other content */
 `;
 
 const Logo = styled.div`
@@ -27,16 +29,19 @@ const Nav = styled.nav<NavProps>`
   align-items: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    top: 60px;
-    right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100vh;
     background-color: #1e1e1e;
     flex-direction: column;
     justify-content: flex-start; /* Align items to the top */
-    padding-top: 40px; /* Add padding to push items down */
-    transition: right 0.3s ease;
+    padding-top: 80px; /* Add padding to push items down */
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Add this to prevent scrolling issues */
+    z-index: 999; /* Ensure the nav stays above other content */
   }
 `;
 
@@ -67,6 +72,7 @@ const NavLink = styled.a`
 const Hamburger = styled.div`
   display: none;
   cursor: pointer;
+  z-index: 1001; /* Ensure the hamburger button stays above the nav */
 
   @media (max-width: 768px) {
     display: block;
@@ -83,19 +89,19 @@ const Header = () => {
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </Hamburger>
       <Nav isOpen={isOpen}>
-        <NavLink href="#home">
+        <NavLink href="#home" onClick={() => setIsOpen(false)}>
           <FaHome />
           Home
         </NavLink>
-        <NavLink href="#about">
+        <NavLink href="#about" onClick={() => setIsOpen(false)}>
           <FaUser />
           About
         </NavLink>
-        <NavLink href="#projects">
+        <NavLink href="#projects" onClick={() => setIsOpen(false)}>
           <FaCode />
           Projects
         </NavLink>
-        <NavLink href="#resume">
+        <NavLink href="#resume" onClick={() => setIsOpen(false)}>
           <FaFileAlt />
           Resume
         </NavLink>
