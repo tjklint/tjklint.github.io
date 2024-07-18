@@ -5,7 +5,7 @@ import spaceship from '../../assets/spaceship.png';
 const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1e1e1e;
   color: #fff;
   overflow: hidden;
@@ -23,8 +23,7 @@ const LeftContainer = styled.div`
   padding: 40px;
 
   @media (max-width: 768px) {
-    padding-top: 0; 
-    flex: 0 0 25%;
+    padding-top: 0;  /* Remove upper padding for mobile */
   }
 
   @media (min-width: 768px) {
@@ -39,15 +38,11 @@ const RightContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;  /* Ensure nothing overflows */
+  min-height: 50vh; /* Ensure it takes a minimum height on mobile */
 
   @media (min-width: 768px) {
     flex: 0 0 65%;
   }
-
-  @media (max-width: 768px) {
-    flex: 0 0 75%;
-  }
-
 `;
 
 const floatAnimation = keyframes`
@@ -63,9 +58,13 @@ const floatAnimation = keyframes`
 `;
 
 const Spaceship = styled.img`
-  width: 50%;
+  width: 80%; /* Adjusted to take up more space */
   z-index: 1;
   animation: ${floatAnimation} 3s infinite;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 const shrinkAndMove = (left: number, top: number, containerWidth: number, containerHeight: number) => keyframes`
@@ -93,6 +92,30 @@ const Circle = styled.div<{ left: number; top: number; size: number; containerWi
   `}
 `;
 
+const GradientText = styled.h2`
+  background: linear-gradient(90deg, #8a2be2, #d4a1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4em; /* Make the text much bigger */
+  font-weight: bold; /* Make the text bolder */
+  margin: 0.5em 0;
+`;
+
+const blink = keyframes`
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(255, 255, 255, 0.75); }
+`;
+
+const TypewriterText = styled.div`
+  color: #d4a1ff; /* Light purple color */
+  font-size: 1.5em; /* Adjust the size */
+  margin-top: 0.5em;
+  border-right: 3px solid rgba(255, 255, 255, 0.75); /* Cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: ${blink} 1s step-end infinite; /* Cursor blink animation */
+`;
+
 interface CircleProps {
   id: number;
   left: number;
@@ -104,7 +127,71 @@ interface CircleProps {
 
 const Hero: React.FC = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]);
+  const [topLine, setTopLine] = useState('');
+  const [currentText, setCurrentText] = useState('');
   const rightContainerRef = useRef<HTMLDivElement>(null);
+
+  const topLines = [
+    "You’re finally awake. Let’s explore my work.",
+    "In a galaxy far, far away, I created this portfolio.",
+    "Winter is coming, but you’re safe here. Explore my work.",
+    "Welcome to my corner of the web!",
+    "Greetings! I'm thrilled to have you here.",
+    "Hi! Thanks for dropping by.",
+    "Hello! Come on in."
+  ];
+
+  const typewriterTexts = [
+    "Software Developer",
+    "EX-SDE Intern @ Bell",
+    "Ethical Hacker",
+    "AI Enthusiast",
+    "Coffee Drinker",
+    "Hackathon Fanatic"
+  ];
+
+  useEffect(() => {
+    // Set a random top line once
+    setTopLine(topLines[Math.floor(Math.random() * topLines.length)]);
+  }, []);
+
+  useEffect(() => {
+    const typeWriter = () => {
+      let i = 0;
+      let j = 0;
+      let textPos = 0;
+      let currentString = typewriterTexts[i];
+      const speed = 100;
+      const deleteSpeed = 50;
+      const waitTime = 2000;
+
+      function type() {
+        setCurrentText(currentString.substring(0, textPos) + '_');
+
+        if (textPos++ === currentString.length) {
+          setTimeout(() => deleteText(), waitTime);
+        } else {
+          setTimeout(type, speed);
+        }
+      }
+
+      function deleteText() {
+        setCurrentText(currentString.substring(0, textPos) + '_');
+
+        if (textPos-- === 0) {
+          i = (i + 1) % typewriterTexts.length;
+          currentString = typewriterTexts[i];
+          setTimeout(type, speed);
+        } else {
+          setTimeout(deleteText, deleteSpeed);
+        }
+      }
+
+      type();
+    };
+
+    typeWriter();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -146,8 +233,9 @@ const Hero: React.FC = () => {
   return (
     <HeroContainer>
       <LeftContainer>
-        <h1>Welcome to TJ KLINT's Portfolio</h1>
-        <p>Check out my projects, resume, and more!</p>
+        <h1>{topLine}</h1>
+        <GradientText>I'm TJ Klint.</GradientText>
+        <TypewriterText>{currentText}</TypewriterText>
       </LeftContainer>
       <RightContainer ref={rightContainerRef}>
         <Spaceship src={spaceship} alt="Spaceship" />
