@@ -23,7 +23,7 @@ const LeftContainer = styled.div`
   padding: 40px;
 
   @media (max-width: 768px) {
-    padding-top: 0;  /* Remove upper padding for mobile */
+    padding-top: 0; 
   }
 
   @media (min-width: 768px) {
@@ -43,6 +43,7 @@ const RightContainer = styled.div`
   @media (min-width: 768px) {
     flex: 0 0 65%;
   }
+
 `;
 
 const floatAnimation = keyframes`
