@@ -24,20 +24,18 @@ const MainContent = styled.div`
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Router>
-        <AppContainer>
-          <Header />
-          <MainContent>
-            <Routes>
-              <Route path="/" element={<><Hero /><SocialLinks /></>} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-            </Routes>
-          </MainContent>
-        </AppContainer>
-      </Router>
-    </div>
+    <Router>
+      <AppContainer>
+        <Header />
+        <MainContent>
+          <Routes>
+            <Route path="/" element={<><Hero /><SocialLinks /></>} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </MainContent>
+      </AppContainer>
+    </Router>
   );
 }
 
