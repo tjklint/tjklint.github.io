@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.a89be4f1.js",
+    "main.js": "/static/js/main.985f8e2e.js",
     "static/js/453.d3bffd49.chunk.js": "/static/js/453.d3bffd49.chunk.js",
     "static/media/PokePC.gif": "/static/media/PokePC.b0a25b1be642143a26ad.gif",
     "static/media/InvestSmart.gif": "/static/media/InvestSmart.f5c69df3dd635e82ae67.gif",
     "static/media/spaceship.png": "/static/media/spaceship.4243cec2629db135f8e0.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.a89be4f1.js.map": "/static/js/main.a89be4f1.js.map",
+    "main.985f8e2e.js.map": "/static/js/main.985f8e2e.js.map",
     "453.d3bffd49.chunk.js.map": "/static/js/453.d3bffd49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.a89be4f1.js"
+    "static/js/main.985f8e2e.js"
   ]
 }
