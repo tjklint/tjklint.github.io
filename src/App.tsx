@@ -10,7 +10,8 @@ import Hero from './components/hero/hero.tsx';
 import SocialLinks from './components/social_links/social_links.tsx';
 // @ts-ignore
 import Resume from './components/resume/resume.tsx';
-
+// @ts-ignore
+import Projects from './components/projects/projects.tsx';
 
 const AppContainer = styled.div`
   background-color: #1e1e1e; /* Match the background color of the hero section */
@@ -19,21 +20,23 @@ const AppContainer = styled.div`
 `;
 
 const MainContent = styled.div`
-  padding-top: 60px; /* Adjust padding to accommodate header height */
 `;
 
 const App: React.FC = () => {
   return (
     <div>
       <Router>
-      <AppContainer>
-        <Header />
-        <Routes>
-          <Route path="/" element={<><Hero /><SocialLinks /></>} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-      </AppContainer>
-    </Router>
+        <AppContainer>
+          <Header />
+          <MainContent>
+            <Routes>
+              <Route path="/" element={<><Hero /><SocialLinks /></>} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/projects" element={<Projects />} />
+            </Routes>
+          </MainContent>
+        </AppContainer>
+      </Router>
     </div>
   );
 }
