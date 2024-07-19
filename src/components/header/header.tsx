@@ -100,7 +100,7 @@ const Header = () => {
           <FaUser />
           About
         </NavLink>
-        <NavLink to="#projects" onClick={() => setIsOpen(false)}>
+        <NavLink to="/projects" onClick={() => setIsOpen(false)}>
           <FaCode />
           Projects
         </NavLink>
