@@ -6,7 +6,6 @@ const ResumeContainer = styled.div`
   flex-direction: column;
   padding: 20px 40px;
   color: #fff;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
   margin-top: 60px;
 
   @media (min-width: 768px) {
@@ -50,6 +49,7 @@ const RightColumn = styled.div`
 const ResumeTitle = styled.h1`
   font-size: 2.5em;
   margin-bottom: 20px;
+  padding-bottom: 10px;
   margin-top: -40px; /* Move the title 40px higher */
 `;
 
