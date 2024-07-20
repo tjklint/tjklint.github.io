@@ -17,20 +17,9 @@ const ResumeContainer = styled.div`
 const LeftColumn = styled.div`
   flex: 1;
   margin-right: 20px;
-  position: relative;
 
   @media (max-width: 768px) {
     margin-right: 0;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 10px; /* Adjust to start below the Resume title */
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    background: #d3d3d3;
   }
 `;
 
@@ -47,17 +36,31 @@ const RightColumn = styled.div`
   }
 `;
 
-const ResumeTitle = styled.h1`
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  margin-top: -40px; /* Move the title 40px higher */
+const SectionContainer = styled.div`
+  margin-bottom: 40px;
+  position: relative;
 `;
 
-const JobContainer = styled.div`
+const SectionTitle = styled.h1`
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  padding-left: 20px;
   position: relative;
-  padding-left: 40px;
-  margin-bottom: 40px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: #d3d3d3;
+  }
+`;
+
+const LineContainer = styled.div`
+  position: relative;
+  padding-left: 20px;
 
   &:before {
     content: "";
@@ -70,22 +73,26 @@ const JobContainer = styled.div`
   }
 `;
 
-const JobTitle = styled.h3`
-  font-size: 1.5em;
-  margin: 10px 0;
+const JobContainer = styled.div`
+  margin-bottom: 20px;
+  padding-left: 40px;
   position: relative;
-  padding-left: 20px;
 
   &:before {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -20px;
-    width: 20px;
+    top: 1em; /* Adjust this to align with job title */
+    left: 0; /* Align with the vertical line */
+    width: 20px; /* Adjust this width as necessary */
     height: 2px;
     background: #d3d3d3;
   }
+`;
+
+const JobTitle = styled.h3`
+  font-size: 1.5em;
+  margin: 10px 0;
+  position: relative;
 `;
 
 const Company = styled.span`
@@ -95,11 +102,10 @@ const Company = styled.span`
 const JobDates = styled.p`
   font-size: 1em;
   color: #d3d3d3;
-  margin: 5px 0 10px 20px;
+  margin: 5px 0 10px 0;
 `;
 
 const BulletPoint = styled.li`
-  margin-left: 20px;
   list-style-type: none;
   position: relative;
   padding-left: 20px;
@@ -113,30 +119,58 @@ const BulletPoint = styled.li`
   }
 `;
 
+interface SectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const Section: React.FC<SectionProps> = ({ title, children }) => (
+  <SectionContainer>
+    <SectionTitle>{title}</SectionTitle>
+    <LineContainer>
+      {children}
+    </LineContainer>
+  </SectionContainer>
+);
+
 const Resume: React.FC = () => {
   return (
     <ResumeContainer>
       <LeftColumn>
-        <ResumeTitle>Resume</ResumeTitle>
-        <JobContainer>
-          <JobTitle>Software Developer <Company>@CompanyName</Company></JobTitle>
-          <JobDates>January 2020 - Present</JobDates>
-          <ul>
-            <BulletPoint>Developed and maintained web applications</BulletPoint>
-            <BulletPoint>Collaborated with cross-functional teams</BulletPoint>
-            <BulletPoint>Implemented new features and improvements</BulletPoint>
-          </ul>
-        </JobContainer>
-        <JobContainer>
-          <JobTitle>Intern <Company>@AnotherCompany</Company></JobTitle>
-          <JobDates>June 2019 - December 2019</JobDates>
-          <ul>
-            <BulletPoint>Assisted in the development of internal tools</BulletPoint>
-            <BulletPoint>Conducted testing and debugging</BulletPoint>
-            <BulletPoint>Participated in code reviews</BulletPoint>
-          </ul>
-        </JobContainer>
-        {/* Add more job experiences as needed */}
+        <Section title="Education">
+          <JobContainer>
+            <JobTitle>Computer Science <Company>@John Abbott College</Company></JobTitle>
+            <JobDates>August 2022 - May 2025</JobDates>
+            <ul>
+              <BulletPoint>Developed and maintained web applications</BulletPoint>
+              <BulletPoint>Collaborated with cross-functional teams</BulletPoint>
+              <BulletPoint>Implemented new features and improvements</BulletPoint>
+            </ul>
+          </JobContainer>
+        </Section>
+
+        <Section title="Experience">
+          <JobContainer>
+            <JobTitle>Software Developer <Company>@Bell</Company></JobTitle>
+            <JobDates>May 2024 - August 2024</JobDates>
+            <ul>
+              <BulletPoint>Developed and maintained web applications</BulletPoint>
+              <BulletPoint>Collaborated with cross-functional teams</BulletPoint>
+              <BulletPoint>Implemented new features and improvements</BulletPoint>
+            </ul>
+          </JobContainer>
+          <JobContainer>
+            <JobTitle>Co-Chair <Company>@CUSEC (Canadian University Software Engineering Conference)</Company></JobTitle>
+            <JobDates>January 2024 - Present</JobDates>
+            <ul>
+              <BulletPoint>Overseeing operations for a 15+ team of student organizers including scheduling, sponsorships 
+              and logistics, to ensure a high-quality conference for 250 attendees from 17 schools across 6 provinces</BulletPoint>
+              <BulletPoint>Guiding organizers in developing conference vision, resolving logistic conflicts, and coordinating 
+              details with speakers, sponsors, and hotel venue</BulletPoint>
+              <BulletPoint>Handled recruiting through social media and interviewing more than 30+ applicants.</BulletPoint>
+            </ul>
+          </JobContainer>
+        </Section>
       </LeftColumn>
       <RightColumn>
         <iframe
