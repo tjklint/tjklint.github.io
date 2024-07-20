@@ -56,7 +56,7 @@ const About: React.FC = () => {
       </section>
 
       <section className="about-technologies">
-        <h2>My Technologies</h2>
+        <h2>My Techstack</h2>
         <div className="technology-categories">
           <div className="technology-category">
             <h3>Languages</h3>
