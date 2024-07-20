@@ -10,7 +10,7 @@ const SocialContainer = styled.div`
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'RobotoMono', sans-serif;
 
   @media (max-width: 768px) {
     width: 80%; 
