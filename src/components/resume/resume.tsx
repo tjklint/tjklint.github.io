@@ -6,7 +6,7 @@ const ResumeContainer = styled.div`
   flex-direction: column;
   padding: 20px 40px;
   color: #fff;
-  margin-top: 60px;
+  margin-top: 0px;
   font-family: 'RobotoMono', sans-serif;
 
   @media (min-width: 768px) {
