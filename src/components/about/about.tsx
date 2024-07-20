@@ -101,7 +101,6 @@ const About: React.FC = () => {
               <div className="technology-item"><FaGitlab /><p>GitLab</p></div>
               <div className="technology-item"><FaDocker /><p>Docker</p></div>
               <div className="technology-item"><FaJira /><p>Jira</p></div>
-              <div className="technology-item"><SiCisco /><p>Cisco Packet Tracer</p></div>
               <div className="technology-item"><SiVisualstudio /><p>Visual Studio</p></div>
             </div>
           </div>
