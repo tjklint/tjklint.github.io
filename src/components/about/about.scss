@@ -38,18 +38,14 @@
           font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
         }
   
-        .purple-text {
-          color: #8a2be2;
-        }
-  
         a {
           color: #8a2be2;
           text-decoration: underline;
-          transition: color 0.3s;
+          font-weight: bold;
+        }
   
-          &:hover {
-            color: #d4a1ff;
-          }
+        .purple-text {
+          color: #8a2be2;
         }
       }
   
@@ -78,6 +74,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
   
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+  
         .technology-category {
           background-color: #2a2a2a; /* Slightly lighter grey */
           padding: 20px;
@@ -85,7 +85,7 @@
   
           h3 {
             font-size: 1.5em;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-align: center;
           }
   
@@ -121,46 +121,19 @@
       }
     }
   
-    .about-contact {
-      h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-  
-      form {
-        display: flex;
+    @media (max-width: 768px) {
+      .about-intro {
         flex-direction: column;
   
-        label {
-          margin-bottom: 10px;
-          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
+        .about-text {
+          padding-right: 0;
+          text-align: center;
         }
   
-        input,
-        textarea {
-          margin-bottom: 20px;
-          padding: 10px;
-          font-size: 1em;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
-        }
-  
-        button {
-          padding: 10px 20px;
-          font-size: 1.2em;
-          color: #fff;
-          background-color: #8a2be2;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-          font-family: 'RobotoMono', sans-serif;
-  
-          &:hover {
-            background-color: #7a23d1;
-          }
+        .about-photo {
+          padding-left: 0;
+          margin-top: 20px;
+          flex: 0 0 auto;
         }
       }
     }
