@@ -24,13 +24,13 @@ const About: React.FC = () => {
       <section className="about-intro">
         <div className="about-text">
           <p>
-            Hello! My name is<span className="purple-text"> TJ Klint</span>, well, technically it's <i>Timothy</i> (our little secret). 
+            Hello! My name is <span className="purple-text">TJ Klint</span>, well, technically it's <i>Timothy</i> (our little secret). 
             Anyways, I'm a passionate developer with a love for coding and technology. Most recently, I have finished a Software Developer 
             internship at Bell.
           </p>
           <p>
-            I'm currently <span className="purple-text"> studying at John Abbott College </span> 
-            in my <span className="purple-text"> third year</span>. 
+            I'm currently <span className="purple-text">studying at John Abbott College</span> 
+            in my <span className="purple-text">third year</span>.
           </p>
           <p>
             My interests change greatly depending on my environment, but at the moment, I am most interested by  
@@ -46,8 +46,8 @@ const About: React.FC = () => {
             and travelling!
           </p>
           <p>
-            You can also catch my blogs over on Medium or Dev.to, and if you want to keep up to date with my work you should definetly
-            connect with me over on LinkedIn and GitHub.
+            You can also catch my blogs over on <a href="https://medium.com/@tjklint" target="_blank" rel="noopener noreferrer">Medium</a> or <a href="https://dev.to/tjklint" target="_blank" rel="noopener noreferrer">Dev.to</a>, and if you want to keep up to date with my work you should definitely
+            connect with me over on <a href="https://linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/tjklint" target="_blank" rel="noopener noreferrer">GitHub</a>.
           </p>
         </div>
         <div className="about-photo">
