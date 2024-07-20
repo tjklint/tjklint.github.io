@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 interface NavProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  font-family: 'RobotoMono', sans-serif;
   position: relative; /* Ensure the header container is positioned correctly */
   z-index: 1000; /* Ensure the header is on top */
 `;
@@ -42,7 +44,7 @@ const Nav = styled.nav<NavProps>`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   margin-left: 40px;
@@ -50,6 +52,7 @@ const NavLink = styled.a`
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
+  font-family: 'RobotoMono', sans-serif;
 
   &:hover {
     color: #9b59b6;
@@ -94,19 +97,19 @@ const Header = () => {
       </Hamburger>
       <Nav isOpen={isOpen}>
         {isOpen && <CloseIcon size={30} onClick={() => setIsOpen(false)} />}
-        <NavLink href="/">
+        <NavLink to="/" onClick={() => setIsOpen(false)}>
           <FaHome />
           Home
         </NavLink>
-        <NavLink href="/about">
+        <NavLink to="/about" onClick={() => setIsOpen(false)}>
           <FaUser />
           About
         </NavLink>
-        <NavLink href="/projects">
+        <NavLink to="/projects" onClick={() => setIsOpen(false)}>
           <FaCode />
           Projects
         </NavLink>
-        <NavLink href="/resume">
+        <NavLink to="/resume" onClick={() => setIsOpen(false)}>
           <FaFileAlt />
           Resume
         </NavLink>
