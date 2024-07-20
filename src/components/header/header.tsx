@@ -14,6 +14,7 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  font-family: 'RobotoMono', sans-serif;
 `;
 
 const Logo = styled.div`
@@ -35,8 +36,8 @@ const Nav = styled.nav<NavProps>`
     height: calc(100vh - 60px);
     background-color: #1e1e1e;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the top */
-    padding-top: 40px; /* Add padding to push items down */
+    justify-content: flex-start;
+    padding-top: 40px;
     transition: right 0.3s ease;
   }
 `;
@@ -49,6 +50,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
+  font-family: 'RobotoMono', sans-serif;
 
   &:hover {
     color: #9b59b6;
@@ -74,7 +76,7 @@ const Hamburger = styled.div`
   }
 `;
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -88,17 +90,17 @@ const Header: React.FC = () => {
           <FaHome />
           Home
         </NavLink>
-        <NavLink to="#about" onClick={() => setIsOpen(false)}>
+        <NavLink to="/about">
           <FaUser />
           About
-        </NavLink>
-        <NavLink to="/resume">
-          <FaFileAlt />
-          Resume
         </NavLink>
         <NavLink to="/projects">
           <FaCode />
           Projects
+        </NavLink>
+        <NavLink to="/resume">
+          <FaFileAlt />
+          Resume
         </NavLink>
       </Nav>
     </HeaderContainer>
