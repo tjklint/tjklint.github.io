@@ -9,7 +9,7 @@ const HeroContainer = styled.section`
   background-color: #1e1e1e;
   color: #fff;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-family: 'RobotoMono', sans-serif; /* Use RobotoMono font */
 
   @media (min-width: 768px) {
     flex-direction: row;

@@ -4,14 +4,14 @@ import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 // Import GIFs directly
 import investSmartGif from '../../assets/projects/InvestSmart.gif';
-import pokePCGif from '../../assets/projects/PokePC.gif'
+import pokePCGif from '../../assets/projects/PokePC.gif';
 
 const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 30px 40px;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'RobotoMono', sans-serif;
 `;
 
 const SectionTitle = styled.h2`
@@ -135,7 +135,7 @@ const SmallProject = styled.div`
 const handleComingSoonClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
     alert('Coming soon!');
-  };
+};
 
 const Projects: React.FC = () => {
   return (
