@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaLinkedin, FaGlobe, FaMedium } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaGlobe, FaMedium, FaDev } from 'react-icons/fa';
 
 const SocialContainer = styled.div`
   width: 30%;
@@ -63,6 +63,7 @@ const SocialLinks: React.FC = () => {
         <a href="https://www.linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         <a href="https://tjklint.com" target="_blank" rel="noopener noreferrer"><FaGlobe /></a>
         <a href="https://medium.com/@tjklint" target="_blank" rel="noopener noreferrer"><FaMedium /></a>
+        <a href="https://dev.to/tjklint" target="_blank" rel="noopener noreferrer"><FaDev /></a>
       </SocialIcons>
     </SocialContainer>
   );
