@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 interface NavProps {
   isOpen: boolean;
@@ -14,7 +13,8 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  font-family: 'RobotoMono', sans-serif;
+  position: relative; /* Ensure the header container is positioned correctly */
+  z-index: 1000; /* Ensure the header is on top */
 `;
 
 const Logo = styled.div`
@@ -29,20 +29,20 @@ const Nav = styled.nav<NavProps>`
   align-items: center;
 
   @media (max-width: 768px) {
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 0;
     right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100vh; /* Cover the entire viewport height */
     background-color: #1e1e1e;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 40px;
+    justify-content: center;
     transition: right 0.3s ease;
+    z-index: 999; /* Ensure the nav is on top */
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   display: flex;
   align-items: center;
   margin-left: 40px;
@@ -50,7 +50,6 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
-  font-family: 'RobotoMono', sans-serif;
 
   &:hover {
     color: #9b59b6;
@@ -76,6 +75,14 @@ const Hamburger = styled.div`
   }
 `;
 
+const CloseIcon = styled(FaTimes)`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+`;
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -86,19 +93,20 @@ const Header = () => {
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </Hamburger>
       <Nav isOpen={isOpen}>
-        <NavLink to="/">
+        {isOpen && <CloseIcon size={30} onClick={() => setIsOpen(false)} />}
+        <NavLink href="#home">
           <FaHome />
           Home
         </NavLink>
-        <NavLink to="/about">
+        <NavLink href="#about">
           <FaUser />
           About
         </NavLink>
-        <NavLink to="/projects">
+        <NavLink href="#projects">
           <FaCode />
           Projects
         </NavLink>
-        <NavLink to="/resume">
+        <NavLink href="#resume">
           <FaFileAlt />
           Resume
         </NavLink>
