@@ -4,17 +4,17 @@
     font-weight: 500;
   }
   
-@font-face {
-font-family: 'RobotoMono';
-src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
-font-weight: 400;
-}
-
-@font-face {
-font-family: 'Inter';
-src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
-font-weight: 400;
-}
+  @font-face {
+    font-family: 'RobotoMono';
+    src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
   
   .about-container {
     width: 70%;
@@ -40,6 +40,16 @@ font-weight: 400;
   
         .purple-text {
           color: #8a2be2;
+        }
+  
+        a {
+          color: #8a2be2;
+          text-decoration: underline;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #d4a1ff;
+          }
         }
       }
   
@@ -146,7 +156,7 @@ font-weight: 400;
           border-radius: 5px;
           cursor: pointer;
           transition: background-color 0.3s;
-          font-family: 'RobotoMono', sans-serif; 
+          font-family: 'RobotoMono', sans-serif;
   
           &:hover {
             background-color: #7a23d1;
