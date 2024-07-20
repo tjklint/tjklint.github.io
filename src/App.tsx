@@ -16,6 +16,8 @@ import Resume from './components/resume/resume.tsx';
 import Projects from './components/projects/projects.tsx';
 // @ts-ignore
 import About from './components/about/about.tsx'
+// @ts-ignore
+import Footer from './components/footer/footer.tsx';
 
 const AppContainer = styled.div`
   background-color: #1e1e1e; /* Match the background color of the hero section */
@@ -39,6 +41,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
           </Routes>
         </MainContent>
+        <Footer />
       </AppContainer>
     </Router>
   );
