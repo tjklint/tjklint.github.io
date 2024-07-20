@@ -62,7 +62,7 @@ const SocialLinks: React.FC = () => {
         <a href="https://github.com/tjklint" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         <a href="https://tjklint.com" target="_blank" rel="noopener noreferrer"><FaGlobe /></a>
-        <a href="https://medium.com/@my-profile" target="_blank" rel="noopener noreferrer"><FaMedium /></a>
+        <a href="https://medium.com/@tjklint" target="_blank" rel="noopener noreferrer"><FaMedium /></a>
       </SocialIcons>
     </SocialContainer>
   );
