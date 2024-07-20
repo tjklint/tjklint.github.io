@@ -20,7 +20,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 2px;
   color: #e1e1e1;
