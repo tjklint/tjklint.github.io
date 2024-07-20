@@ -29,7 +29,7 @@ const About: React.FC = () => {
             internship at Bell.
           </p>
           <p>
-            I'm currently <span className="purple-text"> studying at John Abbott College</span> 
+            I'm currently <span className="purple-text"> studying at John Abbott College </span> 
             in my <span className="purple-text"> third year</span>. 
           </p>
           <p>
