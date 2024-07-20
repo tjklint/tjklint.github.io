@@ -94,19 +94,19 @@ const Header = () => {
       </Hamburger>
       <Nav isOpen={isOpen}>
         {isOpen && <CloseIcon size={30} onClick={() => setIsOpen(false)} />}
-        <NavLink href="#home">
+        <NavLink href="/">
           <FaHome />
           Home
         </NavLink>
-        <NavLink href="#about">
+        <NavLink href="/about">
           <FaUser />
           About
         </NavLink>
-        <NavLink href="#projects">
+        <NavLink href="/projects">
           <FaCode />
           Projects
         </NavLink>
-        <NavLink href="#resume">
+        <NavLink href="/resume">
           <FaFileAlt />
           Resume
         </NavLink>
