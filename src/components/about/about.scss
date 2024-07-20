@@ -20,7 +20,7 @@
     width: 70%;
     margin: 0 auto;
     padding: 20px 0;
-    font-family: 'RobotoMono', sans-serif; /* Default font */
+    font-family: 'RobotoMono', sans-serif;
     color: #fff;
   
     .about-intro {
@@ -29,29 +29,48 @@
       align-items: center;
       margin-bottom: 40px;
   
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+  
       .about-text {
         flex: 1;
         padding-right: 20px;
   
-        p {
-          font-size: 1.2em;
-          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
+        @media (max-width: 768px) {
+          padding-right: 0;
         }
   
-        a {
-          color: #8a2be2;
-          text-decoration: underline;
-          font-weight: bold;
+        p {
+          font-size: 1.2em;
+          font-family: 'RobotoMono', sans-serif;
         }
   
         .purple-text {
           color: #8a2be2;
+        }
+  
+        a {
+          color: #8a2be2;
+          font-weight: bold;
+          text-decoration: underline;
+  
+          &:hover {
+            color: #d4a1ff;
+          }
         }
       }
   
       .about-photo {
         flex: 0 0 30%;
         padding-left: 5%;
+  
+        @media (max-width: 768px) {
+          width: 70%;
+          padding-left: 0;
+          margin-top: 20px;
+        }
+  
         img {
           width: 100%;
           border: 3px solid #8a2be2;
@@ -75,7 +94,7 @@
         gap: 20px;
   
         @media (max-width: 768px) {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr; // Change to 1 column below 768px
         }
   
         .technology-category {
@@ -85,7 +104,7 @@
   
           h3 {
             font-size: 1.5em;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
           }
   
@@ -93,6 +112,10 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+  
+            @media (max-width: 500px) {
+              grid-template-columns: repeat(2, 1fr); // Change to 2 columns below 500px
+            }
   
             .technology-item {
               display: flex;
@@ -109,7 +132,7 @@
               p {
                 margin: 0;
                 text-align: center;
-                font-family: 'Inter', sans-serif; /* Use Inter font */
+                font-family: 'Inter', sans-serif;
               }
   
               &:hover {
@@ -121,19 +144,48 @@
       }
     }
   
-    @media (max-width: 768px) {
-      .about-intro {
-        flex-direction: column;
+    .about-contact {
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
   
-        .about-text {
-          padding-right: 0;
-          text-align: center;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        label {
+          margin-bottom: 10px;
+          font-family: 'RobotoMono', sans-serif;
         }
   
-        .about-photo {
-          padding-left: 0;
-          margin-top: 20px;
-          flex: 0 0 auto;
+        input,
+        textarea {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 1em;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-family: 'RobotoMono', sans-serif;
+          width: 80%;
+        }
+  
+        button {
+          padding: 10px 20px;
+          font-size: 1.2em;
+          color: #fff;
+          background-color: #8a2be2;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          font-family: 'RobotoMono', sans-serif;
+  
+          &:hover {
+            background-color: #7a23d1;
+          }
         }
       }
     }
