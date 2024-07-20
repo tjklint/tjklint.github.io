@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../../fonts/RobotoMono/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+@font-face {
+font-family: 'RobotoMono';
+src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'Inter';
+src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
+font-weight: 400;
+}
+  
+  .about-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family: 'RobotoMono', sans-serif; /* Default font */
+    color: #fff;
+  
+    .about-intro {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 40px;
+  
+      .about-text {
+        flex: 1;
+        padding-right: 20px;
+  
+        p {
+          font-size: 1.2em;
+          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
+        }
+  
+        .purple-text {
+          color: #8a2be2;
+        }
+      }
+  
+      .about-photo {
+        flex: 0 0 30%;
+        img {
+          width: 100%;
+          border: 3px solid #8a2be2;
+          border-radius: 10px;
+        }
+      }
+    }
+  
+    .about-technologies {
+      margin-bottom: 40px;
+  
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+  
+      .technology-categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+  
+        .technology-category {
+          background-color: #2a2a2a; /* Slightly lighter grey */
+          padding: 20px;
+          border-radius: 10px;
+  
+          h3 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-align: center;
+          }
+  
+          .technology-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+  
+            .technology-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              font-size: 1.2em;
+              cursor: pointer;
+  
+              i {
+                font-size: 3em;
+                margin-bottom: 10px;
+              }
+  
+              p {
+                margin: 0;
+                text-align: center;
+                font-family: 'Inter', sans-serif; /* Use Inter font */
+              }
+  
+              &:hover {
+                color: #8a2be2;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .about-contact {
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          margin-bottom: 10px;
+          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
+        }
+  
+        input,
+        textarea {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 1em;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-family: 'RobotoMono', sans-serif; /* Use RobotoMono */
+        }
+  
+        button {
+          padding: 10px 20px;
+          font-size: 1.2em;
+          color: #fff;
+          background-color: #8a2be2;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          font-family: 'RobotoMono', sans-serif; 
+  
+          &:hover {
+            background-color: #7a23d1;
+          }
+        }
+      }
+    }
+  }
+  
