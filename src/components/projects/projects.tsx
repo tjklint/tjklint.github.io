@@ -11,7 +11,7 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
   padding: 30px 40px;
   color: #fff;
-  font-family: 'RobotoMono', sans-serif;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const SectionTitle = styled.h2`
@@ -39,16 +39,14 @@ const BigProject = styled.div`
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
     opacity: 0.3; /* Grey the image */
     position: absolute;
-    top: 50%; /* Center the image vertically */
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
     z-index: 0;
     object-fit: cover; /* Ensure the image covers the area */
-    object-position: center; /* Center the image */
   }
 
   h3 {
@@ -93,6 +91,11 @@ const SmallProjectsContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const SmallProject = styled.div`
@@ -101,6 +104,10 @@ const SmallProject = styled.div`
   border-radius: 10px;
   padding: 20px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 70%; /* Same width as big projects on mobile */
+  }
 
   h3 {
     font-size: 1.5em;
@@ -133,8 +140,8 @@ const SmallProject = styled.div`
 `;
 
 const handleComingSoonClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    event.preventDefault();
-    alert('Coming soon!');
+  event.preventDefault();
+  alert('Coming soon!');
 };
 
 const Projects: React.FC = () => {
