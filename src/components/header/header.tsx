@@ -132,9 +132,10 @@ const Header = () => {
           Resume
         </NavLink>
         <Button href="https://github.com/tjklint/tjklint.github.io" target="_blank">
-          <FaCodeBranch />
-          {`or\u00A0`}
-          <FaStar />
+        {`\u00A0`}
+        <FaStar />
+        {`or\u00A0`}
+        <FaCodeBranch />
         </Button>
       </Nav>
     </HeaderContainer>
