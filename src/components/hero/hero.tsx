@@ -140,7 +140,8 @@ const Hero: React.FC = () => {
 
   const typewriterTexts = [
     "Software Developer",
-    "EX-SDE Intern @ Bell",
+    "SDE Intern @ Bell",
+    "Co-Chair @ CUSEC",
     "Ethical Hacker",
     "AI Enthusiast",
     "Coffee Drinker",
