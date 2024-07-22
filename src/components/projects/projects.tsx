@@ -11,7 +11,7 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
   padding: 30px 40px;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'RobotoMono', sans-serif;
 `;
 
 const SectionTitle = styled.h2`
