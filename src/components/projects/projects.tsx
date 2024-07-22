@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 
-// Import GIFs directly
+// Import GIFs and videos directly
 import investSmartGif from '../../assets/projects/InvestSmart.gif';
 import pokePCGif from '../../assets/projects/PokePC.gif';
-import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif'; // Add your GIF here
+import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif';
+import portfolioGif from '../../assets/projects/Portfolio.gif'; 
 
 const ProjectsContainer = styled.div`
   display: flex;
@@ -38,7 +39,7 @@ const ProjectContainer = styled.div`
   position: relative;
   overflow: hidden;
 
-  img {
+  img, video {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -171,6 +172,19 @@ const Projects: React.FC = () => {
             </a>
             <a href="#" onClick={handleComingSoonClick}>
               <FaGlobe /> Try it Out
+            </a>
+          </div>
+        </SmallProject>
+        <SmallProject>
+          <img src={portfolioGif} alt="Portfolio GIF" />
+          <h3>Portfolio</h3>
+          <p>Built in React, this portfolio website is built to last and showcase my best work and skills. Thanks for checking it out!</p>
+          <div className="links">
+            <a href="https://github.com/tjklint/tjklint.github.io" target="_blank" rel="noopener noreferrer">
+              <FaGithub /> See on GitHub
+            </a>
+            <a href="https://tjklint.github.io" onClick={handleComingSoonClick}>
+              <FaGlobe /> You're already here!
             </a>
           </div>
         </SmallProject>
