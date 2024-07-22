@@ -5,6 +5,7 @@ import { FaGithub, FaGlobe } from 'react-icons/fa';
 // Import GIFs directly
 import investSmartGif from '../../assets/projects/InvestSmart.gif';
 import pokePCGif from '../../assets/projects/PokePC.gif';
+import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif'; // Add your GIF here
 
 const ProjectsContainer = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const BigProjectsContainer = styled.div`
   margin-bottom: 40px;
 `;
 
-const BigProject = styled.div`
+const ProjectContainer = styled.div`
   width: 70%;
   margin-bottom: 40px;
   background: rgba(0, 0, 0, 0.6);
@@ -84,6 +85,10 @@ const BigProject = styled.div`
       color: #d4a1ff;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SmallProjectsContainer = styled.div`
@@ -98,12 +103,8 @@ const SmallProjectsContainer = styled.div`
   }
 `;
 
-const SmallProject = styled.div`
+const SmallProject = styled(ProjectContainer)`
   width: 35%;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: left;
 
   @media (max-width: 768px) {
     width: 70%; /* Same width as big projects on mobile */
@@ -111,31 +112,14 @@ const SmallProject = styled.div`
 
   h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
   }
 
   p {
     font-size: 1em;
-    margin-bottom: 20px;
-  }
-
-  .links {
-    display: flex;
-    gap: 10px;
   }
 
   a {
-    color: #9b59b6; /* Adjusted purple color */
     font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
-
-    &:hover {
-      color: #d4a1ff;
-    }
   }
 `;
 
@@ -149,7 +133,7 @@ const Projects: React.FC = () => {
     <ProjectsContainer>
       <SectionTitle>Projects</SectionTitle>
       <BigProjectsContainer>
-        <BigProject>
+        <ProjectContainer>
           <img src={investSmartGif} alt="Invest Smart Project" />
           <h3>Capital Coach</h3>
           <p>A financial management tool designed to empower individuals with smart 
@@ -162,8 +146,8 @@ const Projects: React.FC = () => {
               <FaGlobe /> Try it Out
             </a>
           </div>
-        </BigProject>
-        <BigProject>
+        </ProjectContainer>
+        <ProjectContainer>
           <img src={pokePCGif} alt="PokePC Project" />
           <h3>PokePC</h3>
           <p>PokePC is a Pokedex & a user-friendly web app for managing and organizing Pokemon collections, 
@@ -173,11 +157,23 @@ const Projects: React.FC = () => {
               <FaGithub /> See on GitHub
             </a>
           </div>
-        </BigProject>
-        {/* Add more big projects as needed */}
+        </ProjectContainer>
       </BigProjectsContainer>
 
       <SmallProjectsContainer>
+        <SmallProject>
+          <img src={privacyXPressoGif} alt="PrivacyXPresso Project" />
+          <h3>PrivacyXPresso</h3>
+          <p>PrivacyXPresso simplifies data deletion from big companies, enhancing online security with easy-to-use local tools.</p>
+          <div className="links">
+            <a href="https://github.com/tjklint/BellGeekfest2023" target="_blank" rel="noopener noreferrer">
+              <FaGithub /> See on GitHub
+            </a>
+            <a href="#" onClick={handleComingSoonClick}>
+              <FaGlobe /> Try it Out
+            </a>
+          </div>
+        </SmallProject>
         <SmallProject>
           <h3>More Projects Coming Soon...</h3>
           <p>Stay tuned!</p>
@@ -190,7 +186,6 @@ const Projects: React.FC = () => {
             </a>
           </div>
         </SmallProject>
-        {/* Add more small projects as needed */}
       </SmallProjectsContainer>
     </ProjectsContainer>
   );
