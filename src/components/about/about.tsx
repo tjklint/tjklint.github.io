@@ -10,8 +10,12 @@ import tjklint2 from '../../assets/me/tjklint2.jpg';
 import tjklint3 from '../../assets/me/tjklint3.jpg';
 import tjklint4 from '../../assets/me/tjklint4.jpg';
 import tjklint5 from '../../assets/me/tjklint5.jpg';
+import tjklint6 from '../../assets/me/tjklint6.jpg';
+import tjklint7 from '../../assets/me/tjklint7.jpg';
+import tjklint8 from '../../assets/me/tjklint8.jpg';
 
-const photos = [tjklint1, tjklint2, tjklint3, tjklint4, tjklint5];
+
+const photos = [tjklint2, tjklint3, tjklint4, tjklint5, tjklint6, tjklint6];
 
 const About: React.FC = () => {
   const [photo, setPhoto] = useState('');
