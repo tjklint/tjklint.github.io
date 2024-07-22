@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes, FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 interface NavProps {
@@ -15,12 +15,10 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
-  position: relative; /* Ensure the header container is positioned correctly */
-  z-index: 1000; /* Ensure the header is on top */
 `;
 
 const Logo = styled.div`
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 2px;
   color: #e1e1e1;
@@ -31,16 +29,16 @@ const Nav = styled.nav<NavProps>`
   align-items: center;
 
   @media (max-width: 768px) {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 60px;
     right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
     width: 100%;
-    height: 100vh; /* Cover the entire viewport height */
+    height: calc(100vh - 60px);
     background-color: #1e1e1e;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 40px;
     transition: right 0.3s ease;
-    z-index: 999; /* Ensure the nav is on top */
   }
 `;
 
@@ -78,12 +76,33 @@ const Hamburger = styled.div`
   }
 `;
 
-const CloseIcon = styled(FaTimes)`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  color: #fff;
+const Button = styled.a`
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  padding: 8px 16px;
+  border: 2px solid #9b59b6;
+  color: #9b59b6;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+  font-family: 'RobotoMono', sans-serif;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #9b59b6;
+    color: #fff;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
 `;
 
 const Header = () => {
@@ -96,23 +115,27 @@ const Header = () => {
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </Hamburger>
       <Nav isOpen={isOpen}>
-        {isOpen && <CloseIcon size={30} onClick={() => setIsOpen(false)} />}
-        <NavLink to="/" onClick={() => setIsOpen(false)}>
+        <NavLink to="/">
           <FaHome />
           Home
         </NavLink>
-        <NavLink to="/about" onClick={() => setIsOpen(false)}>
+        <NavLink to="/about">
           <FaUser />
           About
         </NavLink>
-        <NavLink to="/projects" onClick={() => setIsOpen(false)}>
+        <NavLink to="/projects">
           <FaCode />
           Projects
         </NavLink>
-        <NavLink to="/resume" onClick={() => setIsOpen(false)}>
+        <NavLink to="/resume">
           <FaFileAlt />
           Resume
         </NavLink>
+        <Button href="https://github.com/tjklint/tjklint.github.io" target="_blank">
+          <FaCodeBranch />
+          {`or\u00A0`}
+          <FaStar />
+        </Button>
       </Nav>
     </HeaderContainer>
   );
