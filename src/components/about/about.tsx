@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './about.scss';
+// @ts-ignore
+import ContributionMap from '../contribution_map/contribution_map.tsx';
 import { FaGithub, FaGitlab, FaDocker, FaJira, FaJava, FaPython, FaHtml5, FaCss3, FaJs, FaReact, FaDatabase, FaNodeJs } from 'react-icons/fa';
 import { SiCsharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiXamarin, SiVisualstudio, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn, SiWebpack } from 'react-icons/si';
 
@@ -101,6 +103,7 @@ const About: React.FC = () => {
               <div className="technology-item"><FaGitlab /><p>GitLab</p></div>
               <div className="technology-item"><FaDocker /><p>Docker</p></div>
               <div className="technology-item"><FaJira /><p>Jira</p></div>
+              <div className="technology-item"><SiCisco /><p>Cisco Packet Tracer</p></div>
               <div className="technology-item"><SiVisualstudio /><p>Visual Studio</p></div>
             </div>
           </div>
@@ -114,6 +117,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <ContributionMap />
     </div>
   );
 }

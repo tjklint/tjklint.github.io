@@ -1,0 +1,17 @@
+.contribution-map {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .react-github-calendar {
+      display: flex;
+      justify-content: center; /* Center the calendar */
+    }
+  }
+  
