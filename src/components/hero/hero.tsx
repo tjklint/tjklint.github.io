@@ -135,7 +135,10 @@ const Hero: React.FC = () => {
     "Welcome to my corner of the web!",
     "Greetings! I'm thrilled to have you here.",
     "Hi! Thanks for dropping by.",
-    "Hello! Come on in."
+    "It’s dangerous to go alone! Take this portfolio.",
+    "Say hello to my little projects!",
+    "Welcome to the dark side of my portfolio.",
+    "One portfolio to rule them all.",
   ];
 
   const typewriterTexts = [
