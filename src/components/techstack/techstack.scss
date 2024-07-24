@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../../fonts/RobotoMono/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: 'RobotoMono';
+    src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  .techstack {
+    font-family: 'RobotoMono', sans-serif;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .technology-categories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+      }
+  
+      .technology-category {
+        background-color: #2a2a2a; /* Slightly lighter grey */
+        padding: 20px;
+        border-radius: 10px;
+  
+        h3 {
+          font-size: 1.5em;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+  
+        .technology-items {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+  
+          @media (max-width: 500px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+  
+          .technology-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2em;
+            cursor: pointer;
+  
+            i {
+              font-size: 3em;
+              margin-bottom: 10px;
+            }
+  
+            p {
+              margin: 0;
+              text-align: center;
+            }
+  
+            &:hover {
+              color: #8a2be2;
+            }
+          }
+        }
+      }
+    }
+  }
+  
