@@ -45,6 +45,12 @@ Old icons:
 
 
 ### Deploy locally
+Prerequisites:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+  
 ```
 # Clone the repository
 git clone https://github.com/tjklint/tjklint.github.io.git
