@@ -18,6 +18,11 @@ Technologies used:
     <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
 </p>
 
+<h6 align="center">
+  Like what you see? Give me a ⭐ on to support my work!  
+</h6>
+
+
 <!--
 Old icons:
     <p align="center">
@@ -44,6 +49,7 @@ Old icons:
         </a>
     </p>
 -->
+
 ## 📋 Table of Contents
 1.  ⚙️ [Tech Stack](#tech-stack)
 2.  ✨ [Features](#features)
