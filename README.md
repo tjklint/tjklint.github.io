@@ -2,6 +2,10 @@
   <img src="https://github.com/tjklint/tjklint.github.io/blob/main/src/assets/portfoliodemo.gif" alt="Portfolio Demo">
 </div>
 
+<h3 align="center">
+  A fully-custom, responsive, and modern ReactJS portfolio
+</h3>
+
 <h4 align="center">
 Technologies used:
 </h4>
@@ -41,9 +45,8 @@ Old icons:
     </p>
 -->
 
-# 💻 tjklint.com / tjklint.github.io
 
-### ⚙️ Tech Stack
+## ⚙️ Tech Stack
   👉 **React**: To leverage its rich ecosystem and large community support, streamlined development workflow, modern web development practices, and high performance.
   
   👉 **TypeScript**: The added benefit of catching errors early, and lovely static-typing
@@ -54,7 +57,7 @@ Old icons:
   
   👉 **Figma**: Efficient design.
 
-### 🚀 Deploy locally
+## 🚀 Deploy locally
 Prerequisites:
 
 - [Git](https://git-scm.com/)
