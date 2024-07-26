@@ -57,6 +57,28 @@ Old icons:
   
   👉 **Figma**: Efficient design.
 
+## ✨ Features
+
+  1️⃣  **Hero**: Captivating introduction featuring a spaceship with a moving spaceship effect.
+
+  2️⃣  **Work Experience**: Prominent display of professional background for emphasis and credibility, including a resume inbed.
+
+  3️⃣  **Responsiveness**: Seamless adaptability across all devices, ensuring optimal viewing experience for every user.
+
+  4️⃣  **Projects Showcase**: Visually appealing presentation of projects with detailed descriptions and links to GitHub repositories.
+
+  5️⃣  **Tech Stack**: Display of skills and technologies used, organized into categories for easy viewing.
+
+  6️⃣  **Contribution Map**: Interactive GitHub contribution graph showing recent activity.
+
+  7️⃣  **Social Links**: Integration of social media icons linking to profiles on platforms like LinkedIn, GitHub, Medium, and Dev.to.
+
+  8️⃣  **Custom Fonts**: Implementation of custom fonts for a unique and polished look.
+
+  9️⃣  **Footer**: Well-designed footer with developer credits, social links, and copyright information.
+
+  1️⃣0️⃣  **Code Architecture**: Clean and maintainable code architecture with a focus on reusability and scalability.
+
 ## 🚀 Deploy locally
 Prerequisites:
 
@@ -77,6 +99,9 @@ npm i
 # Run the local server
 npm run start
 ```
+
+
+
 
 # Welcome!
 This README will be completed soon. If you want to see my portfolio in very early stages of development check it out at:
