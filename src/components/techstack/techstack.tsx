@@ -3,9 +3,9 @@ import { FaGithub, FaGitlab, FaDocker, FaJira, FaJava, FaPython, FaHtml5, FaCss3
 import { SiCsharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiXamarin, SiVisualstudio, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn, SiWebpack } from 'react-icons/si';
 import './techstack.scss';
 
-const TechStack: React.FC = () => {
+const Techstack: React.FC = () => {
   return (
-    <section className="techstack">
+    <section className="about-technologies">
       <h2>My Techstack</h2>
       <div className="technology-categories">
         <div className="technology-category">
@@ -66,6 +66,6 @@ const TechStack: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
-export default TechStack;
+export default Techstack;
