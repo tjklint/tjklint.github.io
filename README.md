@@ -44,9 +44,12 @@ Old icons:
         </a>
     </p>
 -->
+## 📋 Table of Contents
+1.  ⚙️ [Tech Stack](#tech-stack)
+2.  ✨ [Features](#features)
+3.  🚀 [Deploy Locally](#deploy)
 
-
-## ⚙️ Tech Stack
+## <a name="tech-stack">⚙️ Tech Stack </a>
   👉 **React**: To leverage its rich ecosystem and large community support, streamlined development workflow, modern web development practices, and high performance.
   
   👉 **TypeScript**: The added benefit of catching errors early, and lovely static-typing
@@ -57,7 +60,7 @@ Old icons:
   
   👉 **Figma**: Efficient design.
 
-## ✨ Features
+## <a name="features">✨ Features</a>
 
   1️⃣  **Hero**: Captivating introduction featuring a spaceship with a moving spaceship effect.
 
@@ -79,7 +82,7 @@ Old icons:
 
   1️⃣0️⃣  **Code Architecture**: Clean and maintainable code architecture with a focus on reusability and scalability.
 
-## 🚀 Deploy locally
+## <a name="deploy">🚀 Deploy locally</a>
 Prerequisites:
 
 - [Git](https://git-scm.com/)
