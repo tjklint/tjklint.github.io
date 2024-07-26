@@ -44,11 +44,15 @@ Old icons:
 # 💻 tjklint.com / tjklint.github.io
 
 ### ⚙️ Tech Stack
-  👉 React: To leverage its rich ecosystem and large community support, streamlined development workflow, modern web development practices, and high performance.
-  👉 TypeScript: The added benefit of catching errors early, and lovely static-typing
-  👉 SASS: Easier to organize and more added features compared to CSS
-  👉 NodeJS: A unified development process.
-  👉 Figma: Efficient design.
+  👉 **React**: To leverage its rich ecosystem and large community support, streamlined development workflow, modern web development practices, and high performance.
+  
+  👉 **TypeScript**: The added benefit of catching errors early, and lovely static-typing
+  
+  👉 **SASS**: Easier to organize and more added features compared to CSS
+  
+  👉 **NodeJS**: A unified development process.
+  
+  👉 **Figma**: Efficient design.
 
 ### 🚀 Deploy locally
 Prerequisites:
