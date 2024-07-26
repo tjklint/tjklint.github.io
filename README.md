@@ -1,5 +1,28 @@
-![Video Title](https://github.com/tjklint/tjklint.github.io/blob/main/src/assets/portfoliodemo.gif)
-> Demo of the intitial splash page.
+<div align="center">
+  <img src="https://github.com/tjklint/tjklint.github.io/blob/main/src/assets/portfoliodemo.gif" alt="Portfolio Demo">
+</div>
+
+# tjklint.com / tjklint.github.io
+
+
+### Deploy locally
+```
+# Clone the repository
+git clone https://github.com/tjklint/tjklint.github.io.git
+
+# Navigate to the project directory
+cd tjklint.github.io
+
+# Install dependencies
+npm i
+
+# Run the local server
+npm run start
+```
+
+
+
+
 # Welcome!
 This README will be completed soon. If you want to see my portfolio in very early stages of development check it out at:
 [tjklint.github.io]([tjklint.github.io](https://tjklint.github.io/))
