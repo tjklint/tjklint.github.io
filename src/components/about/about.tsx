@@ -3,7 +3,7 @@ import './about.scss';
 // @ts-ignore
 import ContributionMap from '../contribution_map/contribution_map.tsx';
 // @ts-ignore
-import TechStack from '../techstack/techstack.tsx';
+import Techstack from '../techstack/techstack.tsx';
 
 import tjklint1 from '../../assets/me/tjklint1.jpg';
 import tjklint2 from '../../assets/me/tjklint2.jpg';
@@ -14,7 +14,7 @@ import tjklint6 from '../../assets/me/tjklint6.jpg';
 import tjklint7 from '../../assets/me/tjklint7.jpg';
 import tjklint8 from '../../assets/me/tjklint8.jpg';
 
-const photos = [tjklint2, tjklint3, tjklint4, tjklint5, tjklint6, tjklint6];
+const photos = [tjklint2, tjklint3, tjklint4, tjklint5, tjklint6, tjklint8];
 
 const About: React.FC = () => {
   const [photo, setPhoto] = useState('');
@@ -60,7 +60,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <TechStack />
+      <Techstack />
 
       <ContributionMap />
     </div>
