@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
-  A fully-custom, responsive, and modern ReactJS portfolio
+  A fully-custom, responsive, and modern ReactTS portfolio
 </h3>
 
 <h4 align="center">
