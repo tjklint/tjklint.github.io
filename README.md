@@ -19,7 +19,7 @@ Technologies used:
 </p>
 
 <h6 align="center">
-  Like what you see? Give me a ⭐ on to support my work!  
+  Like what you see? Give me a ⭐ to support my work!  
 </h6>
 
 
