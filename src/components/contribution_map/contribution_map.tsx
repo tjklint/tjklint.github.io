@@ -4,8 +4,8 @@ import './contribution_map.scss';
 
 const ContributionMap: React.FC = () => {
   const theme = {
-    light: ['#f5e6ff', '#d9b3ff', '#b366ff', '#7a00cc', '#4c0080'],
-    dark: ['#f5e6ff', '#d9b3ff', '#b366ff', '#7a00cc', '#4c0080']
+    light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'],
+    dark: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']
   };
 
   return (
@@ -15,8 +15,10 @@ const ContributionMap: React.FC = () => {
         username="tjklint"
         blockSize={15}
         fontSize={16}
-        theme={{ light: ['#f5e6ff', '#d9b3ff', '#b366ff', '#7a00cc', '#4c0080'], 
-            dark: ['#f5e6ff', '#d9b3ff', '#b366ff', '#7a00cc', '#4c0080']}}
+        theme={{ 
+          light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'], 
+          dark: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'] 
+        }}
       />
     </div>
   );
