@@ -8,7 +8,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="header-container">
-      <div className="logo">TJ KLINT</div>
+      <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
+        TJ KLINT
+      </Link>
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes size={30} className="close-icon" /> : <FaBars size={30} />}
       </div>
