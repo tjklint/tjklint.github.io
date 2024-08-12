@@ -26,9 +26,12 @@ const Resume: React.FC = () => {
               </h3>
               <p className="job-dates">May 2024 - August 2024</p>
               <ul>
-                <li className="bullet-point">Developed and maintained web applications</li>
-                <li className="bullet-point">Collaborated with cross-functional teams</li>
-                <li className="bullet-point">Implemented new features and improvements</li>
+                <li className="bullet-point">Developed a web app to streamline internal ticket creation 
+                  using the Jira API.</li>
+                <li className="bullet-point">Utilized the MEVN stack (MongoDB, Express, Vue.js, Node.js) 
+                  for development.</li>
+                <li className="bullet-point">Enhanced efficiency of internal processes at Bell through 
+                  automation.</li>
               </ul>
             </div>
             <div className="job-container">
@@ -46,7 +49,7 @@ const Resume: React.FC = () => {
                   details with speakers, sponsors, and hotel venue
                 </li>
                 <li className="bullet-point">
-                  Handled recruiting through social media and interviewing more than 30+ applicants.
+                  Handled recruiting through social media and interviewing more than 90+ applicants.
                 </li>
               </ul>
             </div>
