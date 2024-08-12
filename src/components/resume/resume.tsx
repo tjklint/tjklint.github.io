@@ -13,11 +13,6 @@ const Resume: React.FC = () => {
                 Computer Science <span className="company">@John Abbott College</span>
               </h3>
               <p className="job-dates">August 2022 - May 2025</p>
-              <ul>
-                <li className="bullet-point">Developed and maintained web applications</li>
-                <li className="bullet-point">Collaborated with cross-functional teams</li>
-                <li className="bullet-point">Implemented new features and improvements</li>
-              </ul>
             </div>
           </div>
         </div>
