@@ -5,7 +5,7 @@ import './contribution_map.scss';
 const ContributionMap: React.FC = () => {
   const theme = {
     light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'],
-    dark: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']
+    dark:  ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']
   };
 
   return (
@@ -17,8 +17,7 @@ const ContributionMap: React.FC = () => {
         fontSize={16}
         theme={{ 
           light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'], 
-          dark: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'] 
-        }}
+          dark:  ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']}}
       />
     </div>
   );
