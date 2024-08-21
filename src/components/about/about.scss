@@ -19,9 +19,17 @@
 .about-container {
   width: 70%;
   margin: 0 auto;
-  padding: 20px 0;
   font-family: 'RobotoMono', sans-serif;
-  color: #fff;
+  color: white;
+
+  h2 {
+    font-size: 2em;
+    padding-top: 10px;
+    margin: 0;
+    color: #fff;
+    font-family: 'RobotoMono', sans-serif;
+    text-align: left;
+  }
 
   .about-intro {
     display: flex;
@@ -71,78 +79,14 @@
     }
   }
 
-  .about-technologies {
+  .about-technologies,
+  .about-contact {
     margin-bottom: 40px;
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .technology-categories {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-
-      @media (max-width: 900px) {
-        grid-template-columns: 1fr;
-      }
-
-      .technology-category {
-        background-color: #2a2a2a;
-        padding: 20px;
-        border-radius: 10px;
-
-        h3 {
-          font-size: 1.5em;
-          margin-bottom: 30px;
-          text-align: center;
-        }
-
-        .technology-items {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
-
-          @media (max-width: 500px) {
-            grid-template-columns: 1fr;
-          }
-
-          .technology-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.2em;
-            cursor: pointer;
-
-            i {
-              font-size: 3em;
-              margin-bottom: 10px;
-            }
-
-            p {
-              margin: 0;
-              text-align: center;
-              font-family: 'Inter', sans-serif;
-            }
-
-            &:hover {
-              color: #8a2be2;
-            }
-          }
-        }
-      }
-    }
+    
   }
 
   .about-contact {
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
     form {
       display: flex;
       flex-direction: column;
@@ -175,6 +119,84 @@
 
         &:hover {
           background-color: #7a23d1;
+        }
+      }
+    }
+  }
+}
+
+.about-technologies-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: 'RobotoMono', sans-serif;
+  color: #fff;
+
+  .about-technologies {
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+      font-family: 'RobotoMono', sans-serif;
+    }
+
+    .technology-categories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+      }
+
+      .technology-category {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+
+        h3 {
+          font-size: 1.5em;
+          margin-bottom: 30px;
+          text-align: center;
+          color: #fff;
+        }
+
+        .technology-items {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+
+          @media (max-width: 500px) {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .technology-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #fff;
+
+            i {
+              font-size: 3em;
+              margin-bottom: 10px;
+              color: #fff;
+            }
+
+            p {
+              margin: 0;
+              text-align: center;
+              color: #fff;
+              font-family: 'Inter', sans-serif;
+            }
+
+            &:hover {
+              color: #8a2be2;
+            }
+          }
         }
       }
     }

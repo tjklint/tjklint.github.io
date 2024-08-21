@@ -23,6 +23,7 @@ const About: React.FC = () => {
 
   return (
     <div className="about-container">
+      <h2 className="about-title">About Me</h2>
       <section className="about-intro">
         <div className="about-text">
           <p>
