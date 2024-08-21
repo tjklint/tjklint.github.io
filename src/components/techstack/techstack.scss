@@ -1,22 +1,12 @@
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('../../fonts/RobotoMono/RobotoMono-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
 .about-technologies {
   font-family: 'RobotoMono', sans-serif;
+  color: #fff; // This ensures the text inside the tech stack section is white
 
   h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
+    color: #fff; // Make the heading white
   }
 
   .technology-categories {
@@ -32,11 +22,13 @@
       background-color: #2a2a2a;
       padding: 20px;
       border-radius: 10px;
+      color: #fff; // Ensure the text inside the technology-category is white
 
       h3 {
         font-size: 1.5em;
         margin-bottom: 30px;
         text-align: center;
+        color: #fff; // Make the subheading white
       }
 
       .technology-items {
@@ -54,15 +46,18 @@
           align-items: center;
           font-size: 1.2em;
           cursor: pointer;
+          color: #fff; // Make the text of each technology item white
 
           i {
             font-size: 3em;
             margin-bottom: 10px;
+            color: #fff; // Make the icons white
           }
 
           p {
             margin: 0;
             text-align: center;
+            color: #fff; // Ensure the paragraph text is white
           }
 
           &:hover {
