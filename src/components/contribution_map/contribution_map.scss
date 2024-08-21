@@ -1,18 +1,53 @@
-.contribution-map {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('../../fonts/RobotoMono/RobotoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+.contribution-map-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
   color: #fff;
+  font-family: 'RobotoMono', sans-serif;
 
-  h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #fff; 
-  }
-
-  .react-github-calendar {
+  .contribution-map {
+    margin-top: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: 'RobotoMono', sans-serif;
+      text-align: left; 
+    }
+
+    .react-github-calendar {
+      display: flex;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      width: 100%; 
+    }
+
+    .calendar-wrapper {
+      display: flex;
+      justify-content: center; 
+      width: 100%;
+    }
   }
 }

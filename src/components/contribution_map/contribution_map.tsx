@@ -1,24 +1,31 @@
-import React from 'react';
-import GitHubCalendar from 'react-github-calendar';
-import './contribution_map.scss';
+import React from "react";
+import GitHubCalendar from "react-github-calendar";
+import "./contribution_map.scss";
 
 const ContributionMap: React.FC = () => {
   const theme = {
-    light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'],
-    dark:  ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']
+    light: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
+    dark: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
   };
 
   return (
-    <div className="contribution-map">
-      <h2>My GitHub Contributions</h2>
-      <GitHubCalendar 
-        username="tjklint"
-        blockSize={15}
-        fontSize={16}
-        theme={{ 
-          light: ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699'], 
-          dark:  ['#e6ccff', '#c299ff', '#9f66ff', '#7a33cc', '#592699']}}
-      />
+    <div className="contribution-map-container">
+      <section className="contribution-map">
+        <h2>My Github Contributions</h2>
+        <div className="react-github-calendar">
+          <div className="calendar-wrapper">
+            <GitHubCalendar
+              username="tjklint"
+              blockSize={15}
+              fontSize={16}
+              theme={{
+                light: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
+                dark: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
+              }}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
