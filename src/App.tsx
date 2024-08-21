@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 import GlobalStyles from './globalstyles';
 
@@ -15,9 +15,13 @@ import Resume from './components/resume/resume.tsx';
 // @ts-ignore
 import Projects from './components/projects/projects.tsx';
 // @ts-ignore
-import About from './components/about/about.tsx'
+import About from './components/about/about.tsx';
 // @ts-ignore
 import Footer from './components/footer/footer.tsx';
+// @ts-ignore
+import Techstack from './components/techstack/techstack.tsx';
+// @ts-ignore
+import ContributionMap from './components/contribution_map/contribution_map.tsx';
 
 const AppContainer = styled.div`
   background-color: #1e1e1e; /* Match the background color of the hero section */
@@ -34,12 +38,19 @@ const App: React.FC = () => {
       <AppContainer>
         <Header />
         <MainContent>
-          <Routes>
-            <Route path="/" element={<><Hero /><SocialLinks /></>} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
+          <Hero />
+          
+          <About />
+          
+          <Resume />
+          
+          <Projects />
+          
+          <Techstack />
+          
+          <ContributionMap />
+          
+          <SocialLinks />
         </MainContent>
         <Footer />
       </AppContainer>
