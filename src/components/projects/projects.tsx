@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 
-// Import GIFs and videos directly
 import investSmartGif from '../../assets/projects/InvestSmart.gif';
 import pokePCGif from '../../assets/projects/PokePC.gif';
 import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif';
@@ -30,7 +29,7 @@ const BigProjectsContainer = styled.div`
 `;
 
 const ProjectContainer = styled.div`
-  width: 70%;
+  width: 70%; /* Same width as other components on the page */
   margin-bottom: 40px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -43,12 +42,12 @@ const ProjectContainer = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    opacity: 0.3; /* Grey the image */
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    object-fit: cover; /* Ensure the image covers the area */
+    object-fit: cover;
   }
 
   h3 {
@@ -74,13 +73,13 @@ const ProjectContainer = styled.div`
   }
 
   a {
-    color: #9b59b6; /* Adjusted purple color */
+    color: #9b59b6;
     font-size: 1.2em;
     display: flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 
     &:hover {
       color: #d4a1ff;
@@ -105,10 +104,14 @@ const SmallProjectsContainer = styled.div`
 `;
 
 const SmallProject = styled(ProjectContainer)`
-  width: 35%;
+  width: 35%; /* Half the width of the big project container */
+
+  @media (max-width: 1200px) {
+    width: 48%; /* Slightly smaller width for better fit */
+  }
 
   @media (max-width: 768px) {
-    width: 70%; /* Same width as big projects on mobile */
+    width: 100%; /* Full width on smaller screens */
   }
 
   h3 {
