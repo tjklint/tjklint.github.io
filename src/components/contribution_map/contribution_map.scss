@@ -22,7 +22,7 @@
   padding: 20px 0;
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
-
+  
   .contribution-map {
     margin-top: 40px;
     display: flex;
@@ -34,13 +34,17 @@
       margin-bottom: 20px;
       color: #fff;
       font-family: 'RobotoMono', sans-serif;
-      text-align: left; 
+      text-align: left;
+      .react-github-calendar {
+        margin-top: 20px;
+        text-align: center;
+      }
     }
 
     .react-github-calendar {
       display: flex;
       justify-content: center;
-      font-family: 'Inter', sans-serif;
+      font-family: 'RobotoMono', sans-serif;
       width: 100%; 
     }
 
