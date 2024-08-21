@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './about.scss';
-// @ts-ignore
-import ContributionMap from '../contribution_map/contribution_map.tsx';
-// @ts-ignore
-import Techstack from '../techstack/techstack.tsx';
+
 
 import tjklint1 from '../../assets/me/tjklint1.jpg';
 import tjklint2 from '../../assets/me/tjklint2.jpg';
@@ -60,9 +57,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <Techstack />
-
-      <ContributionMap />
+      
     </div>
   );
 }
