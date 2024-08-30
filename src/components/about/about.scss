@@ -34,7 +34,7 @@
   .about-intro {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Align items at the start */
+    align-items: flex-start; 
     margin-bottom: 40px;
   
     @media (max-width: 768px) {
