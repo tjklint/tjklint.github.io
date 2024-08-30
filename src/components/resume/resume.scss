@@ -1,13 +1,16 @@
 .resume-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  margin-top: 0px;
+  width: 80%;
+  margin: 0 auto; /* Center the container horizontally */
   font-family: 'RobotoMono', sans-serif;
 
   @media (min-width: 768px) {
     flex-direction: row;
+    justify-content: center; /* Ensure horizontal centering in row direction */
   }
 }
 
