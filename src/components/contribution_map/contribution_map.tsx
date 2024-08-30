@@ -32,6 +32,8 @@ const ContributionMap: React.FC = () => {
                 light: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
                 dark: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
               }}
+              labels={labels}
+
             />
           </div>
         </div>
