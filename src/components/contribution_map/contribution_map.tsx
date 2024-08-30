@@ -13,8 +13,8 @@ const ContributionMap: React.FC = () => {
     weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     totalCount: '{{count}} contributions in 2024', 
     legend: {
-      less: 'less',
-      more: 'more',
+      less: 'Less',
+      more: 'More',
     },
   };
 
