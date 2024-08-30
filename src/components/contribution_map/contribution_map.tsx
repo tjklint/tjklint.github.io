@@ -9,7 +9,7 @@ const ContributionMap: React.FC = () => {
   };
 
   const labels = {
-    months: ['Jan', 'Feb', 'M', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+    months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     weekdays: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
     totalCount: '{{count}} in {{year}}', 
     legend: {
