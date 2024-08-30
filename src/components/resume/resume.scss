@@ -5,18 +5,17 @@
   align-items: center;
   color: #fff;
   width: 80%;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto; 
   font-family: 'RobotoMono', sans-serif;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: center; /* Ensure horizontal centering in row direction */
+    justify-content: center;
   }
 }
 
 .left-column {
   flex: 1;
-  margin-right: 20px;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -37,7 +36,6 @@
 }
 
 .section-container {
-  margin-bottom: 40px;
   position: relative;
 }
 
@@ -75,7 +73,6 @@
 
 .job-container {
   margin-bottom: 20px;
-  padding-left: 40px;
   position: relative;
 
   &:before {
