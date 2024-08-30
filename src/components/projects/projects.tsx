@@ -15,7 +15,7 @@ const ProjectsContainer = styled.div`
   font-family: 'RobotoMono', sans-serif;
   padding: 0 10px;
   overflow-x: hidden;
-  width: 70%; /* Container width is 70% of the page */
+  width: 80%; /* Container width is 70% of the page */
   margin: 0 auto; /* Center the container */
 `;
 
@@ -165,7 +165,7 @@ const SmallProject = styled.div`
     }
   }
 
-  
+
   @media (max-width: 1250px) {
     width: 45%;
   }
