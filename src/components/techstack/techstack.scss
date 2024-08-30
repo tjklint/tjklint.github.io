@@ -57,15 +57,15 @@
             flex-direction: column;
             align-items: center;
             font-size: 1.2em;
-            cursor: pointer;
             color: #fff;
-            transition: color 0.3s ease; 
+            transition: color 0.3s ease;
+            cursor: default; /* Ensures the cursor stays default */
 
             i {
               font-size: 3em;
               margin-bottom: 10px;
               color: inherit;
-              transition: inherit; 
+              transition: inherit;
             }
 
             p {
