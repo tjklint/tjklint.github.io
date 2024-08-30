@@ -103,12 +103,12 @@ const ProjectContainer = styled.div`
 const SmallProjectsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Ensures space between the two projects */
-  width: 100%; /* Full width of the container */
+  justify-content: space-between; 
+  width: 100%; 
 `;
 
 const SmallProject = styled.div`
-  width: 45%; /* Two small projects per row with a small gap */
+  width: 45%; 
   margin-bottom: 40px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -174,8 +174,8 @@ const SmallProject = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%; /* Full width on tablets and smaller screens */
-    margin: 0 auto 20px auto; /* Margin for spacing */
+    width: 100%;
+    margin: 0 auto 20px auto;
   }
 `;
 
