@@ -59,20 +59,20 @@
             font-size: 1.2em;
             cursor: pointer;
             color: #fff;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease; /* Ensure uniform transition */
 
             i {
               font-size: 3em;
               margin-bottom: 10px;
               color: inherit;
-              transition: color 0.3s ease;
+              transition: inherit; /* Use the same transition as the parent */
             }
 
             p {
               margin: 0;
               text-align: center;
               color: inherit;
-              transition: color 0.3s ease;
+              transition: inherit; /* Use the same transition as the parent */
             }
 
             &:hover {
