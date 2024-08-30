@@ -15,8 +15,8 @@ const ProjectsContainer = styled.div`
   font-family: 'RobotoMono', sans-serif;
   padding: 0 10px;
   overflow-x: hidden;
-  width: 80%; /* Container width is 70% of the page */
-  margin: 0 auto; /* Center the container */
+  width: 80%; 
+  margin: 0 auto; 
 `;
 
 const SectionTitle = styled.h2`
@@ -24,7 +24,6 @@ const SectionTitle = styled.h2`
   margin-bottom: 20px;
   text-align: left;
   width: 100%;
-  padding-left: 10px;
   box-sizing: border-box;
 `;
 
@@ -32,11 +31,11 @@ const BigProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Full width within the container */
+  width: 100%; 
 `;
 
 const ProjectContainer = styled.div`
-  width: 100%; /* Full width for big projects */
+  width: 100%; 
   margin-bottom: 40px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
