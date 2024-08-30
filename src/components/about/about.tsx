@@ -45,6 +45,11 @@ const About: React.FC = () => {
             where I'm able to hone skills on the fly to improve and deliver on time.
           </p>
           <p>
+            My love for tech goes beyond the classroom. I’m always eager to dive into the world of hackathons and tech conferences. 
+            My passion for these events led me to join my favorite conference, CUSEC, as the Director of Events in 2024. This year, 
+            I'm thrilled to be stepping up as Co-Chair for 2025.
+          </p>
+          <p>
             Outside of tech, you'll typically find me playing hockey, listening/discovering some live music, using the oxford comma, 
             and travelling!
           </p>
