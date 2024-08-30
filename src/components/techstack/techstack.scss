@@ -59,26 +59,24 @@
             font-size: 1.2em;
             cursor: pointer;
             color: #fff;
+            transition: color 0.3s ease;
 
             i {
               font-size: 3em;
               margin-bottom: 10px;
-              color: #fff;
-              transition: color 0.3s ease; 
+              color: inherit;
+              transition: color 0.3s ease;
             }
 
             p {
               margin: 0;
               text-align: center;
-              color: #fff;
+              color: inherit;
+              transition: color 0.3s ease;
             }
 
             &:hover {
               color: #8a2be2;
-
-              i {
-                color: #8a2be2;
-              }
             }
           }
         }
