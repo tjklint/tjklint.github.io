@@ -165,6 +165,7 @@ const SmallProject = styled.div`
     }
   }
 
+  
   @media (max-width: 1250px) {
     width: 45%;
   }
