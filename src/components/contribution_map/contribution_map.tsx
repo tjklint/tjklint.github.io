@@ -9,9 +9,9 @@ const ContributionMap: React.FC = () => {
   };
 
   const labels = {
-    months: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+    months: ['Jan', 'Feb', 'M', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
     weekdays: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
-    totalCount: '{{count}} in {{year}}', // Shortened string for mobile
+    totalCount: '{{count}} in {{year}}', 
     legend: {
       less: 'Weniger',
       more: 'Mehr',
@@ -33,7 +33,6 @@ const ContributionMap: React.FC = () => {
                 dark: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
               }}
               labels={labels}
-
             />
           </div>
         </div>
