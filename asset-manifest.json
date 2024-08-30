@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb2dd1d4.css",
-    "main.js": "/static/js/main.9fd2f1bb.js",
+    "main.css": "/static/css/main.73d805d7.css",
+    "main.js": "/static/js/main.073bbe0b.js",
     "static/js/453.a2e6c992.chunk.js": "/static/js/453.a2e6c992.chunk.js",
-    "static/media/Portfolio.gif": "/static/media/Portfolio.3621e4d653665a71ce5f.gif",
-    "static/media/PokePC.gif": "/static/media/PokePC.b0a25b1be642143a26ad.gif",
-    "static/media/tjklint2.jpg": "/static/media/tjklint2.19779b5f8c006d3d24dd.jpg",
-    "static/media/tjklint6.jpg": "/static/media/tjklint6.840869c52c37c2d0d2d0.jpg",
-    "static/media/tjklint3.jpg": "/static/media/tjklint3.ccd172ccb29df945c379.jpg",
-    "static/media/tjklint5.jpg": "/static/media/tjklint5.3609fceb9512f749b67c.jpg",
-    "static/media/PrivacyXPresso.gif": "/static/media/PrivacyXPresso.2c9a9ed257504a86dd51.gif",
-    "static/media/tjklint4.jpg": "/static/media/tjklint4.ef5251bd189049002788.jpg",
-    "static/media/InvestSmart.gif": "/static/media/InvestSmart.f5c69df3dd635e82ae67.gif",
-    "static/media/spaceship.png": "/static/media/spaceship.4243cec2629db135f8e0.png",
+    "static/media/Portfolio.gif": "/static/media/Portfolio.790a6e5526bfc90474d2.gif",
+    "static/media/PokePC.gif": "/static/media/PokePC.0e1b9e00f819bd234496.gif",
+    "static/media/tjklint2.jpg": "/static/media/tjklint2.cb32078421a9e22c9960.jpg",
+    "static/media/tjklint6.jpg": "/static/media/tjklint6.ab3c84ddb2c2cff9bff0.jpg",
+    "static/media/tjklint3.jpg": "/static/media/tjklint3.a95cfb4eea53cfeb75ed.jpg",
+    "static/media/tjklint5.jpg": "/static/media/tjklint5.3567d4fa29bfe7b01ffa.jpg",
+    "static/media/PrivacyXPresso.gif": "/static/media/PrivacyXPresso.8f4426f1086da1ed2fbc.gif",
+    "static/media/tjklint4.jpg": "/static/media/tjklint4.1901de44b0461ee41ccf.jpg",
+    "static/media/InvestSmart.gif": "/static/media/InvestSmart.6d622b5ac8cbeacb2a9f.gif",
+    "static/media/spaceship.png": "/static/media/spaceship.d0dcfecd0a85b6b564ee.png",
     "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/tjklint8.jpg": "/static/media/tjklint8.8407fbde3f2cb07f6a71.jpg",
+    "static/media/tjklint8.jpg": "/static/media/tjklint8.acd9cd68a8876cf021d7.jpg",
     "static/media/RobotoMono-Regular.ttf": "/static/media/RobotoMono-Regular.94ffabb10cbc81ee42ba.ttf",
     "static/media/RobotoMono-Medium.ttf": "/static/media/RobotoMono-Medium.275e41b58d96111c1152.ttf",
     "index.html": "/index.html",
-    "main.bb2dd1d4.css.map": "/static/css/main.bb2dd1d4.css.map",
-    "main.9fd2f1bb.js.map": "/static/js/main.9fd2f1bb.js.map",
+    "main.73d805d7.css.map": "/static/css/main.73d805d7.css.map",
+    "main.073bbe0b.js.map": "/static/js/main.073bbe0b.js.map",
     "453.a2e6c992.chunk.js.map": "/static/js/453.a2e6c992.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb2dd1d4.css",
-    "static/js/main.9fd2f1bb.js"
+    "static/css/main.73d805d7.css",
+    "static/js/main.073bbe0b.js"
   ]
 }
