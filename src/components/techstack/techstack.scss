@@ -19,11 +19,11 @@
       gap: 20px;
 
       @media (max-width: 1024px) {
-        grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+        grid-template-columns: 1fr 1fr; 
       }
 
       @media (max-width: 500px) {
-        grid-template-columns: 1fr; /* One column on small screens */
+        grid-template-columns: 1fr; 
       }
 
       .technology-category {
@@ -45,7 +45,7 @@
           gap: 10px;
 
           @media (max-width: 1024px) {
-            grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+            grid-template-columns: repeat(2, 1fr); 
           }
 
           @media (max-width: 500px) {
