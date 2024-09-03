@@ -1,21 +1,3 @@
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('../../fonts/RobotoMono/RobotoMono-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('../../fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../../fonts/Inter/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
 .about-container {
   width: 80%;
   margin: 0 auto;
@@ -55,7 +37,7 @@
       p {
         font-size: 1.2em;
         font-family: 'RobotoMono', sans-serif;
-        margin-bottom: 20px; /* Add consistent margin between paragraphs */
+        margin-bottom: 20px;
       }
   
       .purple-text {
@@ -67,8 +49,8 @@
       flex: 0 0 30%;
       padding-left: 5%;
       display: flex;
-      justify-content: flex-end; /* Align image to the bottom of the text */
-      align-items: flex-start;
+      justify-content: flex-end; 
+      align-items: center; /* Center the photo vertically */
   
       img {
         width: 100%;
@@ -88,8 +70,6 @@
   .about-technologies,
   .about-contact {
     margin-bottom: 40px;
-
-    
   }
 
   .about-contact {
