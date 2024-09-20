@@ -186,7 +186,7 @@ const handleComingSoonClick = (event: React.MouseEvent<HTMLAnchorElement, MouseE
 
 const Projects: React.FC = () => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <SectionTitle>Projects</SectionTitle>
       <BigProjectsContainer>
         <ProjectContainer>
