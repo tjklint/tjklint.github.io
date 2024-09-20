@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './about.scss';
 
 
-import tjklint1 from '../../assets/me/tjklint1.jpg';
-import tjklint2 from '../../assets/me/tjklint2.jpg';
-import tjklint3 from '../../assets/me/tjklint3.jpg';
-import tjklint4 from '../../assets/me/tjklint4.jpg';
-import tjklint5 from '../../assets/me/tjklint5.jpg';
-import tjklint6 from '../../assets/me/tjklint6.jpg';
-import tjklint7 from '../../assets/me/tjklint7.jpg';
-import tjklint8 from '../../assets/me/tjklint8.jpg';
+import tjklint1 from '../../assets/me/webp/tjklint1.webp';
+import tjklint2 from '../../assets/me/webp/tjklint2.webp';
+import tjklint3 from '../../assets/me/webp/tjklint3.webp';
+import tjklint4 from '../../assets/me/webp/tjklint4.webp';
+import tjklint5 from '../../assets/me/webp/tjklint5.webp';
+import tjklint6 from '../../assets/me/webp/tjklint6.webp';
+import tjklint7 from '../../assets/me/webp/tjklint7.webp';
+import tjklint8 from '../../assets/me/webp/tjklint8.webp';
 
 const photos = [tjklint2, tjklint3, tjklint4, tjklint5, tjklint6];
 

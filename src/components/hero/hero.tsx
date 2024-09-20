@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import spaceship from '../../assets/spaceship.png';
+import spaceship from '../../assets/spaceship/webp/spaceship.webp';
 
 const HeroContainer = styled.section`
   display: flex;
