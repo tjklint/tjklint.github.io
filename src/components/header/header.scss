@@ -1,117 +1,121 @@
 .header-container {
-  background-color: #1e1e1e;
-  padding: 20px 40px;
+  background-color: #1e1e1e; /* Dark background for the header */
+  padding: 20px 40px; /* Spacing around the header content */
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
+  align-items: center; /* Vertically align items in the header */
+  justify-content: space-between; /* Space items evenly (logo on the left, nav on the right) */
+  color: #fff; /* White text color */
   font-family: 'RobotoMono', sans-serif;
-  position: relative;
-  z-index: 1000;
+  position: relative; /* Set relative position for z-index control */
+  z-index: 1000; /* Ensure the header stays on top of other elements */
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #e1e1e1;
-  text-decoration: none;
+  font-size: 24px; /* Size of the logo text */
+  font-weight: bold; /* Bold text for emphasis */
+  letter-spacing: 2px; /* Add space between the letters */
+  color: #e1e1e1; /* Light gray color for the logo */
+  text-decoration: none; /* Remove underline from logo text */
   
   &:hover {
-    color: #9b59b6;
+    color: #9b59b6; /* Change logo color to purple on hover */
   }
 }
 
 .nav {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically align navigation links */
 
+  /* Mobile: Show the nav as a full-screen menu when open */
   @media (max-width: 768px) {
-    position: fixed;
+    position: fixed; /* Fix the nav in place on small screens */
     top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #1e1e1e;
-    flex-direction: column;
-    justify-content: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 999;
+    right: -100%; /* Initially hide the nav by moving it offscreen */
+    width: 100%; /* Full width for the mobile menu */
+    height: 100%; /* Full height for the mobile menu */
+    background-color: #1e1e1e; /* Same dark background */
+    flex-direction: column; /* Stack the nav items vertically */
+    justify-content: center; /* Center nav items vertically */
+    transition: right 0.3s ease-in-out; /* Smooth slide-in effect */
+    z-index: 999; /* Layer it above other content */
   }
 
   &.open {
-    right: 0;
+    right: 0; /* Slide the nav into view when it's open */
   }
 }
 
 .nav-link {
   display: flex;
-  align-items: center;
-  margin-left: 40px;
-  color: #d3d3d3;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+  align-items: center; /* Vertically align link content */
+  margin-left: 40px; /* Add space between the links */
+  color: #d3d3d3; /* Light gray for the link text */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Set the link text size */
+  transition: color 0.3s; /* Smooth color transition on hover */
   font-family: 'RobotoMono', sans-serif;
 
   &:hover {
-    color: #9b59b6;
+    color: #9b59b6; /* Change link color to purple on hover */
   }
 
   svg {
-    margin-right: 8px;
+    margin-right: 8px; /* Add space between the icon and the text */
   }
 
+  /* Mobile: Adjust link spacing and size */
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 20px; /* Add space between links */
+    font-size: 24px; /* Larger font size on mobile */
   }
 }
 
 .hamburger {
-  display: none;
-  cursor: pointer;
+  display: none; /* Hide the hamburger menu by default */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
 
+  /* Mobile: Show the hamburger menu icon */
   @media (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
+    top: 20px; /* Position the hamburger at the top */
+    right: 20px; /* Align the hamburger to the right */
+    z-index: 1001; /* Layer the hamburger above the nav */
   }
 }
 
 .button {
   display: flex;
-  align-items: center;
-  margin-left: 40px;
-  padding: 8px 16px;
-  border: 2px solid #9b59b6;
-  color: #9b59b6;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s;
+  align-items: center; /* Vertically align button content */
+  margin-left: 40px; /* Space between the button and nav links */
+  padding: 8px 16px; /* Padding inside the button */
+  border: 2px solid #9b59b6; /* Purple border around the button */
+  color: #9b59b6; /* Purple text */
+  text-decoration: none; /* Remove underline from the button text */
+  font-size: 18px; /* Set the button text size */
+  transition: all 0.3s; /* Smooth transition for background and text color */
   font-family: 'RobotoMono', sans-serif;
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded button corners */
 
   &:hover {
-    background-color: #9b59b6;
-    color: #fff;
+    background-color: #9b59b6; /* Purple background on hover */
+    color: #fff; /* White text on hover */
   }
 
   svg {
-    margin-right: 8px;
+    margin-right: 8px; /* Space between the icon and text */
   }
 
+  /* Mobile: Adjust button spacing and size */
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 20px; /* Add space between the button and other elements */
+    font-size: 24px; /* Increase button font size on mobile */
   }
 }
 
 .close-icon {
-  display: block;
-  z-index: 1002;
+  display: block; /* Show the close icon by default */
+  z-index: 1002; /* Ensure the close icon is above the nav */
 }
