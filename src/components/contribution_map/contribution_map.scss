@@ -17,8 +17,8 @@
 }
 
 .contribution-map-container {
-  width: 80%; /* Set width to 80% for consistent margin with the rest of the components */
-  margin: 0 auto;
+  width: 80%; /* Keep the width consistent with other components */
+  margin: 0 auto; /* Center the entire container */
   padding: 20px 0;
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
@@ -27,7 +27,7 @@
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything except the header */
+    align-items: center; /* Center all content except the header */
     color: #fff;
 
     h2 {
@@ -36,21 +36,21 @@
       color: #fff;
       font-family: 'RobotoMono', sans-serif;
       text-align: left;
-      align-self: flex-start; /* Keep the header aligned to the left */
+      align-self: flex-start; /* Ensure the header stays aligned to the left */
       width: 100%;
     }
 
     .react-github-calendar {
-      width: 100%;
+      width: 100%; /* Make the contribution graph take up full width */
       display: flex;
-      justify-content: center; /* Center the contribution graph */
-      overflow-x: auto; /* Allows horizontal scroll if the graph overflows */
+      justify-content: center; /* Center the contribution graph itself */
+      overflow-x: auto; /* Enable horizontal scrolling if content overflows */
     }
 
     .calendar-wrapper {
-      width: 100%;
+      width: 100%; /* The graph wrapper takes the full width */
       display: flex;
-      justify-content: center; /* Center the content within the wrapper */
+      justify-content: center; /* Center the contents inside the wrapper */
     }
   }
 }
