@@ -21,9 +21,10 @@ const ContributionMap: React.FC = () => {
   return (
     <div className="contribution-map-container">
       <section className="contribution-map">
-        <h2>My Github Contributions</h2>
-        <div className="react-github-calendar">
-          <div className="calendar-wrapper">
+        <div className="content-wrapper">
+          <h2>My Github Contributions</h2>
+          <div className="react-github-calendar">
+            <div className="calendar-wrapper">
             <GitHubCalendar
               username="tjklint"
               blockSize={20}
@@ -35,6 +36,7 @@ const ContributionMap: React.FC = () => {
               labels={labels}
             
             />
+          </div>
           </div>
         </div>
       </section>
