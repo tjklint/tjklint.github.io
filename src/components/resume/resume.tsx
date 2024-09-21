@@ -4,7 +4,7 @@ import './resume.scss';
 const Resume: React.FC = () => {
   return (
     <div className="resume-container" id="resume">
-      <h1 className="resume-title">Resume</h1>
+      {/* <h1 className="resume-title">Resume</h1> */}
       <div className="content-wrapper">
         <div className="left-column">
           <div className="section-container">

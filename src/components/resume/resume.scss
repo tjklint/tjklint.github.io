@@ -63,30 +63,19 @@
 .section-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  padding-left: 20px;
   position: relative;
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 20px;
-    width: 2px;
-    height: calc(100% + 20px);
-    background: #d3d3d3;
-  }
+
 }
 
 .line-container {
   position: relative;
-  padding-left: 20px;
 
   &:before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 20px;
     width: 2px;
     background: #d3d3d3;
   }
@@ -127,7 +116,6 @@
 .bullet-point {
   list-style-type: none;
   position: relative;
-  padding-left: 20px;
   font-size: 1em;
 
   &:before {
