@@ -1,85 +1,89 @@
 .footer-container {
-    background-color: #1e1e1e;
-    color: #fff;
-    padding: 20px 40px;
-    text-align: center;
-    font-family: 'RobotoMono', sans-serif;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    align-items: center;
-  
+  background-color: #1e1e1e; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 40px; /* Padding around the content */
+  text-align: center; /* Center text by default */
+  font-family: 'RobotoMono', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  align-items: center; /* Vertically align items in the grid */
+
+  /* Stack the footer elements vertically on smaller screens */
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Ensure text remains centered */
+    gap: 10px; /* Add spacing between stacked items */
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content in each column */
+
+    /* Ensure alignment stays centered on smaller screens */
     @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      text-align: center;
-      gap: 10px;
-    }
-  
-    .footer-content {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-  
-      @media (max-width: 768px) {
-        align-items: center;
-        text-align: center;
-      }
-    }
-  
-    .purple-heart {
-      color: #8a2be2;
-    }
-  
-    .footer-link {
-      color: #8a2be2;
-      text-decoration: underline;
-      margin-left: 5px;
-    }
-  
-    .social-icons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-  
-      @media (max-width: 768px) {
-        justify-content: center;
-      }
-  
-      a {
-        color: #d3d3d3;
-        font-size: 1.5em;
-        transition: color 0.3s;
-  
-        &:hover {
-          color: #8a2be2;
-        }
-      }
-    }
-  
-    p {
-      margin: 0;
-    }
-  
-    .left-align {
-      text-align: left;
-  
-      @media (max-width: 768px) {
-        text-align: center; /* Center-align on mobile */
-        padding-down: 5px;
-      }
-    }
-  
-    .center-align {
       text-align: center;
     }
-  
-    .right-align {
-      text-align: right;
-  
-      @media (max-width: 768px) {
-        text-align: center; /* Center-align on mobile */
-        padding-top: 5px;
+  }
+
+  .purple-heart {
+    color: #8a2be2; /* Purple color for the heart icon */
+  }
+
+  .footer-link {
+    color: #8a2be2; /* Purple color for footer links */
+    text-decoration: underline; /* Underline links */
+    margin-left: 5px; /* Small left margin to separate from text */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-end; /* Align social icons to the right */
+    gap: 20px; /* Add space between icons */
+
+    /* Center the social icons on smaller screens */
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    a {
+      color: #d3d3d3; /* Light grey for social icons */
+      font-size: 1.5em; /* Size of social icons */
+      transition: color 0.3s; /* Smooth transition for hover effect */
+
+      &:hover {
+        color: #8a2be2; /* Change icon color to purple on hover */
       }
     }
   }
-  
+
+  p {
+    margin: 0; /* Remove default paragraph margin */
+  }
+
+  .left-align {
+    text-align: left; /* Align text to the left */
+
+    /* Center-align on mobile */
+    @media (max-width: 768px) {
+      text-align: center;
+      padding-bottom: 5px; /* Add space below the text */
+    }
+  }
+
+  .center-align {
+    text-align: center; /* Center text */
+  }
+
+  .right-align {
+    text-align: right; /* Align text to the right */
+
+    /* Center-align on mobile */
+    @media (max-width: 768px) {
+      text-align: center;
+      padding-top: 5px; /* Add space above the text */
+    }
+  }
+}
