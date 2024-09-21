@@ -19,11 +19,12 @@
     align-items: flex-start;
     margin-bottom: 40px;
   
-    /* Desktop: Vertically center the photo relative to text and header */
+    /* Vertically center the photo with text and header on desktop */
     @media (min-width: 769px) {
-      align-items: center; /* Center vertically */
+      align-items: center;
     }
   
+    /* Stack content and center text and photo on mobile */
     @media (max-width: 768px) {
       flex-direction: column;
       text-align: center;
@@ -33,7 +34,8 @@
       flex: 1;
       padding-right: 0;
       text-align: left;
-  
+
+      /* Center text on mobile */
       @media (max-width: 768px) {
         text-align: center;
         padding-right: 0;
@@ -45,19 +47,19 @@
       }
   
       .purple-text {
-        color: #9b30ff;
+        color: #9b30ff; /* Purple color for highlighted text */
       }
   
       a {
-        color: #9b30ff;
-        text-decoration: underline;
+        color: #9b30ff; /* Purple color for links */
+        text-decoration: underline; /* Always underline links */
   
         &:visited {
-          color: #9b30ff;
+          color: #9b30ff; /* Maintain purple for visited links */
         }
   
         &:hover {
-          color: #8a2be2;
+          color: #8a2be2; /* Slightly darker purple on hover */
         }
       }
     }
@@ -76,15 +78,15 @@
         border-radius: 10px;
       }
   
-      /* Mobile: Horizontal centering */
+      /* Ensure the photo is centered horizontally and vertically on mobile */
       @media (max-width: 768px) {
         width: 70%;
         padding-left: 0;
         margin-top: 20px;
-        margin-left: auto; /* Ensures horizontal centering */
-        margin-right: auto; /* Ensures horizontal centering */
-        justify-content: center; /* Keep centered horizontally */
-        align-items: center;     /* Keep centered vertically */
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -126,7 +128,7 @@
         font-family: 'RobotoMono', sans-serif;
 
         &:hover {
-          background-color: #7a23d1;
+          background-color: #7a23d1; /* Slightly darker purple on hover */
         }
       }
     }
@@ -154,6 +156,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 20px;
 
+      /* Switch to single-column layout on small screens */
       @media (max-width: 500px) {
         grid-template-columns: 1fr;
       }
@@ -176,6 +179,7 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 10px;
 
+          /* Adjust to two columns on small screens */
           @media (max-width: 500px) {
             grid-template-columns: repeat(2, 1fr) !important;
           }
@@ -202,7 +206,7 @@
             }
 
             &:hover {
-              color: #8a2be2;
+              color: #8a2be2; /* Purple highlight on hover */
             }
           }
         }
