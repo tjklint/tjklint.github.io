@@ -40,17 +40,17 @@ const About: React.FC = () => {
             <span className="purple-text"> AI/ML, Ethical Hacking, and Fintech.</span>
           </p>
           <p>
-            My skillset is quite wide-ranged, I don't focus all to heavy on the frameworks/languages, I like to choose
+            My skillset is quite wide-ranged, I don't focus all too heavy on the frameworks/languages, I like to choose
             the best tools to get the best product as fast as possible. I'm a quick learner, especially in fast-paced environments
             where I'm able to hone skills on the fly to improve and deliver on time.
           </p>
           <p>
             My love for tech goes beyond the classroom. I’m always eager to dive into the world of hackathons and tech conferences. 
-            My passion for these events led me to join my favorite conference, CUSEC, as the Director of Events in 2024. This year, 
-            I'm thrilled to be stepping up as Co-Chair for 2025.
+            My passion for these events led me to join my favorite conference, <span className="purple-text">CUSEC</span>, as the <span className="purple-text">Director of Events in 2024</span>. This year, 
+            I'm thrilled to be stepping up as <span className="purple-text">Co-Chair for 2025</span>.
           </p>
           <p>
-            Outside of tech, you'll typically find me playing hockey, listening/discovering some live music, using the oxford comma, 
+            Outside of tech, you'll typically find me playing hockey, golfing, listening/discovering some live music, using the oxford comma, 
             and travelling!
           </p>
           <p>
