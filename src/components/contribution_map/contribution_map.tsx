@@ -26,13 +26,14 @@ const ContributionMap: React.FC = () => {
           <div className="calendar-wrapper">
             <GitHubCalendar
               username="tjklint"
-              blockSize={15}
+              blockSize={20}
               fontSize={16}
               theme={{
-                light: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
-                dark: ["#e6ccff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
+                light: ["#ffffff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
+                dark: ["#ffffff", "#c299ff", "#9f66ff", "#7a33cc", "#592699"],
               }}
               labels={labels}
+            
             />
           </div>
         </div>

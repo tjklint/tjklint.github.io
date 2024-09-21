@@ -17,7 +17,7 @@
 }
 
 .contribution-map-container {
-  width: 64%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
   color: #fff;
@@ -35,6 +35,7 @@
       color: #fff;
       font-family: 'RobotoMono', sans-serif;
       text-align: left;
+      margin-left: 10%;
       .react-github-calendar {
         margin-top: 20px;
         text-align: center;
