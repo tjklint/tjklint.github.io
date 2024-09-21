@@ -18,68 +18,77 @@
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 40px;
-
+  
+    /* Desktop: Vertically center the photo relative to text and header */
+    @media (min-width: 769px) {
+      align-items: center; /* Center vertically */
+    }
+  
     @media (max-width: 768px) {
       flex-direction: column;
       text-align: center;
     }
-
+  
     .about-text {
       flex: 1;
       padding-right: 0;
       text-align: left;
-
+  
       @media (max-width: 768px) {
         text-align: center;
         padding-right: 0;
       }
-
+  
       p {
         font-size: 1.2em;
-        font-family: 'RobotoMono', sans-serif;
         margin-bottom: 20px;
       }
-
+  
       .purple-text {
-        color: #9b30ff; /* Lighter purple for accessibility */
+        color: #9b30ff;
       }
-
+  
       a {
-        color: #9b30ff; /* Same lighter purple for links */
-        text-decoration: underline; /* Ensure links are always underlined */
-
+        color: #9b30ff;
+        text-decoration: underline;
+  
         &:visited {
-          color: #9b30ff; /* Ensures visited links stay the same color */
+          color: #9b30ff;
         }
-
+  
         &:hover {
           color: #8a2be2;
         }
       }
     }
-
+  
     .about-photo {
       flex: 0 0 30%;
       padding-left: 5%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-
+  
       img {
         width: 100%;
         height: auto;
         border: 3px solid #8a2be2;
         border-radius: 10px;
       }
-
+  
+      /* Mobile: Horizontal centering */
       @media (max-width: 768px) {
         width: 70%;
         padding-left: 0;
         margin-top: 20px;
+        margin-left: auto; /* Ensures horizontal centering */
+        margin-right: auto; /* Ensures horizontal centering */
+        justify-content: center; /* Keep centered horizontally */
+        align-items: center;     /* Keep centered vertically */
       }
     }
   }
-
+  
   .about-technologies,
   .about-contact {
     margin-bottom: 40px;
