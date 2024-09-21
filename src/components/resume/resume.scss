@@ -1,128 +1,126 @@
 .resume-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  width: 80%;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'RobotoMono', sans-serif;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center the content horizontally */
+  color: #fff; /* White text color */
+  width: 80%; /* Set container width to 80% */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0; /* Remove padding */
+  font-family: 'RobotoMono', sans-serif; /* Use the RobotoMono font */
 
   .resume-title {
-    font-size: 2.5em;
-    text-align: left;
-    margin: 0;  
-    padding: 0; 
-    width: 100%; 
+    font-size: 2.5em; /* Large font size for the title */
+    text-align: left; /* Align the title text to the left */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Full width for the title */
   }
 
   .content-wrapper {
-    width: 100%;
+    width: 100%; /* Full width for content wrapper */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically by default */
 
     @media (min-width: 1025px) {
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: row; /* Switch to a row layout on larger screens */
+      justify-content: center; /* Center content horizontally */
     }
   }
 }
 
 .left-column {
-  flex: 1;
-  margin-bottom: 20px;
+  flex: 1; /* Allow the left column to take up equal space */
+  margin-bottom: 20px; /* Space below the left column */
 
   @media (max-width: 1024px) {
-    margin-right: 0;
-    width: 100%;
+    margin-right: 0; /* Remove right margin on smaller screens */
+    width: 100%; /* Full width on smaller screens */
   }
 }
 
 .right-column {
-  flex: 1;
+  flex: 1; /* Allow the right column to take up equal space */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 100%; /* Full width for the right column */
 
   iframe {
-    width: 100%;
-    height: 115vh;
-    border: none;
+    width: 100%; /* Full width iframe for embedding content */
+    height: 115vh; /* Set iframe height */
+    border: none; /* Remove the iframe border */
 
     @media (max-width: 1200px) {
-      height: 60vh;
+      height: 60vh; /* Reduce iframe height on smaller screens */
     }
   }
 }
 
 .section-container {
-  position: relative;
+  position: relative; /* Position relative for the section */
 }
 
 .section-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  position: relative;
-
-
+  font-size: 2.5em; /* Large font size for section titles */
+  margin-bottom: 20px; /* Space below the section title */
+  position: relative; /* Position relative for future positioning */
 }
 
 .line-container {
-  position: relative;
+  position: relative; /* Relative positioning for the line indicator */
 
   &:before {
-    content: "";
+    content: ""; /* Create a vertical line */
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: #d3d3d3;
+    width: 2px; /* Set the line width */
+    background: #d3d3d3; /* Light gray color for the line */
   }
 }
 
 .job-container {
-  margin-bottom: 20px;
-  padding-left: 40px;
-  position: relative;
+  margin-bottom: 20px; /* Space below each job section */
+  padding-left: 40px; /* Space on the left to align content */
+  position: relative; /* Relative positioning for the job container */
 
   &:before {
-    content: "";
+    content: ""; /* Create a horizontal line for job sections */
     position: absolute;
     top: 1em;
     left: 0;
-    width: 20px;
-    height: 2px;
-    background: #d3d3d3;
+    width: 20px; /* Set width of the horizontal line */
+    height: 2px; /* Set height of the line */
+    background: #d3d3d3; /* Light gray color for the line */
   }
 }
 
 .job-title {
-  font-size: 1.5em;
-  margin: 10px 0;
-  position: relative;
+  font-size: 1.5em; /* Font size for job titles */
+  margin: 10px 0; /* Space above and below the job title */
+  position: relative; /* Relative positioning for future positioning */
 }
 
 .company {
-  color: #8a2be2;
+  color: #8a2be2; /* Purple color for company names */
 }
 
 .job-dates {
-  font-size: 1em;
-  color: #d3d3d3;
-  margin: 5px 0 10px 0;
+  font-size: 1em; /* Font size for job dates */
+  color: #d3d3d3; /* Light gray color for job dates */
+  margin: 5px 0 10px 0; /* Spacing around job dates */
 }
 
 .bullet-point {
-  list-style-type: none;
-  position: relative;
-  padding-left: 20px;
-  font-size: 1em;
+  list-style-type: none; /* Remove default list style */
+  position: relative; /* Relative positioning for bullet points */
+  padding-left: 20px; /* Space on the left for the bullet points */
+  font-size: 1em; /* Font size for the bullet points */
 
   &:before {
-    content: ">";
+    content: ">"; /* Arrow symbol for bullet points */
     position: absolute;
-    left: 0;
-    color: #8a2be2;
+    left: 0; /* Align bullet point to the left */
+    color: #8a2be2; /* Purple color for bullet point arrows */
   }
 }
