@@ -1,82 +1,82 @@
 .about-technologies-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
+  width: 80%; /* Set width to 80% for consistent margin with other components */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px 0; /* Padding around the container */
   font-family: 'RobotoMono', sans-serif;
-  color: #fff;
+  color: #fff; /* White text color */
 
   .about-technologies {
     h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: left;
-      color: #fff;
+      font-size: 2em; /* Large font size for section title */
+      margin-bottom: 20px; /* Space below the title */
+      text-align: left; /* Align title to the left */
+      color: #fff; /* White title */
     }
 
     .technology-categories {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      display: grid; /* Use grid layout to organize categories */
+      grid-template-columns: 1fr 1fr; /* Two columns by default */
+      gap: 20px; /* Space between grid items */
 
       @media (max-width: 1024px) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Keep two columns on medium screens */
       }
 
       @media (max-width: 500px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Switch to single column on small screens */
       }
 
       .technology-category {
-        background-color: #2a2a2a;
-        padding: 20px;
-        border-radius: 10px;
-        color: #fff;
+        background-color: #2a2a2a; /* Dark background for each category */
+        padding: 20px; /* Padding inside each category box */
+        border-radius: 10px; /* Rounded corners */
+        color: #fff; /* White text color */
 
         h3 {
-          font-size: 1.5em;
-          margin-bottom: 30px;
-          text-align: center;
-          color: #fff;
+          font-size: 1.5em; /* Font size for category headings */
+          margin-bottom: 30px; /* Space below the category title */
+          text-align: center; /* Center-align category titles */
+          color: #fff; /* White color for category titles */
         }
 
         .technology-items {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
+          display: grid; /* Grid layout for technology items inside each category */
+          grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+          gap: 10px; /* Space between technology items */
 
           @media (max-width: 1024px) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
           }
 
           @media (max-width: 500px) {
-            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-columns: repeat(2, 1fr) !important; /* Two columns on small screens */
           }
 
           .technology-item {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.2em;
-            color: #fff;
-            transition: color 0.3s ease;
-            cursor: default; /* Ensures the cursor stays default */
+            flex-direction: column; /* Stack icon and text vertically */
+            align-items: center; /* Center-align items */
+            font-size: 1.2em; /* Font size for text inside technology items */
+            color: #fff; /* White text color */
+            transition: color 0.3s ease; /* Smooth color transition on hover */
+            cursor: default; /* Keep cursor default, not clickable */
 
             i {
-              font-size: 3em;
-              margin-bottom: 10px;
-              color: inherit;
-              transition: inherit;
+              font-size: 3em; /* Large icon size */
+              margin-bottom: 10px; /* Space below the icon */
+              color: inherit; /* Inherit color from parent */
+              transition: inherit; /* Inherit transition from parent */
             }
 
             p {
-              margin: 0;
-              text-align: center;
-              color: inherit;
-              transition: inherit;
+              margin: 0; /* Remove default margin */
+              text-align: center; /* Center-align text */
+              color: inherit; /* Inherit color from parent */
+              transition: inherit; /* Inherit transition from parent */
             }
 
             &:hover {
-              color: #8a2be2;
+              color: #8a2be2; /* Change color to purple on hover */
             }
           }
         }
