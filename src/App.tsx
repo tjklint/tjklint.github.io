@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { HashRouter as Router } from 'react-router-dom';
 
-import GlobalStyles from './globalstyles';
-
 // @ts-ignore
 import Header from './components/header/header.tsx';
 // @ts-ignore
