@@ -23,9 +23,9 @@ const About: React.FC = () => {
 
   return (
     <div className="about-container" id="about">
-      <h2 className="about-title">About Me</h2>
       <section className="about-intro">
         <div className="about-text">
+        <h2 className="about-title">About Me</h2>
           <p>
             Hello! My name is <span className="purple-text">TJ Klint</span>, well, technically it's <i>Timothy</i> (our little secret). 
             Anyways, I'm a passionate developer with a love for coding and technology. Most recently, I have finished a Software Developer 
