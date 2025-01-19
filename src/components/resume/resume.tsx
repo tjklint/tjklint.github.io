@@ -22,6 +22,12 @@ const Resume: React.FC = () => {
           <div className="section-container">
             <h1 className="section-title">Experience</h1>
             <div className="line-container">
+            <div className="job-container">
+                <h3 className="job-title">
+                  Software Developer <span className="company">@CSE (Communications Security Establishment)</span>
+                </h3>
+                <p className="job-dates">January 2024 - April 2024</p>
+              </div>
               <div className="job-container">
                 <h3 className="job-title">
                   Software Developer <span className="company">@Bell</span>
