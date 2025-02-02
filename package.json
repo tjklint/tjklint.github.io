@@ -22,7 +22,7 @@
     "sass-loader": "^14.2.1",
     "styled-components": "^6.1.13",
     "typescript": "^5.5.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
