@@ -19,7 +19,7 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "sass": "^1.81.0",
-    "sass-loader": "^14.2.1",
+    "sass-loader": "^16.0.5",
     "styled-components": "^6.1.13",
     "typescript": "^5.5.4",
     "web-vitals": "^2.1.4"
