@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResumeEntry, ResumeSection } from './resumetypes';
 
-const visualaid: React.FC<{ section: ResumeSection }> = ({ section }) => {
+const VisualAid: React.FC<{ section: ResumeSection }> = ({ section }) => {
   return (
     <div className="section-container">
       <h1 className="section-title">{section.title}</h1>
@@ -28,4 +28,4 @@ const visualaid: React.FC<{ section: ResumeSection }> = ({ section }) => {
   );
 };
 
-export default visualaid;
+export default VisualAid;

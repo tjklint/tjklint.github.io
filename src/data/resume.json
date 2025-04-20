@@ -1,0 +1,45 @@
+{
+    "sections": [
+      {
+        "title": "Education",
+        "entries": [
+          {
+            "title": "Computer Science",
+            "company": "@John Abbott College",
+            "dates": "August 2022 - May 2025"
+          }
+        ]
+      },
+      {
+        "title": "Experience",
+        "entries": [
+          {
+            "title": "Software Developer",
+            "company": "@CSE (Communications Security Establishment)",
+            "dates": "January 2024 - April 2024"
+          },
+          {
+            "title": "Software Developer",
+            "company": "@Bell",
+            "dates": "May 2024 - August 2024",
+            "bulletPoints": [
+              "Developed a web app to streamline internal ticket creation using the Jira API.",
+              "Utilized the MEVN stack (MongoDB, Express, Vue.js, Node.js) for development.",
+              "Enhanced efficiency of internal processes at Bell through automation."
+            ]
+          },
+          {
+            "title": "Co-Chair",
+            "company": "@CUSEC (Canadian University Software Engineering Conference)",
+            "dates": "January 2024 - Present",
+            "bulletPoints": [
+              "Overseeing operations for a 15+ team of student organizers...",
+              "Guiding organizers in developing conference vision...",
+              "Handled recruiting through social media and interviewing more than 90+ applicants."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
