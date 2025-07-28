@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './about.scss';
 
-
 import tjklint1 from '../../assets/me/webp/tjklint1.webp';
 import tjklint2 from '../../assets/me/webp/tjklint2.webp';
 import tjklint3 from '../../assets/me/webp/tjklint3.webp';
@@ -28,16 +27,33 @@ const About: React.FC = () => {
         <h2 className="about-title">About Me</h2>
           <p>
             Hello! My name is <span className="purple-text">TJ Klint</span>, well, technically it's <i>Timothy</i> (our little secret). 
-            Anyways, I'm a passionate developer with a love for coding and technology. Most recently, I am working as a <span className="purple-text">Software Developer at CSE </span>
-            (Communications Security Establishment) and previously a Software Developer at Bell.
+            Anyways, I'm a passionate developer with a love for coding and technology. Most recently, I am doing a 2nd internship as a <span className="purple-text">Software Developer at Bell </span>
+            and previously a Software Developer at <span className="purple-text">CSE (Communications Security Establishment)</span> and Bell.
           </p>
           <p>
-            I'm currently <span className="purple-text"> studying at John Abbott College </span> 
-            in my <span className="purple-text">third year</span>.
+            I'm a <span className="purple-text">
+              <a
+                href="https://www.johnabbott.qc.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                graduate from John Abbott College
+              </a>
+            </span>. I am expected to begin at <span className="purple-text">
+              <a
+                href="https://www.concordia.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                Concordia University
+              </a>
+            </span> in the fall of 2025, where I will be pursuing a bachelor's in Computer Science.
           </p>
           <p>
             My interests change greatly depending on my environment, but at the moment, I am most interested by  
-            <span className="purple-text"> AI/ML, Ethical Hacking, and Fintech.</span>
+            <span className="purple-text"> AI/ML, Ethical Hacking, DevOps and Fintech.</span>
           </p>
           <p>
             My skillset is quite wide-ranged, I don't focus all too heavy on the frameworks/languages, I like to choose
@@ -45,8 +61,17 @@ const About: React.FC = () => {
             where I'm able to hone skills on the fly to improve and deliver on time.
           </p>
           <p>
-            My love for tech goes beyond the classroom. I’m always eager to dive into the world of hackathons and tech conferences. 
-            My passion for these events led me to join my favorite conference, <span className="purple-text">CUSEC</span>, as the <span className="purple-text">Director of Events in 2024</span>. This year, 
+            My love for tech goes beyond class. I’m always eager to dive into the world of hackathons and tech conferences. 
+            My passion has led me to join my favorite conference, <span className="purple-text">
+              <a
+                href="https://2025.cusec.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'underline' }}
+              >
+                CUSEC
+              </a>
+            </span>, as the <span className="purple-text">Director of Events in 2024</span>. This past year, 
             I'm thrilled to be stepping up as <span className="purple-text">Co-Chair for 2025</span>.
           </p>
           <p>
@@ -54,16 +79,14 @@ const About: React.FC = () => {
             and travelling!
           </p>
           <p>
-            You can also catch my blogs over on <a href="https://medium.com/@tjklint" target="_blank" rel="noopener noreferrer">Medium</a> or <a href="https://dev.to/tjklint" target="_blank" rel="noopener noreferrer">Dev.to</a>, and if you want to keep up to date with my work you should definitely
-            connect with me over on <a href="https://linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/tjklint" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            You can also catch my blogs over on <a href="https://medium.com/@tjklint" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Medium</a> or <a href="https://dev.to/tjklint" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>Dev.to</a>, and if you want to keep up to date with my work you should definitely
+            connect with me over on <a href="https://linkedin.com/in/timothy-klint" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>LinkedIn</a> and <a href="https://github.com/tjklint" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>GitHub</a>.
           </p>
         </div>
         <div className="about-photo">
           <img src={photo} alt="TJ Klint" />
         </div>
       </section>
-
-      
     </div>
   );
 }
