@@ -34,4 +34,21 @@
         "demo": null
       }
     },
+    {
+      "id": "privacy-xpresso",
+      "title": "PrivacyXPresso",
+      "description": "PrivacyXPresso simplifies data deletion from big companies, enhancing online security with easy-to-use local tools.",
+      "image": "PrivacyXPresso.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["Python", "JavaScript"],
+        "frameworks": ["Electron", "Flask"],
+        "libraries": ["Requests", "BeautifulSoup", "Selenium"]
+      },
+      "tags": ["Privacy", "Automation", "Security", "Desktop App"],
+      "links": {
+        "github": "https://github.com/tjklint/BellGeekfest2023",
+        "demo": null
+      }
+    },
     
