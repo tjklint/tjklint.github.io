@@ -51,4 +51,22 @@
         "demo": null
       }
     },
-    
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "description": "Built in React, this portfolio website is built to last and showcase my best work and skills. Thanks for checking it out!",
+      "image": "Portfolio.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["TypeScript", "SASS", "HTML"],
+        "frameworks": ["React"],
+        "libraries": ["Styled Components", "React Icons", "React Router"]
+      },
+      "tags": ["Portfolio", "Responsive Design", "TypeScript", "SASS"],
+      "links": {
+        "github": "https://github.com/tjklint/tjklint.github.io",
+        "demo": "https://tjklint.github.io"
+      }
+    }
+  ]
+}
