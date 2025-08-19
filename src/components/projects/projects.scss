@@ -168,38 +168,36 @@
 .project-container {
   width: 100%;
   margin-bottom: 40px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+  background: #2a2a2a;
+  border-radius: 15px;
   overflow: hidden;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    border-color: rgba(155, 89, 182, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
   }
 
   img, video {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    height: 300px;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0.3;
+    border-bottom: 2px solid #8a2be2;
   }
 
   .project-content {
-    position: relative;
-    z-index: 1;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     .project-header {
       margin-bottom: 15px;
+      text-align: center;
 
       h3 {
         font-size: 2em;
@@ -230,27 +228,31 @@
       margin-bottom: 20px;
       color: #d3d3d3;
       line-height: 1.5;
+      text-align: center;
     }
 
     .project-technologies {
       margin-bottom: 20px;
-      text-align: left;
 
       .tech-section {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
 
         .tech-label {
           font-size: 0.9em;
           color: #9b59b6;
           font-weight: 600;
-          margin-bottom: 5px;
-          display: block;
+          min-width: 90px;
         }
 
         .tech-list {
           display: flex;
           flex-wrap: wrap;
           gap: 6px;
+          flex: 1;
 
           .tech-item {
             background: rgba(42, 42, 42, 0.8);
@@ -310,42 +312,40 @@
 .small-project {
   width: 45%;
   margin-bottom: 40px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+  background: #2a2a2a;
+  border-radius: 15px;
   overflow: hidden;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    border-color: rgba(155, 89, 182, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
   }
 
   img, video {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    height: 200px;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0.3;
+    border-bottom: 2px solid #8a2be2;
   }
 
   .project-content {
-    position: relative;
-    z-index: 1;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
     .project-header {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      text-align: center;
 
       h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
+        font-size: 1.4em;
+        margin-bottom: 8px;
         color: #fff;
       }
 
@@ -368,31 +368,35 @@
     }
 
     .project-description {
-      font-size: 1em;
+      font-size: 0.95em;
       margin-bottom: 15px;
       color: #d3d3d3;
       line-height: 1.4;
+      text-align: center;
     }
 
     .project-technologies {
       margin-bottom: 15px;
-      text-align: left;
 
       .tech-section {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
 
         .tech-label {
           font-size: 0.8em;
           color: #9b59b6;
           font-weight: 600;
-          margin-bottom: 4px;
-          display: block;
+          min-width: 75px;
         }
 
         .tech-list {
           display: flex;
           flex-wrap: wrap;
           gap: 4px;
+          flex: 1;
 
           .tech-item {
             background: rgba(42, 42, 42, 0.8);
@@ -453,33 +457,41 @@
 .coming-soon-project {
   width: 45%;
   margin-bottom: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: #2a2a2a;
   border: 2px dashed #9b59b6;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
 
   &:hover {
+    transform: translateY(-3px);
     background: rgba(155, 89, 182, 0.1);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
   }
 
   .project-content {
-    position: relative;
-    z-index: 1;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     h3 {
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin-bottom: 15px;
       color: #9b59b6;
     }
 
     p {
-      font-size: 1em;
+      font-size: 0.95em;
       margin-bottom: 20px;
       color: #d3d3d3;
+      line-height: 1.4;
     }
 
     .project-links {
