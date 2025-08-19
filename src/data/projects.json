@@ -1,0 +1,72 @@
+{
+  "projects": [
+    {
+      "id": "capital-coach",
+      "title": "Capital Coach",
+      "description": "A financial management tool designed to empower individuals with smart financial planning, integrating simplicity with effectiveness.",
+      "image": "InvestSmart.gif",
+      "category": "big",
+      "technologies": {
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "frameworks": ["React", "Node.js", "Express"],
+        "libraries": ["Chart.js", "Axios", "Material-UI"]
+      },
+      "tags": ["Finance", "Web App", "Dashboard", "Data Visualization"],
+      "links": {
+        "github": "https://github.com/tjklint/CapitalCoach",
+        "demo": null
+      }
+    },
+    {
+      "id": "pokepc",
+      "title": "PokePC",
+      "description": "PokePC is a Pokedex & a user-friendly web app for managing and organizing Pokemon collections, creating battle teams, and tracking Pokemon details, designed for enthusiasts at all levels.",
+      "image": "PokePC.gif",
+      "category": "big",
+      "technologies": {
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "frameworks": ["React", "Node.js"],
+        "libraries": ["Axios", "React Router", "Pokemon API"]
+      },
+      "tags": ["Gaming", "API Integration", "Collection Management", "React"],
+      "links": {
+        "github": "https://github.com/tjklint/PokePC",
+        "demo": null
+      }
+    },
+    {
+      "id": "privacy-xpresso",
+      "title": "PrivacyXPresso",
+      "description": "PrivacyXPresso simplifies data deletion from big companies, enhancing online security with easy-to-use local tools.",
+      "image": "PrivacyXPresso.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["Python", "JavaScript"],
+        "frameworks": ["Electron", "Flask"],
+        "libraries": ["Requests", "BeautifulSoup", "Selenium"]
+      },
+      "tags": ["Privacy", "Automation", "Security", "Desktop App"],
+      "links": {
+        "github": "https://github.com/tjklint/BellGeekfest2023",
+        "demo": null
+      }
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "description": "Built in React, this portfolio website is built to last and showcase my best work and skills. Thanks for checking it out!",
+      "image": "Portfolio.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["TypeScript", "SASS", "HTML"],
+        "frameworks": ["React"],
+        "libraries": ["Styled Components", "React Icons", "React Router"]
+      },
+      "tags": ["Portfolio", "Responsive Design", "TypeScript", "SASS"],
+      "links": {
+        "github": "https://github.com/tjklint/tjklint.github.io",
+        "demo": "https://tjklint.github.io"
+      }
+    }
+  ]
+}
