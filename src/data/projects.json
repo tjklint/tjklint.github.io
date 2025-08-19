@@ -17,4 +17,21 @@
         "demo": null
       }
     },
+    {
+      "id": "pokepc",
+      "title": "PokePC",
+      "description": "PokePC is a Pokedex & a user-friendly web app for managing and organizing Pokemon collections, creating battle teams, and tracking Pokemon details, designed for enthusiasts at all levels.",
+      "image": "PokePC.gif",
+      "category": "big",
+      "technologies": {
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "frameworks": ["React", "Node.js"],
+        "libraries": ["Axios", "React Router", "Pokemon API"]
+      },
+      "tags": ["Gaming", "API Integration", "Collection Management", "React"],
+      "links": {
+        "github": "https://github.com/tjklint/PokePC",
+        "demo": null
+      }
+    },
     
