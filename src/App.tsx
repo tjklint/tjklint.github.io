@@ -17,7 +17,7 @@ import About from './components/about/about.tsx';
 // @ts-ignore
 import Footer from './components/footer/footer.tsx';
 // @ts-ignore
-import Techstack from './components/techstack/techstack.tsx';
+// import Techstack from './components/techstack/techstack.tsx';
 // @ts-ignore
 import ContributionMap from './components/contribution_map/contribution_map.tsx';
 
@@ -44,7 +44,7 @@ const App: React.FC = () => {
           
           <Projects />
           
-          <Techstack />
+          {/* <Techstack /> */}
           
           <ContributionMap />
           
