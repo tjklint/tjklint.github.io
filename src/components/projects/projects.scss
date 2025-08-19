@@ -168,13 +168,12 @@
 .project-container {
   width: 100%;
   margin-bottom: 40px;
-  background: #2a2a2a;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  min-height: 400px;
 
   &:hover {
     transform: translateY(-5px);
@@ -182,15 +181,21 @@
   }
 
   img, video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 2px solid #8a2be2;
+    z-index: 1;
   }
 
   .project-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(30, 30, 30, 0.85);
     padding: 30px;
-    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -233,35 +238,26 @@
 
     .project-technologies {
       margin-bottom: 20px;
+      
+      .tech-uses {
+        color: #9b59b6;
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-right: 8px;
+      }
 
-      .tech-section {
-        margin-bottom: 8px;
-        display: flex;
+      .tech-items {
+        display: inline-flex;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 8px;
+        gap: 6px;
 
-        .tech-label {
-          font-size: 0.9em;
-          color: #9b59b6;
-          font-weight: 600;
-          min-width: 90px;
-        }
-
-        .tech-list {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-          flex: 1;
-
-          .tech-item {
-            background: rgba(42, 42, 42, 0.8);
-            color: #fff;
-            padding: 3px 8px;
-            border-radius: 8px;
-            font-size: 0.85em;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-          }
+        .tech-item {
+          background: rgba(42, 42, 42, 0.8);
+          color: #fff;
+          padding: 3px 8px;
+          border-radius: 8px;
+          font-size: 0.85em;
+          border: 1px solid rgba(155, 89, 182, 0.3);
         }
       }
     }
@@ -312,13 +308,12 @@
 .small-project {
   width: 45%;
   margin-bottom: 40px;
-  background: #2a2a2a;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  min-height: 350px;
 
   &:hover {
     transform: translateY(-5px);
@@ -326,15 +321,21 @@
   }
 
   img, video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 2px solid #8a2be2;
+    z-index: 1;
   }
 
   .project-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(30, 30, 30, 0.85);
     padding: 20px;
-    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -377,35 +378,26 @@
 
     .project-technologies {
       margin-bottom: 15px;
+      
+      .tech-uses {
+        color: #9b59b6;
+        font-weight: 600;
+        font-size: 0.8em;
+        margin-right: 6px;
+      }
 
-      .tech-section {
-        margin-bottom: 6px;
-        display: flex;
+      .tech-items {
+        display: inline-flex;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
+        gap: 4px;
 
-        .tech-label {
-          font-size: 0.8em;
-          color: #9b59b6;
-          font-weight: 600;
-          min-width: 75px;
-        }
-
-        .tech-list {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 4px;
-          flex: 1;
-
-          .tech-item {
-            background: rgba(42, 42, 42, 0.8);
-            color: #fff;
-            padding: 2px 6px;
-            border-radius: 6px;
-            font-size: 0.75em;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-          }
+        .tech-item {
+          background: rgba(42, 42, 42, 0.8);
+          color: #fff;
+          padding: 2px 6px;
+          border-radius: 6px;
+          font-size: 0.75em;
+          border: 1px solid rgba(155, 89, 182, 0.3);
         }
       }
     }
