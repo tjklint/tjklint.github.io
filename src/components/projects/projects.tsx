@@ -84,34 +84,24 @@ const Projects: React.FC = () => {
   const bigProjects = filteredProjects.filter(project => project.category === 'big');
   const smallProjects = filteredProjects.filter(project => project.category === 'small');
 
-  const renderTechnologies = (technologies: Project['technologies'], isSmall: boolean = false) => (
-    <div className="project-technologies">
-      <div className="tech-section">
-        <span className="tech-label">Languages:</span>
-        <div className="tech-list">
-          {technologies.languages.map((lang, index) => (
-            <span key={index} className="tech-item">{lang}</span>
+  const renderTechnologies = (technologies: Project['technologies'], isSmall: boolean = false) => {
+    const allTech = [
+      ...technologies.languages,
+      ...technologies.frameworks,
+      ...technologies.libraries
+    ];
+
+    return (
+      <div className="project-technologies">
+        <span className="tech-uses">Uses:</span>
+        <div className="tech-items">
+          {allTech.map((tech, index) => (
+            <span key={index} className="tech-item">{tech}</span>
           ))}
         </div>
       </div>
-      <div className="tech-section">
-        <span className="tech-label">Frameworks:</span>
-        <div className="tech-list">
-          {technologies.frameworks.map((framework, index) => (
-            <span key={index} className="tech-item">{framework}</span>
-          ))}
-        </div>
-      </div>
-      <div className="tech-section">
-        <span className="tech-label">Libraries:</span>
-        <div className="tech-list">
-          {technologies.libraries.map((library, index) => (
-            <span key={index} className="tech-item">{library}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    );
+  };
 
   const renderProject = (project: Project, isSmall: boolean = false) => {
     const imageSrc = assetMap[project.image] || portfolioGif;
