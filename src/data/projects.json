@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": "capital-coach",
+      "title": "Capital Coach",
+      "description": "A financial management tool designed to empower individuals with smart financial planning, integrating simplicity with effectiveness.",
+      "image": "InvestSmart.gif",
+      "category": "big",
+      "technologies": {
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "frameworks": ["React", "Node.js", "Express"],
+        "libraries": ["Chart.js", "Axios", "Material-UI"]
+      },
+      "tags": ["Finance", "Web App", "Dashboard", "Data Visualization"],
+      "links": {
+        "github": "https://github.com/tjklint/CapitalCoach",
+        "demo": null
+      }
+    },
+    
