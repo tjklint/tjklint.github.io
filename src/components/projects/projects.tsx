@@ -7,6 +7,8 @@ import investSmartGif from '../../assets/projects/InvestSmart.gif';
 import pokePCGif from '../../assets/projects/PokePC.gif';
 import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif';
 import portfolioGif from '../../assets/projects/Portfolio.gif';
+import digitalAdrenalineGif from '../../assets/projects/DigitalAdrenaline.gif';
+import ecovestGif from '../../assets/projects/Ecovest.gif';
 
 // Import projects data
 import projectsData from '../../data/projects.json'; 
@@ -36,6 +38,8 @@ const assetMap: { [key: string]: string } = {
   'PokePC.gif': pokePCGif,
   'PrivacyXPresso.gif': privacyXPressoGif,
   'Portfolio.gif': portfolioGif,
+  'DigitalAdrenaline.gif': digitalAdrenalineGif,
+  'Ecovest.gif': ecovestGif,
 };
 
 // Handle the "Coming Soon" click event

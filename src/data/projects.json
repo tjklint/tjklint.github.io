@@ -9,11 +9,45 @@
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
         "frameworks": ["React", "Node.js", "Express"],
-        "libraries": ["Chart.js", "Axios", "Material-UI"]
+        "libraries": ["Chart.js", "Axios"]
       },
-      "tags": ["Finance", "Web App", "Dashboard", "Data Visualization"],
+      "tags": ["Finance", "Web App", "Data Visualization"],
       "links": {
         "github": "https://github.com/tjklint/CapitalCoach",
+        "demo": null
+      }
+    },
+    {
+      "id": "ecovest",
+      "title": "Ecovest",
+      "description": "A machine learning model designed to help people make sustainable investments by factoring in Environmental, Social, and Governance (ESG) criteria.",
+      "image": "Ecovest.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["TypeScript", "Python"],
+        "frameworks": ["Svelte"],
+        "libraries": ["RandomForestRegressor", "Chart.js", "Machine Learning", "GridSearch", "Gumloop AI Flow"]
+      },
+      "tags": ["Machine Learning", "ESG", "Data Visualization", "AI"],
+      "links": {
+        "github": "https://github.com/tjklint/Ecovest",
+        "demo": null
+      }
+    },
+    {
+      "id": "digital-adrenaline",
+      "title": "DigitalAdrenaline",
+      "description": "A fast-paced 2D Cyberpunk platformer where players navigate through an AI-controlled city. Features unique bullet recovery mechanics and strategic resource management across 2-4 intricately designed levels.",
+      "image": "DigitalAdrenaline.gif",
+      "category": "small",
+      "technologies": {
+        "languages": ["GDScript", "Python"],
+        "frameworks": ["Godot"],
+        "libraries": []
+      },
+      "tags": ["Game Development", "2D Platformer", "Godot"],
+      "links": {
+        "github": "https://github.com/tjklint/DigitalAdrenaline",
         "demo": null
       }
     },
@@ -28,7 +62,7 @@
         "frameworks": ["React", "Node.js"],
         "libraries": ["Axios", "React Router", "Pokemon API"]
       },
-      "tags": ["Gaming", "API Integration", "Collection Management", "React"],
+      "tags": ["Gaming", "API Integration", "React"],
       "links": {
         "github": "https://github.com/tjklint/PokePC",
         "demo": null
@@ -43,9 +77,9 @@
       "technologies": {
         "languages": ["Python", "JavaScript"],
         "frameworks": ["Electron", "Flask"],
-        "libraries": ["Requests", "BeautifulSoup", "Selenium"]
+        "libraries": ["Requests"]
       },
-      "tags": ["Privacy", "Automation", "Security", "Desktop App"],
+      "tags": ["Privacy", "Automation", "Security"],
       "links": {
         "github": "https://github.com/tjklint/BellGeekfest2023",
         "demo": null
@@ -60,9 +94,9 @@
       "technologies": {
         "languages": ["TypeScript", "SASS", "HTML"],
         "frameworks": ["React"],
-        "libraries": ["Styled Components", "React Icons", "React Router"]
+        "libraries": ["Styled Components", "React Router"]
       },
-      "tags": ["Portfolio", "Responsive Design", "TypeScript", "SASS"],
+      "tags": ["Portfolio", "TypeScript", "SASS"],
       "links": {
         "github": "https://github.com/tjklint/tjklint.github.io",
         "demo": "https://tjklint.github.io"
