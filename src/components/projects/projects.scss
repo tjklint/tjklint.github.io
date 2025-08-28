@@ -155,7 +155,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%;
-      gap: 20px;
+      gap: 14px; // reduce horizontal/vertical gap between small cards
 
       @media (max-width: 768px) {
         justify-content: center;
@@ -308,13 +308,13 @@
 
 .small-project {
   width: 45%;
-  margin-bottom: 40px;
+  margin-bottom: 20px; // reduce vertical spacing between small cards
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  min-height: 320px;
+  min-height: 300px; // slightly shorter to reduce perceived gap
 
   &:hover {
     transform: translateY(-5px);
@@ -440,8 +440,8 @@
 
   @media (max-width: 768px) {
     width: 100%;
-    margin: 0 auto 20px auto;
-    min-height: 280px;
+    margin: 0 auto 16px auto; // reduce mobile vertical spacing
+    min-height: 260px;
 
     .project-content {
       padding: 12px;
@@ -474,7 +474,7 @@
   }
 
   @media (max-width: 480px) {
-    min-height: 260px;
+    min-height: 240px;
     
     .project-content {
       padding: 10px;
