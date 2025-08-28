@@ -5,6 +5,7 @@
       "title": "Capital Coach",
       "description": "A financial management tool designed to empower individuals with smart financial planning, integrating simplicity with effectiveness.",
       "image": "InvestSmart.gif",
+      "featured": true,
       "category": "big",
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
@@ -22,6 +23,7 @@
       "title": "Ecovest",
       "description": "A machine learning model designed to help people make sustainable investments by factoring in Environmental, Social, and Governance (ESG) criteria.",
       "image": "Ecovest.gif",
+      "featured": true,
       "category": "small",
       "technologies": {
         "languages": ["TypeScript", "Python"],
@@ -39,6 +41,7 @@
       "title": "DigitalAdrenaline",
       "description": "A fast-paced 2D Cyberpunk platformer where players navigate through an AI-controlled city. Features unique bullet recovery mechanics and strategic resource management across 2-4 intricately designed levels.",
       "image": "DigitalAdrenaline.gif",
+      "featured": false,
       "category": "small",
       "technologies": {
         "languages": ["GDScript", "Python"],
@@ -56,6 +59,7 @@
       "title": "PokePC",
       "description": "PokePC is a Pokedex & a user-friendly web app for managing and organizing Pokemon collections, creating battle teams, and tracking Pokemon details, designed for enthusiasts at all levels.",
       "image": "PokePC.gif",
+      "featured": true,
       "category": "big",
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
@@ -73,6 +77,7 @@
       "title": "PrivacyXPresso",
       "description": "PrivacyXPresso simplifies data deletion from big companies, enhancing online security with easy-to-use local tools.",
       "image": "PrivacyXPresso.gif",
+      "featured": false,
       "category": "small",
       "technologies": {
         "languages": ["Python", "JavaScript"],
@@ -90,6 +95,7 @@
       "title": "Portfolio",
       "description": "Built in React, this portfolio website is built to last and showcase my best work and skills. Thanks for checking it out!",
       "image": "Portfolio.gif",
+      "featured": true,
       "category": "small",
       "technologies": {
         "languages": ["TypeScript", "SASS", "HTML"],

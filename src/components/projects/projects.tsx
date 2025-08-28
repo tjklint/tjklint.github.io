@@ -19,6 +19,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  featured: boolean;
   category: 'big' | 'small';
   technologies: {
     languages: string[];
@@ -62,25 +63,37 @@ const Projects: React.FC = () => {
     return Array.from(tags).sort();
   }, []);
 
-  // Filter projects based on search term and selected tag
+  // Filter and order projects based on search term, selected tag, and featured toggle
   const filteredProjects = useMemo(() => {
-    let filtered = (projectsData.projects as Project[]).filter(project => {
-      const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          project.technologies.languages.some(lang => lang.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                          project.technologies.frameworks.some(fw => fw.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                          project.technologies.libraries.some(lib => lib.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                          project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const allProjects = (projectsData.projects as Project[]);
+
+    // Base filter: search + tag always apply across all projects
+    let filtered = allProjects.filter(project => {
+      const query = searchTerm.toLowerCase();
+      const matchesSearch =
+        project.title.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.technologies.languages.some(lang => lang.toLowerCase().includes(query)) ||
+        project.technologies.frameworks.some(fw => fw.toLowerCase().includes(query)) ||
+        project.technologies.libraries.some(lib => lib.toLowerCase().includes(query)) ||
+        project.tags.some(tag => tag.toLowerCase().includes(query));
 
       const matchesTag = !selectedTag || project.tags.includes(selectedTag);
 
       return matchesSearch && matchesTag;
     });
 
-    // If not showing all, limit to first 5-6 projects
+    // When not showing all AND there is no active search or tag filter,
+    // show only featured projects
     if (!showAll && !searchTerm && !selectedTag) {
-      filtered = filtered.slice(0, 6);
+      filtered = filtered.filter(p => p.featured);
     }
+
+    // Always prioritize featured projects higher in the list
+    filtered = filtered.sort((a, b) => {
+      if (a.featured === b.featured) return 0;
+      return a.featured ? -1 : 1;
+    });
 
     return filtered;
   }, [searchTerm, selectedTag, showAll]);
