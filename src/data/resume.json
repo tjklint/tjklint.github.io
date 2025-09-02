@@ -14,9 +14,41 @@
         "title": "Experience",
         "entries": [
           {
+            "title": "Full Stack Developer",
+            "company": "@Botpress",
+            "dates": "August 2025 - Present",
+            "bulletPoints": [
+              "Developing New-Gen Agentic AI Platform"
+            ]
+          },
+          {
+            "title": "Software Developer",
+            "company": "@Bell",
+            "dates": "May 2024 - August 2024",
+            "bulletPoints": [
+              "Built a Retrieval-Augmented Generation (RAG) system with Elasticsearch, improving decision speed by 65%.",
+              "Developed and secured 18+ API endpoints, with full audit logging and blocked malicious attempts.",
+              "Led, designed, and scaled database infrastructure, boosting query performance by 4×."
+            ]
+          },
+          {
             "title": "Software Developer",
             "company": "@CSE (Communications Security Establishment)",
-            "dates": "January 2024 - April 2024"
+            "dates": "January 2024 - April 2024",
+            "bulletPoints": [
+              "Built a Jenkins pipeline to automate Docker builds and deploys to Azure/Artifactory, cutting deploy time by 80%.",
+              "Integrated unit testing into CI/CD and increased test coverage by 40% as the first to implement it."
+            ]
+          },
+          {
+            "title": "Co-Chair",
+            "company": "@CUSEC (Canadian University Software Engineering Conference)",
+            "dates": "January 2024 - February 2025",
+            "bulletPoints": [
+              "Oversaw operations for a 15+ team of student organizers including scheduling, sponsorships, and logistics, to ensure a high-quality conference for 350+ attendees from 17+ schools across 6+ provinces..",
+              "Guiding organizers, resolving logistic conflicts, and coordinating details with speakers, sponsors, and hotel venue.",
+              "Handled recruiting through social media and interviewed more than 90+ applicants."
+            ]
           },
           {
             "title": "Software Developer",
@@ -26,16 +58,6 @@
               "Developed a web app to streamline internal ticket creation using the Jira API.",
               "Utilized the MEVN stack (MongoDB, Express, Vue.js, Node.js) for development.",
               "Enhanced efficiency of internal processes at Bell through automation."
-            ]
-          },
-          {
-            "title": "Co-Chair",
-            "company": "@CUSEC (Canadian University Software Engineering Conference)",
-            "dates": "January 2024 - Present",
-            "bulletPoints": [
-              "Overseeing operations for a 15+ team of student organizers...",
-              "Guiding organizers in developing conference vision...",
-              "Handled recruiting through social media and interviewing more than 90+ applicants."
             ]
           }
         ]
