@@ -15,7 +15,7 @@
       "tags": ["Finance", "Web App", "Data Visualization"],
       "links": {
         "github": "https://github.com/tjklint/CapitalCoach",
-        "demo": null
+        "demo": "https://tjklint.github.io/CapitalCoach/"
       }
     },
     {
@@ -64,7 +64,7 @@
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
         "frameworks": ["React", "Node.js"],
-        "libraries": ["Axios", "React Router", "Pokemon API"]
+        "libraries": ["Axios", "React Router"]
       },
       "tags": ["Gaming", "API Integration", "React"],
       "links": {
@@ -87,7 +87,7 @@
       "tags": ["Privacy", "Automation", "Security"],
       "links": {
         "github": "https://github.com/tjklint/BellGeekfest2023",
-        "demo": null
+        "demo": "tjklint.github.io/BellGeekfest2023/"
       }
     },
     {
