@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./about.scss";
 
-import tjklint1 from "../../assets/me/webp/tjklint1.webp";
 import tjklint2 from "../../assets/me/webp/tjklint2.webp";
 import tjklint3 from "../../assets/me/webp/tjklint3.webp";
 import tjklint4 from "../../assets/me/webp/tjklint4.webp";
 import tjklint5 from "../../assets/me/webp/tjklint5.webp";
 import tjklint6 from "../../assets/me/webp/tjklint6.webp";
-import tjklint7 from "../../assets/me/webp/tjklint7.webp";
-import tjklint8 from "../../assets/me/webp/tjklint8.webp";
 
 const photos = [tjklint2, tjklint3, tjklint4, tjklint5, tjklint6];
 
@@ -29,18 +26,19 @@ const About: React.FC = () => {
             Hello! My name is <span className="purple-text">TJ Klint</span>,
             well, technically it's <i>Timothy</i> (our little secret). Anyways,
             I'm a passionate developer with a love for coding and technology.
-            Most recently, I am doing a 2nd internship as a
+            Most recently, I'm working as a{" "}
             <span className="purple-text">
+              Full-Stack Developer at{" "}
               <a
-                href="https://www.cse-cst.gc.ca/"
+                href="https://botpress.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
+                style={{ color: "inherit", textDecoration: "underline" }}
               >
-                Software Developer at Bell
+                Botpress
               </a>
             </span>
-            and previously I worked as a Software Developer at
+            , and previously I completed internships at{" "}
             <span className="purple-text">
               <a
                 href="https://www.cse-cst.gc.ca/"
@@ -51,7 +49,18 @@ const About: React.FC = () => {
                 CSE (Communications Security Establishment)
               </a>
             </span>{" "}
-            and Bell.
+            and{" "}
+            <span className="purple-text">
+              <a
+                href="https://www.bell.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Bell
+              </a>
+            </span>
+            .
           </p>
           <p>
             I'm a{" "}
