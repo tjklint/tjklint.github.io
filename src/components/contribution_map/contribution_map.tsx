@@ -21,8 +21,6 @@ const ContributionMap: React.FC = () => {
   return (
     <div className="contribution-map-container">
       <section className="contribution-map">
-        <h2>My Github Contributions</h2>
-        
         <div className="calendar-section">
           <h3 className="year-label">/2025</h3>
           <div className="calendar-wrapper">
