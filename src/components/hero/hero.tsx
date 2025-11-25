@@ -2,15 +2,43 @@ import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import spaceship from '../../assets/spaceship/webp/spaceship.webp'; // Importing spaceship image
 
+// Animated gradient background
+const gradientShift = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
 // Main container for the hero section
 const HeroContainer = styled.section`
   display: flex;
   flex-direction: column; /* Stack items vertically by default */
   min-height: 100vh; /* Full viewport height */
-  background-color: #1e1e1e; /* Dark background */
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
+  background-size: 200% 200%;
+  animation: ${gradientShift} 15s ease infinite;
   color: #fff; /* White text */
   overflow: hidden; /* Prevent overflow */
   font-family: 'RobotoMono', sans-serif; /* Use RobotoMono font */
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 161, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
 
   @media (min-width: 768px) {
     flex-direction: row; /* On larger screens, layout side by side */
@@ -26,14 +54,32 @@ const LeftContainer = styled.div`
   padding: 40px; /* Padding around the text */
   text-align: left; /* Left-align the text */
   margin-top: -10%; /* Adjust to move text slightly up */
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 768px) {
-    padding-top: 0; /* Remove padding for smaller screens */
+    padding: 24px; /* Reduced padding for smaller screens */
     margin-top: 0; /* Remove negative margin for mobile */
   }
 
   @media (min-width: 768px) {
     flex: 0 0 35%; /* Take up 35% of the space on larger screens */
+    padding: 60px 40px; /* More padding on larger screens */
+  }
+`;
+
+// Styling for the headline
+const Headline = styled.h1`
+  font-size: 1.25em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5em;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+
+  @media (min-width: 768px) {
+    font-size: 1.5em;
   }
 `;
 
@@ -54,14 +100,14 @@ const RightContainer = styled.div`
 
 // Floating animation for the spaceship (smooth up and down motion)
 const floatAnimation = keyframes`
-  0% {
-    transform: translateY(0); /* Start at original position */
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px); /* Move 10px up */
+  33% {
+    transform: translateY(-15px) rotate(1deg);
   }
-  100% {
-    transform: translateY(0); /* Return to original position */
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
   }
 `;
 
@@ -69,7 +115,9 @@ const floatAnimation = keyframes`
 const Spaceship = styled.img`
   width: 80%; /* Set spaceship width to 80% of the container */
   z-index: 1; /* Ensure it stays above any background elements */
-  animation: ${floatAnimation} 3s infinite; /* Apply floating animation */
+  animation: ${floatAnimation} 4s ease-in-out infinite; /* Apply floating animation */
+  filter: drop-shadow(0 20px 40px rgba(138, 43, 226, 0.3));
+  transition: transform 0.3s ease;
 
   @media (min-width: 768px) {
     width: 50%; /* Make it smaller on larger screens */
@@ -79,48 +127,78 @@ const Spaceship = styled.img`
 // Animation for shrinking and moving circles
 const shrinkAndMove = (left: number, top: number, containerWidth: number, containerHeight: number) => keyframes`
   0% {
-    transform: translate(0, 0) scale(1); /* Start at full size and original position */
-    opacity: 1; /* Fully visible */
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
   }
   100% {
-    transform: translate(${containerWidth / 2 - left}px, ${containerHeight / 2 - top}px) scale(0); /* Move and shrink */
-    opacity: 0; /* Fade out */
+    transform: translate(${containerWidth / 2 - left}px, ${containerHeight / 2 - top}px) scale(0);
+    opacity: 0;
   }
 `;
 
 // Circle styling with animation based on position and size
 const Circle = styled.div<{ left: number; top: number; size: number; containerWidth: number; containerHeight: number }>`
-  position: absolute; /* Absolute positioning for floating circles */
-  background-color: #fff; /* White background for the circles */
-  border-radius: 50%; /* Make the div a circle */
-  opacity: 0.8; /* Slight transparency */
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(212, 161, 255, 0.6) 100%);
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
 
   ${({ left, top, size, containerWidth, containerHeight }) => css`
-    width: ${size}px; /* Set width based on random size */
-    height: ${size}px; /* Set height to match width */
-    left: ${left}px; /* Set horizontal position */
-    top: ${top}px; /* Set vertical position */
-    animation: ${shrinkAndMove(left, top, containerWidth, containerHeight)} 2s linear forwards; /* Animate shrinking */
+    width: ${size}px;
+    height: ${size}px;
+    left: ${left}px;
+    top: ${top}px;
+    animation: ${shrinkAndMove(left, top, containerWidth, containerHeight)} 2s ease-out forwards;
+    box-shadow: 0 0 ${size / 2}px rgba(212, 161, 255, 0.5);
   `}
 `;
 
 // Styling for the gradient text (title)
 const GradientText = styled.h2`
-  background: linear-gradient(90deg, #8a2be2, #d4a1ff); /* Purple gradient */
-  -webkit-background-clip: text; /* Clip background to text */
-  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-  font-size: 4em; /* Large font size */
-  font-weight: bold; /* Bold text */
-  margin: 0.5em 0; /* Space around the text */
+  background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2.5em, 8vw, 5em);
+  font-weight: 700;
+  margin: 0.3em 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  animation: ${gradientShift} 8s ease infinite;
+  filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
+
+  @media (min-width: 768px) {
+    font-size: clamp(3.5em, 6vw, 5.5em);
+  }
+`;
+
+// Blinking cursor animation
+const blink = keyframes`
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 `;
 
 // Styling for the typewriter effect text
 const TypewriterText = styled.div`
-  color: #d4a1ff; /* Light purple color */
-  font-size: 1.5em; /* Medium font size */
-  margin-top: 0.5em; /* Space above the text */
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflowing text */
+  color: #d4a1ff;
+  font-size: clamp(1.1em, 3vw, 1.75em);
+  margin-top: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  
+  &::after {
+    content: '_';
+    animation: ${blink} 1s infinite;
+    color: #a855f7;
+    font-weight: 300;
+  }
 `;
 
 // Interface for circle properties
@@ -180,7 +258,7 @@ const Hero: React.FC = () => {
 
       // Function to handle typing the text
       function type() {
-        setCurrentText(currentString.substring(0, textPos) + '_'); // Add typing cursor
+        setCurrentText(currentString.substring(0, textPos));
 
         if (textPos++ === currentString.length) {
           setTimeout(() => deleteText(), waitTime); // Wait and start deleting
@@ -191,7 +269,7 @@ const Hero: React.FC = () => {
 
       // Function to handle deleting the text
       function deleteText() {
-        setCurrentText(currentString.substring(0, textPos) + '_'); // Add typing cursor while deleting
+        setCurrentText(currentString.substring(0, textPos));
 
         if (textPos-- === 0) {
           i = (i + 1) % typewriterTexts.length; // Cycle through text array
@@ -252,20 +330,20 @@ const Hero: React.FC = () => {
   return (
     <HeroContainer>
       <LeftContainer>
-        <h1>{topLine}</h1> {/* Display random headline */}
-        <GradientText>I'm TJ Klint.</GradientText> {/* Display name with gradient effect */}
-        <TypewriterText>{currentText}</TypewriterText> {/* Display typewriter effect text */}
+        <Headline>{topLine}</Headline>
+        <GradientText>I'm TJ Klint.</GradientText>
+        <TypewriterText>{currentText}</TypewriterText>
       </LeftContainer>
       <RightContainer ref={rightContainerRef}>
-        <Spaceship src={spaceship} alt="Spaceship" /> {/* Display the floating spaceship */}
+        <Spaceship src={spaceship} alt="Spaceship" />
         {circles.map(circle => (
           <Circle
-            key={circle.id} /* Key for each circle */
-            left={circle.left} /* Horizontal position */
-            top={circle.top} /* Vertical position */
-            size={circle.size} /* Circle size */
-            containerWidth={circle.containerWidth} /* Width of the container */
-            containerHeight={circle.containerHeight} /* Height of the container */
+            key={circle.id}
+            left={circle.left}
+            top={circle.top}
+            size={circle.size}
+            containerWidth={circle.containerWidth}
+            containerHeight={circle.containerHeight}
           />
         ))}
       </RightContainer>
