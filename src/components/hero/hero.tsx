@@ -296,21 +296,8 @@ const Hero: React.FC = () => {
       return { isFuture: true, talk: futureTalks[0] };
     }
 
-    // If no future talks, get the most recent past talk
-    const pastTalks = talks.filter(talk => {
-      const talkDate = new Date(talk.date);
-      talkDate.setHours(0, 0, 0, 0);
-      return talkDate < now;
-    });
-
-    if (pastTalks.length > 0) {
-      // Sort by date and get the most recent past talk
-      pastTalks.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-      return { isFuture: false, talk: pastTalks[0] };
-    }
-
-    // If no talks at all, return the first one
-    return { isFuture: false, talk: talks[0] };
+    // If no future talks, return null (will show "Yours?")
+    return { isFuture: false, talk: null };
   };
 
   const { isFuture, talk } = getTalkInfo();
@@ -435,14 +422,19 @@ const Hero: React.FC = () => {
         <Headline>{topLine}</Headline>
         <GradientText>I'm TJ Klint.</GradientText>
         <TypewriterText>{currentText}</TypewriterText>
-        {talk && (
+        {isFuture && talk ? (
           <TalkLink
             href={talk.website}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {isFuture ? 'Next talk: ' : 'Last talk: '}
-            <span className="event-name">{talk.event}</span>
+            Next talk: <span className="event-name">{talk.event}</span>
+          </TalkLink>
+        ) : (
+          <TalkLink
+            href="mailto:timothyjklint@gmail.com?subject=Speaking Opportunity"
+          >
+            Next talk: <span className="event-name">Your event?</span>
           </TalkLink>
         )}
       </LeftContainer>
