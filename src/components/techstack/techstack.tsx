@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaGitlab, FaDocker, FaJira, FaJava, FaPython, FaHtml5, FaCss3, FaJs, FaReact, FaDatabase, FaNodeJs } from 'react-icons/fa';
-import { SiCsharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiXamarin, SiVisualstudio, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn, SiWebpack } from 'react-icons/si';
+import { SiSharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn, SiWebpack } from 'react-icons/si';
 import './techstack.scss';
 
 const Techstack: React.FC = () => {
@@ -12,7 +12,7 @@ const Techstack: React.FC = () => {
           <div className="technology-category">
             <h3>Languages</h3>
             <div className="technology-items">
-              <div className="technology-item"><SiCsharp /><p>C#</p></div>
+              <div className="technology-item"><SiSharp /><p>C#</p></div>
               <div className="technology-item"><FaJava /><p>Java</p></div>
               <div className="technology-item"><SiCplusplus /><p>C++</p></div>
               <div className="technology-item"><FaPython /><p>Python</p></div>
@@ -32,7 +32,7 @@ const Techstack: React.FC = () => {
             <div className="technology-items">
               <div className="technology-item"><SiDotnet /><p>ASP.NET</p></div>
               <div className="technology-item"><SiDotnet /><p>WPF</p></div>
-              <div className="technology-item"><SiXamarin /><p>Xamarin</p></div>
+              <div className="technology-item"><SiDotnet /><p>Xamarin</p></div>
               <div className="technology-item"><SiSpringboot /><p>SpringBoot</p></div>
               <div className="technology-item"><FaNodeJs /><p>NodeJS</p></div>
               <div className="technology-item"><SiRedis /><p>Redis</p></div>
@@ -51,7 +51,7 @@ const Techstack: React.FC = () => {
               <div className="technology-item"><FaDocker /><p>Docker</p></div>
               <div className="technology-item"><FaJira /><p>Jira</p></div>
               <div className="technology-item"><SiCisco /><p>Cisco</p></div>
-              <div className="technology-item"><SiVisualstudio /><p>Visual Studio</p></div>
+              <div className="technology-item"><SiDotnet /><p>Visual Studio</p></div>
             </div>
           </div>
 
