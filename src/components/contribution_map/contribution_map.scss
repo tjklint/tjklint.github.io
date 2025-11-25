@@ -60,23 +60,32 @@
       filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
     }
 
-    .react-github-calendar {
+    .calendar-section {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      overflow-x: auto;
-      padding: 20px;
-      background: rgba(42, 42, 42, 0.3);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(168, 85, 247, 0.2);
-      box-shadow: 0 8px 24px rgba(138, 43, 226, 0.15);
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .year-label {
+        font-size: clamp(1.5em, 3vw, 2em);
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        font-family: 'RobotoMono', sans-serif;
+        text-align: left;
+      }
     }
 
     .calendar-wrapper {
       width: 100%;
       display: flex;
       justify-content: center;
+      overflow-x: auto;
     }
   }
 }
