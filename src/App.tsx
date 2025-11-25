@@ -22,9 +22,11 @@ import Footer from './components/footer/footer.tsx';
 import ContributionMap from './components/contribution_map/contribution_map.tsx';
 
 const AppContainer = styled.div`
-  background-color: #1e1e1e; /* Match the background color of the hero section */
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
+  background-size: 200% 200%;
   min-height: 100vh;
-  padding: 20px 0;
+  padding: 0;
+  margin: 0;
 `;
 
 const MainContent = styled.div`

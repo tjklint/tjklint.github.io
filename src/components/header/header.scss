@@ -1,24 +1,84 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .header-container {
-  background-color: #1e1e1e; /* Dark background for the header */
-  padding: 20px 40px; /* Spacing around the header content */
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(42, 26, 61, 0.95) 50%, rgba(30, 30, 30, 0.95) 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  padding: 20px 40px;
   display: flex;
-  align-items: center; /* Vertically align items in the header */
-  justify-content: space-between; /* Space items evenly (logo on the left, nav on the right) */
-  color: #fff; /* White text color */
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
   font-family: 'RobotoMono', sans-serif;
-  position: relative; /* Set relative position for z-index control */
-  z-index: 1000; /* Ensure the header stays on top of other elements */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(138, 43, 226, 0.3),
+              0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px 24px;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+    border-radius: 16px;
+
+    &::before {
+      border-radius: 16px;
+    }
+  }
 }
 
 .logo {
-  font-size: 24px; /* Size of the logo text */
-  font-weight: bold; /* Bold text for emphasis */
-  letter-spacing: 2px; /* Add space between the letters */
-  color: #e1e1e1; /* Light gray color for the logo */
-  text-decoration: none; /* Remove underline from logo text */
+  font-size: clamp(1.1em, 2.5vw, 1.5em);
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #e1e1e1 0%, #d4a1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
   
   &:hover {
-    color: #9b59b6; /* Change logo color to purple on hover */
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(138, 43, 226, 0.4));
   }
 }
 
@@ -33,7 +93,8 @@
     right: -100%; /* Initially hide the nav by moving it offscreen */
     width: 100%; /* Full width for the mobile menu */
     height: 100%; /* Full height for the mobile menu */
-    background-color: #1e1e1e; /* Same dark background */
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.98) 0%, rgba(42, 26, 61, 0.98) 100%);
+    backdrop-filter: blur(20px);
     flex-direction: column; /* Stack the nav items vertically */
     justify-content: center; /* Center nav items vertically */
     transition: right 0.3s ease-in-out; /* Smooth slide-in effect */
@@ -47,27 +108,36 @@
 
 .nav-link {
   display: flex;
-  align-items: center; /* Vertically align link content */
-  margin-left: 40px; /* Add space between the links */
-  color: #d3d3d3; /* Light gray for the link text */
-  text-decoration: none; /* Remove underline from links */
-  font-size: 18px; /* Set the link text size */
-  transition: color 0.3s; /* Smooth color transition on hover */
+  align-items: center;
+  margin-left: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  transition: all 0.3s ease;
   font-family: 'RobotoMono', sans-serif;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
 
   &:hover {
-    color: #9b59b6; /* Change link color to purple on hover */
+    color: #d4a1ff;
+    transform: translateY(-2px);
+    filter: drop-shadow(0 2px 4px rgba(138, 43, 226, 0.3));
   }
 
   svg {
-    margin-right: 8px; /* Add space between the icon and the text */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
   }
 
-  /* Mobile: Adjust link spacing and size */
+  &:hover svg {
+    transform: scale(1.1);
+  }
+
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-bottom: 20px; /* Add space between links */
-    font-size: 24px; /* Larger font size on mobile */
+    margin-bottom: 24px;
+    font-size: clamp(1.2em, 4vw, 1.5em);
   }
 }
 
@@ -79,39 +149,53 @@
   @media (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 20px; /* Position the hamburger at the top */
-    right: 20px; /* Align the hamburger to the right */
+    top: 16px; /* Position the hamburger at the top */
+    right: 24px; /* Align the hamburger to the right */
     z-index: 1001; /* Layer the hamburger above the nav */
   }
 }
 
 .button {
   display: flex;
-  align-items: center; /* Vertically align button content */
-  margin-left: 40px; /* Space between the button and nav links */
-  padding: 8px 16px; /* Padding inside the button */
-  border: 2px solid #9b59b6; /* Purple border around the button */
-  color: #9b59b6; /* Purple text */
-  text-decoration: none; /* Remove underline from the button text */
-  font-size: 18px; /* Set the button text size */
-  transition: all 0.3s; /* Smooth transition for background and text color */
+  align-items: center;
+  margin-left: 40px;
+  padding: 10px 20px;
+  border: 2px solid #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  color: #d4a1ff;
+  text-decoration: none;
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  transition: all 0.3s ease;
   font-family: 'RobotoMono', sans-serif;
-  border-radius: 5px; /* Rounded button corners */
+  border-radius: 8px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
 
   &:hover {
-    background-color: #9b59b6; /* Purple background on hover */
-    color: #fff; /* White text on hover */
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+    border-color: #d4a1ff;
   }
 
   svg {
-    margin-right: 8px; /* Space between the icon and text */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
   }
 
-  /* Mobile: Adjust button spacing and size */
+  &:hover svg {
+    transform: scale(1.1) rotate(5deg);
+  }
+
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-bottom: 20px; /* Add space between the button and other elements */
-    font-size: 24px; /* Increase button font size on mobile */
+    margin-bottom: 24px;
+    font-size: clamp(1.2em, 4vw, 1.5em);
+    padding: 12px 24px;
   }
 }
 
