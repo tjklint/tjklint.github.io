@@ -16,10 +16,22 @@
   font-weight: 400;
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .contribution-map-container {
-  width: 80%; /* Keep the width consistent with other components */
-  margin: 0 auto; /* Center the entire container */
-  padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
 
@@ -27,30 +39,44 @@
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all content except the header */
+    align-items: center;
     color: #fff;
 
     h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #fff;
+      font-size: clamp(1.8em, 4vw, 2.5em);
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       font-family: 'RobotoMono', sans-serif;
       text-align: left;
-      align-self: flex-start; /* Ensure the header stays aligned to the left */
+      align-self: flex-start;
       width: 100%;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      animation: gradientShift 8s ease infinite;
+      filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
     }
 
     .react-github-calendar {
-      width: 100%; /* Make the contribution graph take up full width */
+      width: 100%;
       display: flex;
-      justify-content: center; /* Center the contribution graph itself */
-      overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+      justify-content: center;
+      overflow-x: auto;
+      padding: 20px;
+      background: rgba(42, 42, 42, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      box-shadow: 0 8px 24px rgba(138, 43, 226, 0.15);
     }
 
     .calendar-wrapper {
-      width: 100%; /* The graph wrapper takes the full width */
+      width: 100%;
       display: flex;
-      justify-content: center; /* Center the contents inside the wrapper */
+      justify-content: center;
     }
   }
 }
