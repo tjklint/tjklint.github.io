@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import spaceship from '../../assets/spaceship/webp/spaceship.webp'; // Importing spaceship image
+import talksData from '../../data/talks.json';
 
 // Animated gradient background
 const gradientShift = keyframes`
@@ -206,6 +207,50 @@ const TypewriterText = styled.div`
   }
 `;
 
+// Styling for the talk button/link
+const TalkLink = styled.a`
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.8) 0%, rgba(42, 26, 61, 0.8) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.9em, 1.8vw, 1.1em);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.2);
+  align-self: flex-start;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(138, 43, 226, 0.4);
+    border-color: rgba(212, 161, 255, 0.5);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(212, 161, 255, 0.1) 100%);
+  }
+
+  .event-name {
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .event-name {
+    background: linear-gradient(135deg, #d4a1ff 0%, #f0abfc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+`;
+
 // Interface for circle properties
 interface CircleProps {
   id: number; /* Unique ID for each circle */
@@ -216,12 +261,59 @@ interface CircleProps {
   containerHeight: number; /* Height of the container */
 }
 
+// Interface for talk data
+interface Talk {
+  event: string;
+  date: string;
+  website: string;
+}
+
 // Main Hero component
 const Hero: React.FC = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]); // State to manage circles
   const [topLine, setTopLine] = useState(''); // State for random headline
   const [currentText, setCurrentText] = useState(''); // State for typewriter text
   const rightContainerRef = useRef<HTMLDivElement>(null); // Ref to get the right container's dimensions
+
+  // Determine if there's a future talk and get the relevant talk
+  const getTalkInfo = (): { isFuture: boolean; talk: Talk | null } => {
+    const talks = (talksData as { talks: Talk[] }).talks;
+    if (talks.length === 0) return { isFuture: false, talk: null };
+
+    const now = new Date();
+    now.setHours(0, 0, 0, 0); // Reset time to compare dates only
+
+    // Find future talks
+    const futureTalks = talks.filter(talk => {
+      const talkDate = new Date(talk.date);
+      talkDate.setHours(0, 0, 0, 0);
+      return talkDate >= now;
+    });
+
+    if (futureTalks.length > 0) {
+      // Sort by date and get the earliest future talk
+      futureTalks.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+      return { isFuture: true, talk: futureTalks[0] };
+    }
+
+    // If no future talks, get the most recent past talk
+    const pastTalks = talks.filter(talk => {
+      const talkDate = new Date(talk.date);
+      talkDate.setHours(0, 0, 0, 0);
+      return talkDate < now;
+    });
+
+    if (pastTalks.length > 0) {
+      // Sort by date and get the most recent past talk
+      pastTalks.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      return { isFuture: false, talk: pastTalks[0] };
+    }
+
+    // If no talks at all, return the first one
+    return { isFuture: false, talk: talks[0] };
+  };
+
+  const { isFuture, talk } = getTalkInfo();
 
   const topLines = [
     "You’re finally awake. Let’s explore my work.",
@@ -343,6 +435,16 @@ const Hero: React.FC = () => {
         <Headline>{topLine}</Headline>
         <GradientText>I'm TJ Klint.</GradientText>
         <TypewriterText>{currentText}</TypewriterText>
+        {talk && (
+          <TalkLink
+            href={talk.website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {isFuture ? 'Next talk: ' : 'Last talk: '}
+            <span className="event-name">{talk.event}</span>
+          </TalkLink>
+        )}
       </LeftContainer>
       <RightContainer ref={rightContainerRef}>
         <Spaceship src={spaceship} alt="Spaceship" />
