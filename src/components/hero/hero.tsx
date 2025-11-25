@@ -237,13 +237,17 @@ const Hero: React.FC = () => {
   ]; // Array of possible headline texts
 
   const typewriterTexts = [
-    "Software Developer",
+    "Software Developer @ Botpress",
     "Ex-SDE Intern @ Bell",
-    "Co-Chair @ CUSEC",
+    "Co-Chair @ CUSEC 2025",
+    "Ex-SDE Intern @ CSE",
     "Ethical Hacker",
     "AI Enthusiast",
+    "Founder @ JACHacks",
     "Coffee Drinker",
-    "Hackathon Fanatic"
+    "Hackathon Fanatic",
+    "Director of Events @ CUSEC 2024",
+    "USE BOTPRESS.COM"
   ]; // Array of texts for the typewriter effect
 
   useEffect(() => {
