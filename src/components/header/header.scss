@@ -11,7 +11,7 @@
 }
 
 .header-container {
-  background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(42, 26, 61, 0.95) 50%, rgba(30, 30, 30, 0.95) 100%);
   background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
   padding: 20px 40px;
@@ -20,10 +20,14 @@
   justify-content: space-between;
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
 
   &::before {
     content: '';
@@ -32,7 +36,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
     pointer-events: none;
   }
 
@@ -75,7 +79,8 @@
     right: -100%; /* Initially hide the nav by moving it offscreen */
     width: 100%; /* Full width for the mobile menu */
     height: 100%; /* Full height for the mobile menu */
-    background-color: #1e1e1e; /* Same dark background */
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.98) 0%, rgba(42, 26, 61, 0.98) 100%);
+    backdrop-filter: blur(20px);
     flex-direction: column; /* Stack the nav items vertically */
     justify-content: center; /* Center nav items vertically */
     transition: right 0.3s ease-in-out; /* Smooth slide-in effect */

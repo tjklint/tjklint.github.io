@@ -20,6 +20,7 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column; /* Stack items vertically by default */
   min-height: 100vh; /* Full viewport height */
+  padding-top: 80px; /* Account for fixed header */
   background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
   background-size: 200% 200%;
   animation: ${gradientShift} 15s ease infinite;
@@ -27,6 +28,10 @@ const HeroContainer = styled.section`
   overflow: hidden; /* Prevent overflow */
   font-family: 'RobotoMono', sans-serif; /* Use RobotoMono font */
   position: relative;
+
+  @media (max-width: 768px) {
+    padding-top: 70px; /* Slightly less padding on mobile */
+  }
 
   &::before {
     content: '';
