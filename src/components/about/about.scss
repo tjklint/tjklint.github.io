@@ -1,16 +1,37 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .about-container {
   width: 80%;
   margin: 0 auto;
   font-family: 'RobotoMono', sans-serif;
   color: white;
+  padding: 40px 0;
 
   h2 {
-    font-size: 2em;
+    font-size: clamp(1.8em, 4vw, 2.5em);
     padding-top: 10px;
-    margin: 0;
-    color: #fff;
+    margin: 0 0 30px 0;
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: 'RobotoMono', sans-serif;
     text-align: left;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    animation: gradientShift 8s ease infinite;
+    filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
   }
 
   .about-intro {
@@ -42,24 +63,34 @@
       }
   
       p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
+        font-size: clamp(1em, 2vw, 1.25em);
+        margin-bottom: 24px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
       }
   
       .purple-text {
-        color: #9b30ff; /* Purple color for highlighted text */
+        background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
       }
   
       a {
-        color: #9b30ff; /* Purple color for links */
-        text-decoration: underline; /* Always underline links */
+        color: #d4a1ff;
+        text-decoration: underline;
+        text-decoration-color: rgba(212, 161, 255, 0.5);
+        transition: all 0.3s ease;
   
         &:visited {
-          color: #9b30ff; /* Maintain purple for visited links */
+          color: #d4a1ff;
         }
   
         &:hover {
-          color: #8a2be2; /* Slightly darker purple on hover */
+          color: #f0abfc;
+          text-decoration-color: #f0abfc;
+          filter: drop-shadow(0 2px 4px rgba(138, 43, 226, 0.4));
         }
       }
     }
@@ -74,8 +105,17 @@
       img {
         width: 100%;
         height: auto;
-        border: 3px solid #8a2be2;
-        border-radius: 10px;
+        border: 3px solid transparent;
+        background: linear-gradient(135deg, #a855f7, #d4a1ff) padding-box,
+                    linear-gradient(135deg, #a855f7, #d4a1ff) border-box;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(138, 43, 226, 0.5);
+        }
       }
   
       /* Ensure the photo is centered horizontally and vertically on mobile */
