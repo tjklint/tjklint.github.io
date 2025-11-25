@@ -20,7 +20,7 @@ const HeroContainer = styled.section`
   display: flex;
   flex-direction: column; /* Stack items vertically by default */
   min-height: 100vh; /* Full viewport height */
-  padding-top: 80px; /* Account for fixed header */
+  padding-top: 100px; /* Account for floating header with margin */
   background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
   background-size: 200% 200%;
   animation: ${gradientShift} 15s ease infinite;
@@ -30,7 +30,7 @@ const HeroContainer = styled.section`
   position: relative;
 
   @media (max-width: 768px) {
-    padding-top: 70px; /* Slightly less padding on mobile */
+    padding-top: 90px; /* Account for floating header on mobile */
   }
 
   &::before {

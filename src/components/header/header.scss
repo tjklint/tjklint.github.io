@@ -21,13 +21,17 @@
   color: #fff;
   font-family: 'RobotoMono', sans-serif;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 20px;
+  left: 20px;
+  right: 20px;
   z-index: 1000;
   backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
-  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(138, 43, 226, 0.3),
+              0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
 
   &::before {
     content: '';
@@ -36,12 +40,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
     pointer-events: none;
+    border-radius: 20px;
   }
 
   @media (max-width: 768px) {
     padding: 16px 24px;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+    border-radius: 16px;
+
+    &::before {
+      border-radius: 16px;
+    }
   }
 }
 
@@ -135,8 +149,8 @@
   @media (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 20px; /* Position the hamburger at the top */
-    right: 20px; /* Align the hamburger to the right */
+    top: 16px; /* Position the hamburger at the top */
+    right: 24px; /* Align the hamburger to the right */
     z-index: 1001; /* Layer the hamburger above the nav */
   }
 }
