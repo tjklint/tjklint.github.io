@@ -1,12 +1,39 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .footer-container {
-  background-color: #1e1e1e; /* Dark background for the footer */
-  color: #fff; /* White text color */
-  padding: 20px 40px; /* Padding around the content */
-  text-align: center; /* Center text by default */
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  padding: 30px 40px;
+  text-align: center;
   font-family: 'RobotoMono', sans-serif;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-  align-items: center; /* Vertically align items in the grid */
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: relative;
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
 
   /* Stack the footer elements vertically on smaller screens */
   @media (max-width: 768px) {
@@ -29,13 +56,41 @@
   }
 
   .purple-heart {
-    color: #8a2be2; /* Purple color for the heart icon */
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
 
   .footer-link {
-    color: #8a2be2; /* Purple color for footer links */
-    text-decoration: underline; /* Underline links */
-    margin-left: 5px; /* Small left margin to separate from text */
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: underline;
+    text-decoration-color: rgba(212, 161, 255, 0.5);
+    margin-left: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+
+    &:hover {
+      background: linear-gradient(135deg, #d4a1ff 0%, #f0abfc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration-color: #f0abfc;
+      filter: drop-shadow(0 2px 4px rgba(138, 43, 226, 0.4));
+    }
   }
 
   .social-icons {
@@ -49,18 +104,26 @@
     }
 
     a {
-      color: #d3d3d3; /* Light grey for social icons */
-      font-size: 1.5em; /* Size of social icons */
-      transition: color 0.3s; /* Smooth transition for hover effect */
+      color: rgba(255, 255, 255, 0.7);
+      font-size: clamp(1.3em, 2vw, 1.6em);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
 
       &:hover {
-        color: #8a2be2; /* Change icon color to purple on hover */
+        color: #d4a1ff;
+        transform: translateY(-3px) scale(1.1);
+        filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.5));
       }
     }
   }
 
   p {
-    margin: 0; /* Remove default paragraph margin */
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(0.9em, 1.2vw, 1em);
+    position: relative;
+    z-index: 1;
   }
 
   .left-align {
