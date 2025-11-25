@@ -234,6 +234,7 @@ const Hero: React.FC = () => {
     "Say hello to my little projects!",
     "Welcome to the dark side of my portfolio.",
     "One portfolio to rule them all.",
+    
   ]; // Array of possible headline texts
 
   const typewriterTexts = [
