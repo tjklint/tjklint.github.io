@@ -63,48 +63,19 @@ const About: React.FC = () => {
             .
           </p>
           <p>
-            I'm a{" "}
-            <span className="purple-text">
-              <a
-                href="https://www.johnabbott.qc.ca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                graduate from John Abbott College
-              </a>
-            </span>
-            . I am expected to begin at{" "}
-            <span className="purple-text">
-              <a
-                href="https://www.concordia.ca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                Concordia University
-              </a>
-            </span>{" "}
-            in the fall of 2025, where I will be pursuing a bachelor's in
-            Computer Science.
-          </p>
-          <p>
             My interests change greatly depending on my environment, but at the
             moment, I am most interested by
             <span className="purple-text">
               {" "}
-              AI/ML, Ethical Hacking, DevOps and Fintech.
+              AI/ML, Ethical Hacking, and DevOps.
             </span>
           </p>
           <p>
-            My skillset is quite wide-ranged, I don't focus all too heavy on the
-            frameworks/languages, I like to choose the best tools to get the
-            best product as fast as possible. I'm a quick learner, especially in
-            fast-paced environments where I'm able to hone skills on the fly to
-            improve and deliver on time.
+            My skillset spans a wide range of technologies, and I believe in choosing the right tool for the job rather than being tied to specific frameworks or languages. I thrive in fast-paced environments where I can quickly adapt, learn on the fly, and deliver results. Whether it's building new features or{" "}
+            <span className="purple-text">crushing tech debt</span>, I'm always focused on shipping quality solutions that make a real impact.
           </p>
           <p>
-            My love for tech goes beyond class. I’m always eager to dive into
+            My love for tech goes beyond work. I’m always eager to dive into
             the world of hackathons and tech conferences. My passion has led me
             to join my favorite conference,{" "}
             <span className="purple-text">
