@@ -1,16 +1,36 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .about-technologies-container {
-  width: 80%; /* Set width to 80% for consistent margin with other components */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px 0; /* Padding around the container */
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
   font-family: 'RobotoMono', sans-serif;
-  color: #fff; /* White text color */
+  color: #fff;
 
   .about-technologies {
     h2 {
-      font-size: 2em; /* Large font size for section title */
-      margin-bottom: 20px; /* Space below the title */
-      text-align: left; /* Align title to the left */
-      color: #fff; /* White title */
+      font-size: clamp(1.8em, 4vw, 2.5em);
+      margin-bottom: 30px;
+      text-align: left;
+      background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      animation: gradientShift 8s ease infinite;
+      filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
     }
 
     .technology-categories {
@@ -27,16 +47,30 @@
       }
 
       .technology-category {
-        background-color: #2a2a2a; /* Dark background for each category */
-        padding: 20px; /* Padding inside each category box */
-        border-radius: 10px; /* Rounded corners */
-        color: #fff; /* White text color */
+        background: linear-gradient(135deg, rgba(42, 42, 42, 0.8) 0%, rgba(42, 26, 61, 0.8) 100%);
+        backdrop-filter: blur(15px);
+        padding: 28px;
+        border-radius: 16px;
+        color: #fff;
+        border: 1px solid rgba(168, 85, 247, 0.2);
+        box-shadow: 0 8px 24px rgba(138, 43, 226, 0.15);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(138, 43, 226, 0.25);
+          border-color: rgba(212, 161, 255, 0.4);
+        }
 
         h3 {
-          font-size: 1.5em; /* Font size for category headings */
-          margin-bottom: 30px; /* Space below the category title */
-          text-align: center; /* Center-align category titles */
-          color: #fff; /* White color for category titles */
+          font-size: clamp(1.3em, 2.5vw, 1.6em);
+          margin-bottom: 30px;
+          text-align: center;
+          background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 700;
         }
 
         .technology-items {
@@ -54,29 +88,43 @@
 
           .technology-item {
             display: flex;
-            flex-direction: column; /* Stack icon and text vertically */
-            align-items: center; /* Center-align items */
-            font-size: 1.2em; /* Font size for text inside technology items */
-            color: #fff; /* White text color */
-            transition: color 0.3s ease; /* Smooth color transition on hover */
-            cursor: default; /* Keep cursor default, not clickable */
+            flex-direction: column;
+            align-items: center;
+            font-size: clamp(1em, 1.5vw, 1.2em);
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            cursor: default;
+            padding: 12px;
+            border-radius: 12px;
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid transparent;
 
             i {
-              font-size: 3em; /* Large icon size */
-              margin-bottom: 10px; /* Space below the icon */
-              color: inherit; /* Inherit color from parent */
-              transition: inherit; /* Inherit transition from parent */
+              font-size: clamp(2.5em, 4vw, 3em);
+              margin-bottom: 12px;
+              color: inherit;
+              transition: all 0.3s ease;
             }
 
             p {
-              margin: 0; /* Remove default margin */
-              text-align: center; /* Center-align text */
-              color: inherit; /* Inherit color from parent */
-              transition: inherit; /* Inherit transition from parent */
+              margin: 0;
+              text-align: center;
+              color: inherit;
+              transition: inherit;
+              font-weight: 500;
             }
 
             &:hover {
-              color: #8a2be2; /* Change color to purple on hover */
+              background: rgba(168, 85, 247, 0.15);
+              border-color: rgba(212, 161, 255, 0.3);
+              transform: translateY(-4px) scale(1.05);
+              color: #d4a1ff;
+              box-shadow: 0 6px 16px rgba(138, 43, 226, 0.2);
+
+              i {
+                transform: scale(1.1);
+                filter: drop-shadow(0 4px 8px rgba(138, 43, 226, 0.4));
+              }
             }
           }
         }
