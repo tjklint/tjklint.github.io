@@ -41,10 +41,12 @@
     width: 100%; /* Full width for content wrapper */
     display: flex;
     flex-direction: column; /* Stack items vertically by default */
+    gap: 20px; /* Gap between columns on mobile */
 
     @media (min-width: 1025px) {
       flex-direction: row; /* Switch to a row layout on larger screens */
       justify-content: center; /* Center content horizontally */
+      gap: 60px; /* Increased gap between text and iframe */
     }
   }
 }
@@ -52,6 +54,10 @@
 .left-column {
   flex: 1; /* Allow the left column to take up equal space */
   margin-bottom: 20px; /* Space below the left column */
+
+  @media (min-width: 1025px) {
+    margin-right: 0; /* Remove margin, gap handles spacing */
+  }
 
   @media (max-width: 1024px) {
     margin-right: 0; /* Remove right margin on smaller screens */
