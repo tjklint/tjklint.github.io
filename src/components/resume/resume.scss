@@ -1,19 +1,40 @@
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .resume-container {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center the content horizontally */
-  color: #fff; /* White text color */
-  width: 80%; /* Set container width to 80% */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0; /* Remove padding */
-  font-family: 'RobotoMono', sans-serif; /* Use the RobotoMono font */
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: 'RobotoMono', sans-serif;
 
   .resume-title {
-    font-size: 2.5em; /* Large font size for the title */
-    text-align: left; /* Align the title text to the left */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    width: 100%; /* Full width for the title */
+    font-size: clamp(2em, 5vw, 2.8em);
+    text-align: left;
+    margin: 0 0 30px 0;
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    animation: gradientShift 8s ease infinite;
+    filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
   }
 
   .content-wrapper {
@@ -46,12 +67,19 @@
   width: 100%; /* Full width for the right column */
 
   iframe {
-    width: 100%; /* Full width iframe for embedding content */
-    height: 115vh; /* Set iframe height */
-    border: none; /* Remove the iframe border */
+    width: 100%;
+    height: 115vh;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(138, 43, 226, 0.2);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 12px 32px rgba(138, 43, 226, 0.3);
+    }
 
     @media (max-width: 1200px) {
-      height: 60vh; /* Reduce iframe height on smaller screens */
+      height: 60vh;
     }
   }
 }
@@ -61,21 +89,27 @@
 }
 
 .section-title {
-  font-size: 2.5em; /* Large font size for section titles */
-  margin-bottom: 20px; /* Space below the section title */
-  position: relative; /* Position relative for future positioning */
+  font-size: clamp(1.8em, 4vw, 2.5em);
+  margin-bottom: 24px;
+  position: relative;
+  background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
 .line-container {
   position: relative; /* Relative positioning for the line indicator */
 
   &:before {
-    content: ""; /* Create a vertical line */
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px; /* Set the line width */
-    background: #d3d3d3; /* Light gray color for the line */
+    width: 2px;
+    background: linear-gradient(180deg, #a855f7 0%, #d4a1ff 100%);
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
   }
 }
 
@@ -85,13 +119,14 @@
   position: relative; /* Relative positioning for the job container */
 
   &:before {
-    content: ""; /* Create a horizontal line for job sections */
+    content: "";
     position: absolute;
     top: 1em;
     left: 0;
-    width: 20px; /* Set width of the horizontal line */
-    height: 2px; /* Set height of the line */
-    background: #d3d3d3; /* Light gray color for the line */
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7 0%, #d4a1ff 100%);
+    box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
   }
 }
 
@@ -102,7 +137,11 @@
 }
 
 .company {
-  color: #8a2be2; /* Purple color for company names */
+  background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 .job-dates {
@@ -118,9 +157,13 @@
   font-size: 1em; /* Font size for the bullet points */
 
   &:before {
-    content: ">"; /* Arrow symbol for bullet points */
+    content: ">";
     position: absolute;
-    left: 0; /* Align bullet point to the left */
-    color: #8a2be2; /* Purple color for bullet point arrows */
+    left: 0;
+    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
   }
 }
