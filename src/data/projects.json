@@ -41,7 +41,7 @@
       "title": "DigitalAdrenaline",
       "description": "A fast-paced 2D Cyberpunk platformer where players navigate through an AI-controlled city. Features unique bullet recovery mechanics and strategic resource management across 2-4 intricately designed levels.",
       "image": "DigitalAdrenaline.gif",
-      "featured": false,
+      "featured": true,
       "category": "small",
       "technologies": {
         "languages": ["GDScript", "Python"],
