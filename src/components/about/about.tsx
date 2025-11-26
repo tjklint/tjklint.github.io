@@ -33,7 +33,6 @@ const About: React.FC = () => {
                 href="https://botpress.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "underline" }}
               >
                 Botpress
               </a>
@@ -44,7 +43,6 @@ const About: React.FC = () => {
                 href="https://www.cse-cst.gc.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
               >
                 CSE (Communications Security Establishment)
               </a>
@@ -55,7 +53,6 @@ const About: React.FC = () => {
                 href="https://www.bell.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "inherit", textDecoration: "none" }}
               >
                 Bell
               </a>
