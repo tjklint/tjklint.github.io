@@ -75,6 +75,17 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         font-weight: 600;
+
+        a {
+          background: none;
+          -webkit-background-clip: unset;
+          -webkit-text-fill-color: #d4a1ff;
+          background-clip: unset;
+          
+          &:hover {
+            -webkit-text-fill-color: #f0abfc;
+          }
+        }
       }
   
       a {
