@@ -1,6 +1,24 @@
 {
   "projects": [
     {
+      "id": "pathfinder",
+      "title": "Pathfinder",
+      "description": "An AI-driven 3D platform for career exploration that uses NPCs to share real-world advice, giving users interactive recommendations and insights mapped in real time.",
+      "image": "Pathfinder.gif",
+      "featured": true,
+      "category": "big",
+      "technologies": {
+        "languages": ["TypeScript", "SASS", "HTML"],
+        "frameworks": ["React", "Three.js"],
+        "libraries": ["Styled Components", "React Router", "OpenAI", "React Three Fiber"]
+      },
+      "tags": ["Pathfinding", "TypeScript", "SASS", "Three.js", "React", "OpenAI", "React Three Fiber"],
+      "links": {
+        "github": "https://github.com/tjklint/Pathfinder",
+        "demo": "https://www.pathfinderhelpsyoudecidewhereyouwantto.work/"
+      }
+    },
+    {
       "id": "capital-coach",
       "title": "Capital Coach",
       "description": "A financial management tool designed to empower individuals with smart financial planning, integrating simplicity with effectiveness.",
