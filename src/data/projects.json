@@ -8,9 +8,9 @@
       "featured": true,
       "category": "big",
       "technologies": {
-        "languages": ["TypeScript", "SASS", "HTML"],
+        "languages": ["TypeScript"],
         "frameworks": ["React", "Three.js"],
-        "libraries": ["Styled Components", "React Router", "OpenAI", "React Three Fiber"]
+        "libraries": ["React Three Fiber", "OpenAI", "Styled Components"]
       },
       "tags": ["Pathfinding", "TypeScript", "SASS", "Three.js", "React", "OpenAI", "React Three Fiber"],
       "links": {
@@ -26,9 +26,9 @@
       "featured": true,
       "category": "big",
       "technologies": {
-        "languages": ["JavaScript", "HTML", "CSS"],
+        "languages": ["JavaScript"],
         "frameworks": ["React", "Node.js", "Express"],
-        "libraries": ["Chart.js", "Axios"]
+        "libraries": ["Chart.js"]
       },
       "tags": ["Finance", "Web App", "Data Visualization"],
       "links": {
@@ -44,9 +44,9 @@
       "featured": true,
       "category": "small",
       "technologies": {
-        "languages": ["TypeScript", "Python"],
+        "languages": ["Python", "TypeScript"],
         "frameworks": ["Svelte"],
-        "libraries": ["RandomForestRegressor", "Chart.js", "Machine Learning", "GridSearch", "Gumloop AI Flow"]
+        "libraries": ["RandomForestRegressor", "GridSearch", "Chart.js", "Gumloop AI Flow"]
       },
       "tags": ["Machine Learning", "ESG", "Data Visualization", "AI"],
       "links": {
@@ -62,7 +62,7 @@
       "featured": true,
       "category": "small",
       "technologies": {
-        "languages": ["GDScript", "Python"],
+        "languages": ["GDScript"],
         "frameworks": ["Godot"],
         "libraries": []
       },
@@ -80,9 +80,9 @@
       "featured": true,
       "category": "big",
       "technologies": {
-        "languages": ["JavaScript", "HTML", "CSS"],
+        "languages": ["JavaScript"],
         "frameworks": ["React", "Node.js"],
-        "libraries": ["Axios", "React Router"]
+        "libraries": []
       },
       "tags": ["Gaming", "API Integration", "React"],
       "links": {
@@ -100,7 +100,7 @@
       "technologies": {
         "languages": ["Python", "JavaScript"],
         "frameworks": ["Electron", "Flask"],
-        "libraries": ["Requests"]
+        "libraries": []
       },
       "tags": ["Privacy", "Automation", "Security"],
       "links": {
@@ -116,9 +116,9 @@
       "featured": true,
       "category": "small",
       "technologies": {
-        "languages": ["TypeScript", "SASS", "HTML"],
+        "languages": ["TypeScript"],
         "frameworks": ["React"],
-        "libraries": ["Styled Components", "React Router"]
+        "libraries": ["Styled Components", "SASS"]
       },
       "tags": ["Portfolio", "TypeScript", "SASS"],
       "links": {
