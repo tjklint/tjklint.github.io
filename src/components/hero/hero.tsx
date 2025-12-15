@@ -268,6 +268,34 @@ interface Talk {
   website: string;
 }
 
+// Constants for hero component
+const topLines = [
+  "You're finally awake. Let's explore my work.",
+  "In a galaxy far, far away, I created this portfolio.",
+  "Winter is coming, but you're safe here. Explore my work.",
+  "Welcome to my corner of the web!",
+  "Greetings! I'm thrilled to have you here.",
+  "Hi! Thanks for dropping by.",
+  "It's dangerous to go alone! Take this portfolio.",
+  "Say hello to my little projects!",
+  "Welcome to the dark side of my portfolio.",
+  "One portfolio to rule them all.",
+]; // Array of possible headline texts
+
+const typewriterTexts = [
+  "Software Developer @ Botpress",
+  "Ex-SDE Intern @ Bell",
+  "Co-Chair @ CUSEC 2025",
+  "Ex-SDE Intern @ CSE",
+  "Ethical Hacker",
+  "AI Enthusiast",
+  "Founder @ JACHacks",
+  "Coffee Drinker",
+  "Hackathon Fanatic",
+  "Director of Events @ CUSEC 2024",
+  "USE BOTPRESS.COM"
+]; // Array of texts for the typewriter effect
+
 // Main Hero component
 const Hero: React.FC = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]); // State to manage circles
@@ -302,38 +330,10 @@ const Hero: React.FC = () => {
 
   const { isFuture, talk } = getTalkInfo();
 
-  const topLines = [
-    "You’re finally awake. Let’s explore my work.",
-    "In a galaxy far, far away, I created this portfolio.",
-    "Winter is coming, but you’re safe here. Explore my work.",
-    "Welcome to my corner of the web!",
-    "Greetings! I'm thrilled to have you here.",
-    "Hi! Thanks for dropping by.",
-    "It’s dangerous to go alone! Take this portfolio.",
-    "Say hello to my little projects!",
-    "Welcome to the dark side of my portfolio.",
-    "One portfolio to rule them all.",
-    
-  ]; // Array of possible headline texts
-
-  const typewriterTexts = [
-    "Software Developer @ Botpress",
-    "Ex-SDE Intern @ Bell",
-    "Co-Chair @ CUSEC 2025",
-    "Ex-SDE Intern @ CSE",
-    "Ethical Hacker",
-    "AI Enthusiast",
-    "Founder @ JACHacks",
-    "Coffee Drinker",
-    "Hackathon Fanatic",
-    "Director of Events @ CUSEC 2024",
-    "USE BOTPRESS.COM"
-  ]; // Array of texts for the typewriter effect
-
   useEffect(() => {
     // Pick a random top line for the header when the component mounts
     setTopLine(topLines[Math.floor(Math.random() * topLines.length)]);
-  }, []);
+  }, [topLines]);
 
   useEffect(() => {
     // Typewriter effect
@@ -373,7 +373,7 @@ const Hero: React.FC = () => {
     };
 
     typeWriter(); // Invoke the typewriter function on component mount
-  }, []);
+  }, [typewriterTexts]);
 
   useEffect(() => {
     // Create new circles every 333 milliseconds for the spaceship animation

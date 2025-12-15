@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes, FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
+import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes, FaStar, FaCodeBranch } from 'react-icons/fa';
 import './header.scss';
 
 const Header: React.FC = () => {

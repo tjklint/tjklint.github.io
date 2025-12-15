@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResumeEntry, ResumeSection } from './resumetypes';
+import { ResumeSection } from './resumetypes';
 
 const VisualAid: React.FC<{ section: ResumeSection }> = ({ section }) => {
   return (
