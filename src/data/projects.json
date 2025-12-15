@@ -23,7 +23,7 @@
       "title": "Capital Coach",
       "description": "A financial management tool designed to empower individuals with smart financial planning, integrating simplicity with effectiveness.",
       "image": "InvestSmart.gif",
-      "featured": true,
+      "featured": false,
       "category": "big",
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
