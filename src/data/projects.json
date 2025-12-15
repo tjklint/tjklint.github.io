@@ -9,10 +9,10 @@
       "category": "big",
       "technologies": {
         "languages": ["TypeScript", "SASS", "HTML"],
-        "frameworks": ["React", "Three.js"],
-        "libraries": ["Styled Components", "React Router", "OpenAI", "React Three Fiber"]
+        "frameworks": ["React"],
+        "libraries": ["Three.js", "React Three Fiber", "Styled Components", "React Router", "OpenAI API"]
       },
-      "tags": ["Pathfinding", "TypeScript", "SASS", "Three.js", "React", "OpenAI", "React Three Fiber"],
+      "tags": ["Web App", "AI", "3D Visualization", "Career Exploration"],
       "links": {
         "github": "https://github.com/tjklint/Pathfinder",
         "demo": "https://www.pathfinderhelpsyoudecidewhereyouwantto.work/"
@@ -28,9 +28,9 @@
       "technologies": {
         "languages": ["JavaScript", "HTML", "CSS"],
         "frameworks": ["React", "Node.js", "Express"],
-        "libraries": ["Chart.js", "Axios"]
+        "libraries": ["Chart.js", "Axios", "Botpress"]
       },
-      "tags": ["Finance", "Web App", "Data Visualization"],
+      "tags": ["Web App", "Finance", "Data Visualization"],
       "links": {
         "github": "https://github.com/tjklint/CapitalCoach",
         "demo": "https://tjklint.github.io/CapitalCoach/"
@@ -46,9 +46,9 @@
       "technologies": {
         "languages": ["TypeScript", "Python"],
         "frameworks": ["Svelte"],
-        "libraries": ["RandomForestRegressor", "Chart.js", "Machine Learning", "GridSearch", "Gumloop AI Flow"]
+        "libraries": ["scikit-learn", "Chart.js", "Gumloop AI Flow"]
       },
-      "tags": ["Machine Learning", "ESG", "Data Visualization", "AI"],
+      "tags": ["Web App", "Machine Learning", "ESG", "Data Visualization", "AI"],
       "links": {
         "github": "https://github.com/tjklint/Ecovest",
         "demo": null
@@ -66,7 +66,7 @@
         "frameworks": ["Godot"],
         "libraries": []
       },
-      "tags": ["Game Development", "2D Platformer", "Godot"],
+      "tags": ["Game", "2D Platformer", "Cyberpunk"],
       "links": {
         "github": "https://github.com/tjklint/DigitalAdrenaline",
         "demo": null
@@ -84,7 +84,7 @@
         "frameworks": ["React", "Node.js"],
         "libraries": ["Axios", "React Router"]
       },
-      "tags": ["Gaming", "API Integration", "React"],
+      "tags": ["Web App", "Gaming", "API Integration"],
       "links": {
         "github": "https://github.com/tjklint/PokePC",
         "demo": null
@@ -102,7 +102,7 @@
         "frameworks": ["Electron", "Flask"],
         "libraries": ["Requests"]
       },
-      "tags": ["Privacy", "Automation", "Security"],
+      "tags": ["Desktop App", "Privacy", "Automation", "Security"],
       "links": {
         "github": "https://github.com/tjklint/BellGeekfest2023",
         "demo": "tjklint.github.io/BellGeekfest2023/"
@@ -120,7 +120,7 @@
         "frameworks": ["React"],
         "libraries": ["Styled Components", "React Router"]
       },
-      "tags": ["Portfolio", "TypeScript", "SASS"],
+      "tags": ["Web App", "Portfolio"],
       "links": {
         "github": "https://github.com/tjklint/tjklint.github.io",
         "demo": "https://tjklint.github.io"
@@ -138,7 +138,7 @@
         "frameworks": ["Jetpack Compose", "Android"],
         "libraries": ["Gemini SDK"]
       },
-      "tags": ["Android", "Kotlin", "Jetpack Compose", "Mobile App", "AI", "Gemini SDK"],
+      "tags": ["Mobile App", "Habit Tracking", "AI", "Productivity"],
       "links": {
         "github": null,
         "demo": null
