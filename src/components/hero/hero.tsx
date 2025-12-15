@@ -330,11 +330,13 @@ const Hero: React.FC = () => {
 
   const { isFuture, talk } = getTalkInfo();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Pick a random top line for the header when the component mounts
     setTopLine(topLines[Math.floor(Math.random() * topLines.length)]);
-  }, [topLines]);
+  }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Typewriter effect
     const typeWriter = () => {
@@ -373,7 +375,7 @@ const Hero: React.FC = () => {
     };
 
     typeWriter(); // Invoke the typewriter function on component mount
-  }, [typewriterTexts]);
+  }, []);
 
   useEffect(() => {
     // Create new circles every 333 milliseconds for the spaceship animation
