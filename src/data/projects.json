@@ -48,7 +48,7 @@
         "frameworks": ["Svelte"],
         "libraries": ["scikit-learn", "Chart.js", "Gumloop AI Flow"]
       },
-      "tags": ["Web App", "Machine Learning", "ESG", "Data Visualization", "AI"],
+      "tags": ["Svelte","Web App", "Machine Learning", "ESG", "Data Visualization"],
       "links": {
         "github": "https://github.com/tjklint/Ecovest",
         "demo": null
