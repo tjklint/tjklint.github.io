@@ -113,7 +113,7 @@
       "title": "Portfolio",
       "description": "Built in React, this portfolio website is built to last and showcase my best work and skills. Thanks for checking it out!",
       "image": "Portfolio.gif",
-      "featured": true,
+      "featured": false,
       "category": "small",
       "technologies": {
         "languages": ["TypeScript", "SASS", "HTML"],
@@ -124,6 +124,24 @@
       "links": {
         "github": "https://github.com/tjklint/tjklint.github.io",
         "demo": "https://tjklint.github.io"
+      }
+    },
+    {
+      "id": "habit",
+      "title": "HabIT",
+      "description": "A habit tracker Android app built with modern Kotlin and Jetpack Compose, featuring AI-powered insights through Gemini SDK integration.",
+      "image": "habit.gif",
+      "featured": true,
+      "category": "small",
+      "technologies": {
+        "languages": ["Kotlin"],
+        "frameworks": ["Jetpack Compose", "Android"],
+        "libraries": ["Gemini SDK"]
+      },
+      "tags": ["Android", "Kotlin", "Jetpack Compose", "Mobile App", "AI", "Gemini SDK"],
+      "links": {
+        "github": null,
+        "demo": null
       }
     }
   ]
