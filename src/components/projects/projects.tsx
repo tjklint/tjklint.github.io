@@ -9,6 +9,9 @@ import privacyXPressoGif from '../../assets/projects/PrivacyXPresso.gif';
 import portfolioGif from '../../assets/projects/Portfolio.gif';
 import digitalAdrenalineGif from '../../assets/projects/DigitalAdrenaline.gif';
 import ecovestGif from '../../assets/projects/Ecovest.gif';
+import habitGif from '../../assets/projects/habit.gif';
+import mySecretaryGif from '../../assets/projects/MySecretary.gif';
+import pathfinderGif from '../../assets/projects/Pathfinder.gif';
 
 // Import projects data
 import projectsData from '../../data/projects.json'; 
@@ -41,6 +44,9 @@ const assetMap: { [key: string]: string } = {
   'Portfolio.gif': portfolioGif,
   'DigitalAdrenaline.gif': digitalAdrenalineGif,
   'Ecovest.gif': ecovestGif,
+  'habit.gif': habitGif,
+  'MySecretary.gif': mySecretaryGif,
+  'Pathfinder.gif': pathfinderGif,
 };
 
 // Handle the "Coming Soon" click event
