@@ -48,7 +48,7 @@
         "frameworks": ["Svelte"],
         "libraries": ["scikit-learn", "Chart.js", "Gumloop AI Flow"]
       },
-      "tags": ["Svelte","Web App", "Machine Learning", "ESG", "Data Visualization"],
+      "tags": ["Svelte", "Web App", "Machine Learning", "ESG", "Data Visualization"],
       "links": {
         "github": "https://github.com/tjklint/Ecovest",
         "demo": null
@@ -66,7 +66,7 @@
         "frameworks": ["Godot"],
         "libraries": []
       },
-      "tags": ["Game", "2D Platformer", "Cyberpunk"],
+      "tags": ["Gaming", "2D Platformer", "Cyberpunk"],
       "links": {
         "github": "https://github.com/tjklint/DigitalAdrenaline",
         "demo": null
@@ -84,7 +84,7 @@
         "frameworks": ["React", "Node.js"],
         "libraries": ["Axios", "React Router"]
       },
-      "tags": ["Web App", "Gaming", "API Integration"],
+      "tags": ["Web App", "Gaming"],
       "links": {
         "github": "https://github.com/tjklint/PokePC",
         "demo": null
