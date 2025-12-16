@@ -138,7 +138,7 @@
         "frameworks": ["Jetpack Compose", "Android"],
         "libraries": ["Gemini SDK"]
       },
-      "tags": ["Mobile App", "Habit Tracking", "AI", "Productivity"],
+      "tags": ["Mobile App", "AI", "Productivity"],
       "links": {
         "github": "https://github.com/tjklint/habit",
         "demo": null
