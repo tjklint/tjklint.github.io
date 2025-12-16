@@ -140,7 +140,25 @@
       },
       "tags": ["Mobile App", "Habit Tracking", "AI", "Productivity"],
       "links": {
-        "github": null,
+        "github": "https://github.com/tjklint/habit",
+        "demo": null
+      }
+    },
+    {
+      "id": "my-secretary",
+      "title": "My Secretary",
+      "description": "A mobile productivity assistant app that helps users manage tasks, plan activities, and organize their daily routines with an AI-powered interface.",
+      "image": "MySecretary.gif",
+      "featured": false,
+      "category": "small",
+      "technologies": {
+        "languages": ["TypeScript"],
+        "frameworks": ["React Native", "Expo", "Node.js"],
+        "libraries": ["Axios"]
+      },
+      "tags": ["Mobile App", "Productivity", "AI"],
+      "links": {
+        "github": "https://github.com/tjklint/MySecretary",
         "demo": null
       }
     }
