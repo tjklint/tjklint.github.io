@@ -1,9 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.5be8c54d.css",
-    "main.js": "/static/js/main.87ca4ea7.js",
+    "main.js": "/static/js/main.824bcfef.js",
     "static/js/51.e8d59b62.chunk.js": "/static/js/51.e8d59b62.chunk.js",
     "static/media/DigitalAdrenaline.gif": "/static/media/DigitalAdrenaline.a44ff47dce7d809bdf26.gif",
+    "static/media/Pathfinder.gif": "/static/media/Pathfinder.9a86ba7c29c69f5ec782.gif",
+    "static/media/MySecretary.gif": "/static/media/MySecretary.d1e2a6f1f23d6376b409.gif",
+    "static/media/habit.gif": "/static/media/habit.b216a4a811fbf75f5d4f.gif",
     "static/media/Portfolio.gif": "/static/media/Portfolio.790a6e5526bfc90474d2.gif",
     "static/media/PokePC.gif": "/static/media/PokePC.0e1b9e00f819bd234496.gif",
     "static/media/tjklint2.webp": "/static/media/tjklint2.e8ff57101880b3159142.webp",
@@ -20,11 +23,11 @@
     "static/media/spaceship.webp": "/static/media/spaceship.d2dee8ccdbeaa6c6bd9d.webp",
     "index.html": "/index.html",
     "main.5be8c54d.css.map": "/static/css/main.5be8c54d.css.map",
-    "main.87ca4ea7.js.map": "/static/js/main.87ca4ea7.js.map",
+    "main.824bcfef.js.map": "/static/js/main.824bcfef.js.map",
     "51.e8d59b62.chunk.js.map": "/static/js/51.e8d59b62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5be8c54d.css",
-    "static/js/main.87ca4ea7.js"
+    "static/js/main.824bcfef.js"
   ]
 }
