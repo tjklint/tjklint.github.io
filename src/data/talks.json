@@ -4,6 +4,11 @@
       "event": "CUSEC 2026",
       "date": "2026-01-10",
       "website": "https://2026.cusec.net"
+    },
+    {
+      "event": "CUCAI 2026"
+      "date": "2026-03-07"
+      "website": "https://cucai.ca"
     }
   ]
 }
