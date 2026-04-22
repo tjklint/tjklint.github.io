@@ -17,8 +17,6 @@ import About from './components/about/about.tsx';
 // @ts-ignore
 import Footer from './components/footer/footer.tsx';
 // @ts-ignore
-// import Techstack from './components/techstack/techstack.tsx';
-// @ts-ignore
 import ContributionMap from './components/contribution_map/contribution_map.tsx';
 
 const AppContainer = styled.div`
@@ -34,19 +32,19 @@ const App: React.FC = () => {
     <Router>
       <AppContainer>
         <Header />
-        <Hero />
+        <MainContent>
+          <Hero />
+          
+          <About />
+          
+          <Resume />
+          
+          <Projects />
 
-        <About />
-
-        <Resume />
-
-        <Projects />
-
-        {/* <Techstack /> */}
-
-        <ContributionMap />
-
-        <SocialLinks />
+          <ContributionMap />
+          
+          <SocialLinks />
+        </MainContent>
         <Footer />
       </AppContainer>
     </Router>
