@@ -27,18 +27,6 @@
     filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
   }
 
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   // Search and controls section
   .projects-controls {
     width: 100%;
