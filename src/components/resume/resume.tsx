@@ -15,13 +15,6 @@ const Resume: React.FC = () => {
             .map((section) => (
               <VisualAid key={section.title} section={section} />
             ))}
-          {/* Education section commented out
-          {data.sections
-            .filter((section) => section.title === 'Education')
-            .map((section) => (
-              <VisualAid key={section.title} section={section} />
-            ))}
-          */}
         </div>
         <div className="right-column">
           <iframe
