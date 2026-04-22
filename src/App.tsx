@@ -29,29 +29,24 @@ const AppContainer = styled.div`
   margin: 0;
 `;
 
-const MainContent = styled.div`
-`;
-
 const App: React.FC = () => {
   return (
     <Router>
       <AppContainer>
         <Header />
-        <MainContent>
-          <Hero />
-          
-          <About />
-          
-          <Resume />
-          
-          <Projects />
-          
-          {/* <Techstack /> */}
-          
-          <ContributionMap />
-          
-          <SocialLinks />
-        </MainContent>
+        <Hero />
+
+        <About />
+
+        <Resume />
+
+        <Projects />
+
+        {/* <Techstack /> */}
+
+        <ContributionMap />
+
+        <SocialLinks />
         <Footer />
       </AppContainer>
     </Router>

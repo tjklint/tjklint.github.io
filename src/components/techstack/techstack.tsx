@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaGitlab, FaDocker, FaJira, FaJava, FaPython, FaHtml5, FaCss3, FaJs, FaReact, FaDatabase, FaNodeJs } from 'react-icons/fa';
-import { SiSharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn, SiWebpack } from 'react-icons/si';
+import { SiSharp, SiCplusplus, SiPostgresql, SiMongodb, SiMysql, SiSqlite, SiSpringboot, SiRedis, SiRabbitmq, SiDotnet, SiCisco, SiHandlebarsdotjs, SiGo, SiKotlin, SiTypescript, SiScikitlearn } from 'react-icons/si';
 import './techstack.scss';
 
 const Techstack: React.FC = () => {
