@@ -245,11 +245,8 @@
       h3 {
         font-size: clamp(1.5em, 3vw, 2em);
         margin-bottom: 8px;
+        color: #fff;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-        background: linear-gradient(135deg, #fff 0%, #d4a1ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
         font-weight: 700;
       }
 
@@ -424,11 +421,8 @@
       h3 {
         font-size: clamp(1.2em, 2.5vw, 1.5em);
         margin-bottom: 4px;
+        color: #fff;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-        background: linear-gradient(135deg, #fff 0%, #d4a1ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
         font-weight: 700;
       }
 
