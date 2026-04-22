@@ -20,7 +20,8 @@
       "title": "Rate Limiting: The Art of Saying No",
       "event": "MTL_Code",
       "date": "2026-04-16",
-      "website": "https://botpress.com/events"
+      "website": "https://botpress.com/events",
+      "slides": "/data/slides/ratelimiting.pdf"
     }
   ]
 }
