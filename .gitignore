@@ -3,6 +3,9 @@
 /.pnp
 .pnp.js
 
+# tool caches
+/.cachebro
+
 # testing
 /coverage
 
