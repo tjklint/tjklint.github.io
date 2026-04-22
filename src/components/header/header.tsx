@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes, FaStar, FaCodeBranch } from 'react-icons/fa';
+import { FaHome, FaUser, FaCode, FaFileAlt, FaBars, FaTimes, FaStar, FaCodeBranch, FaMicrophone } from 'react-icons/fa';
 import './header.scss';
 
 const Header: React.FC = () => {
@@ -31,13 +31,17 @@ const Header: React.FC = () => {
           <FaUser />
           About
         </a>
-        <a href="#projects" className="nav-link" onClick={(e) => handleClick(e, 'projects')}>
-          <FaCode />
-          Projects
+        <a href="#speaking" className="nav-link" onClick={(e) => handleClick(e, 'speaking')}>
+          <FaMicrophone />
+          Speaking
         </a>
         <a href="#resume" className="nav-link" onClick={(e) => handleClick(e, 'resume')}>
           <FaFileAlt />
           Resume
+        </a>
+        <a href="#projects" className="nav-link" onClick={(e) => handleClick(e, 'projects')}>
+          <FaCode />
+          Projects
         </a>
         <a
           className="button"
