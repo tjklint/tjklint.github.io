@@ -18,6 +18,8 @@ import About from './components/about/about.tsx';
 import Footer from './components/footer/footer.tsx';
 // @ts-ignore
 import ContributionMap from './components/contribution_map/contribution_map.tsx';
+// @ts-ignore
+import ChatBubble from './components/chat_bubble/chat_bubble.tsx';
 
 const AppContainer = styled.div`
   background: linear-gradient(135deg, #1e1e1e 0%, #2a1a3d 50%, #1e1e1e 100%);
@@ -44,6 +46,7 @@ const App: React.FC = () => {
 
         <SocialLinks />
         <Footer />
+        <ChatBubble />
       </AppContainer>
     </Router>
   );

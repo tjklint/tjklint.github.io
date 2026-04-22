@@ -1,0 +1,178 @@
+:root {
+  --chat-bubble-bottom: 24px;
+  --chat-bubble-gap: 16px;
+  --chat-bubble-height: 100px; // JS overrides on mount with the measured value
+}
+
+.chat-bubble {
+  position: fixed;
+  bottom: var(--chat-bubble-bottom);
+  right: 24px;
+  z-index: 9999;
+  width: 200px;
+  background: #0d1117;
+  border-radius: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  cursor: pointer;
+  font-family: 'RobotoMono', monospace;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5),
+              0 0 0 1px rgba(168, 85, 247, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 161, 255, 0.6);
+    box-shadow: 0 12px 32px rgba(138, 43, 226, 0.45),
+                0 0 0 1px rgba(212, 161, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #d4a1ff;
+    outline-offset: 3px;
+  }
+
+  &.is-running .chat-bubble__status-dot {
+    background: #febc2e;
+    box-shadow: 0 0 8px rgba(254, 188, 46, 0.7);
+  }
+
+  &.is-open {
+    border-color: rgba(212, 161, 255, 0.6);
+  }
+
+  @media (max-width: 480px) {
+    width: 170px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+.chat-bubble__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #161b22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.chat-bubble__dots {
+  display: flex;
+  gap: 4px;
+}
+
+.chat-bubble__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &--red    { background: #ff5f57; }
+  &--yellow { background: #febc2e; }
+  &--green  { background: #28c840; }
+}
+
+.chat-bubble__title {
+  font-size: 9px;
+  color: #6e7681;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.chat-bubble__body {
+  padding: 8px 10px;
+  min-height: 44px;
+}
+
+.chat-bubble__line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.chat-bubble__prompt {
+  color: #d4a1ff;
+  font-weight: 600;
+}
+
+.chat-bubble__code {
+  color: #e6edf3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.chat-bubble__cursor {
+  color: #d4a1ff;
+  animation: chat-bubble-blink 1s steps(1) infinite;
+}
+
+@keyframes chat-bubble-blink {
+  50% { opacity: 0; }
+}
+
+.chat-bubble__output {
+  font-size: 10px;
+  color: #00ff9d;
+  margin-top: 4px;
+  padding-left: 16px;
+  min-height: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.chat-bubble__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: #161b22;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 9px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.chat-bubble__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ff9d;
+  box-shadow: 0 0 6px rgba(0, 255, 157, 0.6);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-bubble__status-text {
+  color: #6e7681;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Botpress webchat overrides.
+//
+// 1. Hide the default Botpress FAB — our custom bubble replaces it, so we
+//    don't want two floating buttons stacked in the corner.
+// 2. Push the webchat panel (.bpContainer) above the bubble so opening the
+//    chat doesn't hide the thing the user just clicked. The bubble's
+//    measured height is exposed as --chat-bubble-height by chat_bubble.tsx
+//    on mount.
+// Broad match — Botpress sometimes suffixes the class at build time (hashed
+// classnames, wrappers, etc.), so target any element whose class contains
+// the documented token.
+.bpFabContainer,
+[class*="bpFabContainer"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.bpContainer {
+  bottom: calc(var(--chat-bubble-bottom) + var(--chat-bubble-height) + var(--chat-bubble-gap)) !important;
+}
