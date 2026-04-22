@@ -27,9 +27,6 @@ const AppContainer = styled.div`
   margin: 0;
 `;
 
-const MainContent = styled.div`
-`;
-
 const App: React.FC = () => {
   return (
     <Router>
