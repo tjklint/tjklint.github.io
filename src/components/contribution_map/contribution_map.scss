@@ -69,6 +69,32 @@
       }
     }
 
+    .calendar-row {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+
+      .calendar-section {
+        flex: 1;
+        min-width: 0;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 0;
+
+        .calendar-section {
+          margin-bottom: 50px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
     .calendar-wrapper {
       width: 100%;
       display: flex;

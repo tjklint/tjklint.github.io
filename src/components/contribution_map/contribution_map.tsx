@@ -22,7 +22,7 @@ const ContributionMap: React.FC = () => {
     <div className="contribution-map-container">
       <section className="contribution-map">
         <div className="calendar-section">
-          <h3 className="year-label">/2025</h3>
+          <h3 className="year-label">/2026</h3>
           <div className="calendar-wrapper">
             <GitHubCalendar
               username="tjklint"
@@ -30,22 +30,38 @@ const ContributionMap: React.FC = () => {
               fontSize={16}
               theme={theme}
               labels={labels}
-              year={2025}
+              year={2026}
             />
           </div>
         </div>
 
-        <div className="calendar-section">
-          <h3 className="year-label">/2024</h3>
-          <div className="calendar-wrapper">
-            <GitHubCalendar
-              username="tjklint"
-              blockSize={18}
-              fontSize={16}
-              theme={theme}
-              labels={labels}
-              year={2024}
-            />
+        <div className="calendar-row">
+          <div className="calendar-section">
+            <h3 className="year-label">/2025</h3>
+            <div className="calendar-wrapper">
+              <GitHubCalendar
+                username="tjklint"
+                blockSize={11}
+                fontSize={14}
+                theme={theme}
+                labels={labels}
+                year={2025}
+              />
+            </div>
+          </div>
+
+          <div className="calendar-section">
+            <h3 className="year-label">/2024</h3>
+            <div className="calendar-wrapper">
+              <GitHubCalendar
+                username="tjklint"
+                blockSize={11}
+                fontSize={14}
+                theme={theme}
+                labels={labels}
+                year={2024}
+              />
+            </div>
           </div>
         </div>
       </section>
