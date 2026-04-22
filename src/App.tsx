@@ -32,19 +32,17 @@ const App: React.FC = () => {
     <Router>
       <AppContainer>
         <Header />
-        <MainContent>
-          <Hero />
-          
-          <About />
-          
-          <Resume />
-          
-          <Projects />
+        <Hero />
 
-          <ContributionMap />
-          
-          <SocialLinks />
-        </MainContent>
+        <About />
+
+        <Resume />
+
+        <Projects />
+
+        <ContributionMap />
+
+        <SocialLinks />
         <Footer />
       </AppContainer>
     </Router>
