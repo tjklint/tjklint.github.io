@@ -13,7 +13,6 @@
   left: 20px;
   right: 20px;
   z-index: 1000;
-  backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 12px 48px rgba(138, 43, 226, 0.3),
               0 4px 16px rgba(0, 0, 0, 0.4);
@@ -21,6 +20,9 @@
   max-width: calc(100% - 40px);
   margin: 0 auto;
 
+  // Backdrop-filter lives on the pseudo-element so the header itself does
+  // not become a containing block for position: fixed descendants (the
+  // mobile nav relies on being positioned against the viewport).
   &::before {
     content: '';
     position: absolute;
@@ -29,8 +31,10 @@
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+    backdrop-filter: blur(20px);
     pointer-events: none;
     border-radius: 20px;
+    z-index: -1;
   }
 
   @media (max-width: 768px) {
