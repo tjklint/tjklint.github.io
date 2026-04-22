@@ -10,6 +10,12 @@
   width: 80%;
   margin: 0 auto;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
   .section-title {
     font-size: clamp(2em, 5vw, 3em);
     margin-bottom: 30px;
@@ -225,8 +231,8 @@
   .project-content {
     position: relative;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(30, 30, 30, 0.95) 0%, rgba(30, 30, 30, 0.85) 100%);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.25) 0%, rgba(30, 30, 30, 0.8) 100%);
+    backdrop-filter: blur(2px);
     padding: 24px;
     height: 100%;
     display: flex;
@@ -239,6 +245,7 @@
       h3 {
         font-size: clamp(1.5em, 3vw, 2em);
         margin-bottom: 8px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         background: linear-gradient(135deg, #fff 0%, #d4a1ff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -402,8 +409,8 @@
   .project-content {
     position: relative;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(30, 30, 30, 0.95) 0%, rgba(30, 30, 30, 0.85) 100%);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.25) 0%, rgba(30, 30, 30, 0.8) 100%);
+    backdrop-filter: blur(2px);
     padding: 18px;
     height: 100%;
     display: flex;
@@ -417,6 +424,7 @@
       h3 {
         font-size: clamp(1.2em, 2.5vw, 1.5em);
         margin-bottom: 4px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         background: linear-gradient(135deg, #fff 0%, #d4a1ff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
