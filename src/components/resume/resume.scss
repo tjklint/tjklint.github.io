@@ -20,23 +20,6 @@
   padding: 40px 0;
   font-family: 'RobotoMono', sans-serif;
 
-  .resume-title {
-    font-size: clamp(2em, 5vw, 2.8em);
-    text-align: left;
-    margin: 0 0 30px 0;
-    padding: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #a855f7 0%, #d4a1ff 50%, #f0abfc 100%);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    animation: gradientShift 8s ease infinite;
-    filter: drop-shadow(0 4px 12px rgba(138, 43, 226, 0.3));
-  }
-
   .content-wrapper {
     width: 100%; /* Full width for content wrapper */
     display: flex;
