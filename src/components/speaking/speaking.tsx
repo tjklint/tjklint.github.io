@@ -7,7 +7,6 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import talksData from '../../data/talks.json';
-import speakingPhoto from '../../assets/me/jpg/speaking.jpg';
 import './speaking.scss';
 
 interface Talk {
@@ -107,7 +106,7 @@ const Speaking: React.FC = () => {
 
   return (
     <section className="speaking-container" id="speaking">
-      <div className="speaking-intro">
+      <div className="speaking-content-left">
         <div className="speaking-intro__text">
           <h2 className="speaking-title">Speaking</h2>
           <p>
@@ -130,37 +129,46 @@ const Speaking: React.FC = () => {
             </a>
           </p>
         </div>
-        <div className="speaking-intro__photo">
-          <img src={speakingPhoto} alt="TJ speaking" loading="lazy" />
+
+        {upcoming.length > 0 && (
+          <div className="speaking-group">
+            <h3 className="speaking-group__label">Upcoming</h3>
+            <div className="speaking-grid">
+              {upcoming.map((t) => renderCard(t, 'upcoming'))}
+            </div>
+          </div>
+        )}
+
+        {past.length > 0 && (
+          <div className="speaking-group">
+            <h3 className="speaking-group__label">Past</h3>
+            <div className="speaking-grid">
+              {past.map((t) => renderCard(t, 'past'))}
+            </div>
+          </div>
+        )}
+
+        {upcoming.length === 0 && past.length === 0 && (
+          <p className="speaking-empty">
+            No talks scheduled yet.{' '}
+            <a href="mailto:timothyjklint@gmail.com?subject=Speaking Opportunity">
+              Invite me to yours.
+            </a>
+          </p>
+        )}
+      </div>
+      <div className="speaking-content-right">
+        <div className="speaking-video-container">
+          <iframe
+            src="https://www.youtube.com/embed/ohf7ljqecVc"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
-
-      {upcoming.length > 0 && (
-        <div className="speaking-group">
-          <h3 className="speaking-group__label">Upcoming</h3>
-          <div className="speaking-grid">
-            {upcoming.map((t) => renderCard(t, 'upcoming'))}
-          </div>
-        </div>
-      )}
-
-      {past.length > 0 && (
-        <div className="speaking-group">
-          <h3 className="speaking-group__label">Past</h3>
-          <div className="speaking-grid">
-            {past.map((t) => renderCard(t, 'past'))}
-          </div>
-        </div>
-      )}
-
-      {upcoming.length === 0 && past.length === 0 && (
-        <p className="speaking-empty">
-          No talks scheduled yet.{' '}
-          <a href="mailto:timothyjklint@gmail.com?subject=Speaking Opportunity">
-            Invite me to yours.
-          </a>
-        </p>
-      )}
     </section>
   );
 };

@@ -21,7 +21,8 @@
       "event": "MTL_Code",
       "date": "2026-04-16",
       "website": "https://botpress.com/events",
-      "slides": "/data/slides/ratelimiting.pdf"
+      "slides": "/data/slides/ratelimiting.pdf",
+      "video": "https://www.youtube.com/watch?v=ohf7ljqecVc"
     }
   ]
 }
