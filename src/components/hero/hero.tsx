@@ -289,7 +289,8 @@ const topLines = [
 ]; // Array of possible headline texts
 
 const typewriterTexts = [
-  "Software Developer @ Botpress",
+  "Software Engineer @ Planned",
+  "Ex-Software Developer @ Botpress",
   "Ex-SDE Intern @ Bell",
   "Co-Chair @ CUSEC 2025",
   "Ex-SDE Intern @ CSE",
