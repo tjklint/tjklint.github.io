@@ -6,6 +6,7 @@
           {
             "title": "Computer Science",
             "company": "@John Abbott College",
+            "url": "https://www.johnabbott.qc.ca",
             "dates": "August 2022 - May 2025"
           }
         ]
@@ -16,12 +17,14 @@
           {
             "title": "Software Engineer",
             "company": "@Planned",
+            "url": "https://www.planned.com",
             "dates": "May 2026 - Present",
             "bulletPoints": []
           },
           {
             "title": "Full-Stack Developer",
             "company": "@Botpress",
+            "url": "https://botpress.com",
             "dates": "August 2025 - May 2026",
             "bulletPoints": [
               "Implemented automated quota recharging system, generating $150K ARR within the first 100 days.",
@@ -32,6 +35,7 @@
           {
             "title": "Software Developer Intern",
             "company": "@Bell",
+            "url": "https://www.bell.ca",
             "dates": "May 2025 - September 2025",
             "bulletPoints": [
               "Built a Retrieval-Augmented Generation (RAG) system with Elasticsearch, improving decision speed by 65%.",
@@ -42,6 +46,7 @@
           {
             "title": "Software Developer Intern (DevSecOps + Machine Learning)",
             "company": "@CSE (Communications Security Establishment)",
+            "url": "https://www.cse-cst.gc.ca/en",
             "dates": "January 2025 - May 2025",
             "bulletPoints": [
               "Built a Jenkins pipeline to automate Docker builds and deploys to Azure/Artifactory, cutting deploy time by 80%.",
@@ -51,6 +56,7 @@
           {
             "title": "Co-Chair",
             "company": "@CUSEC (Canadian University Software Engineering Conference)",
+            "url": "https://cusec.net",
             "dates": "April 2023 - February 2025",
             "bulletPoints": [
               "Oversaw operations for a 15+ team of student organizers including scheduling, sponsorships, and logistics, to ensure a high-quality conference for 350+ attendees from 17+ schools across 6+ provinces.",
@@ -61,6 +67,7 @@
           {
             "title": "Software Developer Intern",
             "company": "@Bell",
+            "url": "https://www.bell.ca",
             "dates": "May 2024 - September 2024",
             "bulletPoints": [
               "Developed a web app to streamline internal ticket creation using the Jira API.",

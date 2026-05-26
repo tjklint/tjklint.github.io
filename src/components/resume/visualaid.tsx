@@ -9,7 +9,19 @@ const VisualAid: React.FC<{ section: ResumeSection }> = ({ section }) => {
         {section.entries.map((entry) => (
           <div key={entry.title} className="job-container">
             <h3 className="job-title">
-              {entry.title} <span className="company">{entry.company}</span>
+              {entry.title}{' '}
+              {entry.url ? (
+                <a
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="company company-link"
+                >
+                  {entry.company}
+                </a>
+              ) : (
+                <span className="company">{entry.company}</span>
+              )}
             </h3>
             <p className="job-dates">{entry.dates}</p>
             {entry.bulletPoints && (
