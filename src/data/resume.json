@@ -14,9 +14,15 @@
         "title": "Experience",
         "entries": [
           {
+            "title": "Software Engineer",
+            "company": "@Planned",
+            "dates": "May 2026 - Present",
+            "bulletPoints": []
+          },
+          {
             "title": "Full-Stack Developer",
             "company": "@Botpress",
-            "dates": "August 2025 - Present",
+            "dates": "August 2025 - May 2026",
             "bulletPoints": [
               "Implemented automated quota recharging system, generating $150K ARR within the first 100 days.",
               "Led rapid development of a new Customer Experience platform in 2 months, architecting infrastructure, microservices, and full-stack systems while averaging 14 PRs/day within a 12-person team.",
