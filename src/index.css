@@ -23,6 +23,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-padding-top: 120px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

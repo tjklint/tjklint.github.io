@@ -26,7 +26,17 @@ const About: React.FC = () => {
             Hello! My name is <span className="purple-text">TJ Klint</span>,
             well, technically it’s <i>Timothy</i> (our little secret). I’m a
             passionate developer currently working as a{" "}
-            <span className="purple-text">Software Engineer at Planned</span>,
+            <span className="purple-text">
+              Software Engineer at{" "}
+              <a
+                href="https://planned.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Planned
+              </a>
+            </span>
+            ,
             and previously worked at{" "}
             <span className="purple-text">
               <a
