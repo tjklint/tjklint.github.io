@@ -24,11 +24,11 @@ const About: React.FC = () => {
           <h2 className="about-title">About Me</h2>
           <p>
             Hello! My name is <span className="purple-text">TJ Klint</span>,
-            well, technically it's <i>Timothy</i> (our little secret). Anyways,
-            I'm a passionate developer with a love for coding and technology.
-            Most recently, I'm working as a{" "}
+            well, technically it’s <i>Timothy</i> (our little secret). I’m a
+            passionate developer currently working as a{" "}
+            <span className="purple-text">Software Engineer at Planned</span>,
+            and previously worked at{" "}
             <span className="purple-text">
-              Full-Stack Developer at{" "}
               <a
                 href="https://botpress.com"
                 target="_blank"
@@ -36,15 +36,15 @@ const About: React.FC = () => {
               >
                 Botpress
               </a>
-            </span>
-            , and previously I completed internships at{" "}
+            </span>{" "}
+            and completed internships at{" "}
             <span className="purple-text">
               <a
                 href="https://www.cse-cst.gc.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                CSE (Communications Security Establishment)
+                CSE
               </a>
             </span>{" "}
             and{" "}
@@ -60,21 +60,9 @@ const About: React.FC = () => {
             .
           </p>
           <p>
-            My interests change greatly depending on my environment, but at the
-            moment, I am most interested by
-            <span className="purple-text">
-              {" "}
-              AI/ML, Ethical Hacking, and DevOps.
-            </span>
-          </p>
-          <p>
-            My skillset spans a wide range of technologies, and I believe in choosing the right tool for the job rather than being tied to specific frameworks or languages. I thrive in fast-paced environments where I can quickly adapt, learn on the fly, and deliver results. Whether it's building new features or{" "}
-            <span className="purple-text">crushing tech debt</span>, I'm always focused on shipping quality solutions that make a real impact.
-          </p>
-          <p>
-            My love for tech goes beyond work. I’m always eager to dive into
-            the world of hackathons and tech conferences. My passion has led me
-            to join my favorite conference,{" "}
+            I thrive in fast-paced environments where I can quickly adapt and
+            deliver quality solutions. Beyond work, I’m passionate about
+            hackathons and tech conferences. I served as{" "}
             <span className="purple-text">
               <a
                 href="https://2025.cusec.net"
@@ -82,13 +70,14 @@ const About: React.FC = () => {
                 rel="noopener noreferrer"
                 style={{ color: "inherit", textDecoration: "underline" }}
               >
-                CUSEC
+                Co-Chair for CUSEC 2025
               </a>
             </span>
-            , as the{" "}
-            <span className="purple-text">Director of Events in 2024</span>.
-            This past year, I'm thrilled to be stepping up as{" "}
-            <span className="purple-text">Co-Chair for 2025</span>.
+            .
+          </p>
+          <p>
+            I love sharing knowledge with the tech community through speaking
+            engagements. <span className="purple-text"><a href="#speaking" style={{ color: "inherit", textDecoration: "underline" }}>Check out my talks and speaking experience</a></span>.
           </p>
           <p>
             Outside of tech, you'll typically find me playing hockey, golfing,
