@@ -36,7 +36,7 @@ const About: React.FC = () => {
                 Planned
               </a>
             </span>
-            ,
+            ,            
             and previously worked at{" "}
             <span className="purple-text">
               <a
@@ -72,7 +72,7 @@ const About: React.FC = () => {
           <p>
             I thrive in fast-paced environments where I can quickly adapt and
             deliver quality solutions. Beyond work, I’m passionate about
-            hackathons and tech conferences. I served as{" "}
+            hackathons and tech conferences, this led me to serve as{" "}
             <span className="purple-text">
               <a
                 href="https://2025.cusec.net"
