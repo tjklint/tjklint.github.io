@@ -31,3 +31,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::selection {
+  background-color: #a855f7;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #a855f7;
+  color: #fff;
+}
